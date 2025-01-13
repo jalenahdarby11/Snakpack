@@ -1,0 +1,255 @@
+<style>
+    .success-container {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      color: #000;
+    }
+    
+    .header-banner {
+      aspect-ratio: 6.62;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    
+    .success-message-box {
+      background-color: rgba(217, 217, 217, 0.11);
+      box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+      align-self: center;
+      display: flex;
+      margin-top: 15px;
+      width: 753px;
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+      font-family: Montserrat, sans-serif;
+      font-weight: 400;
+      text-align: center;
+      justify-content: center;
+      padding: 64px 80px;
+      border: 5px solid #000;
+    }
+    
+    .success-content {
+      display: flex;
+      width: 404px;
+      max-width: 100%;
+      flex-direction: column;
+    }
+    
+    .success-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 58px;
+      align-self: center;
+    }
+    
+    .success-title {
+      font-size: 48px;
+      font-weight: 700;
+      margin-top: 35px;
+    }
+    
+    .success-description {
+      font-size: 24px;
+      margin-top: 73px;
+    }
+    
+    .return-home-btn {
+      border-radius: 50px;
+      background-color: #A6E66E;
+      width: 369px;
+      max-width: 100%;
+      font-size: 32px;
+      margin: 107px 18px 0 17px;
+      padding: 30px 40px 50px;
+      cursor: pointer;
+    }
+    
+    .footer-section {
+      background-color: #52B9BC;
+      display: flex;
+      margin-top: 58px;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 79px 80px;
+    }
+    
+    .footer-content {
+      display: flex;
+      width: 100%;
+      max-width: 929px;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .subscribe-container {
+      align-self: stretch;
+      display: flex;
+      gap: 23px;
+      flex-wrap: wrap;
+    }
+    
+    .subscribe-text {
+      flex-grow: 1;
+      flex-basis: auto;
+      margin: auto 0;
+      font: 600 24px Montserrat, sans-serif;
+    }
+    
+    .email-input {
+      border-radius: 100px;
+      background-color: #D9D9D9;
+      flex-grow: 1;
+      width: fit-content;
+      padding: 9px 28px 25px;
+      font: 300 20px Poppins, sans-serif;
+    }
+    
+    .footer-links {
+      display: flex;
+      width: 761px;
+      max-width: 100%;
+      gap: 40px 43px;
+      margin: 50px 0 0 25px;
+      font: 275 24px Poppins, sans-serif;
+    }
+    
+    .footer-link {
+      flex-grow: 1;
+      cursor: pointer;
+    }
+    
+    .footer-logo-primary {
+      aspect-ratio: 6.02;
+      object-fit: contain;
+      object-position: center;
+      width: 410px;
+      margin-top: 34px;
+      max-width: 100%;
+    }
+    
+    .footer-logo-secondary {
+      aspect-ratio: 3.51;
+      object-fit: contain;
+      object-position: center;
+      width: 260px;
+      max-width: 100%;
+      margin: 47px 0 0 29px;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .header-banner {
+        max-width: 100%;
+      }
+      
+      .success-message-box {
+        padding: 0 20px;
+      }
+      
+      .success-title {
+        font-size: 40px;
+      }
+      
+      .success-description {
+        margin-top: 40px;
+      }
+      
+      .return-home-btn {
+        margin: 40px 10px 0;
+        padding: 0 20px;
+      }
+      
+      .footer-section {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+      
+      .footer-content {
+        max-width: 100%;
+      }
+      
+      .subscribe-container {
+        max-width: 100%;
+      }
+      
+      .email-input {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      
+      .footer-links {
+        margin-top: 40px;
+      }
+      
+      .footer-logo-secondary {
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <div class="success-container">
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2cf17b00013288e730b9195aac2518d046287f2b800598d5871f33fdc6c7e7c2?apiKey=3a8ac60b581045f7adb5757904dc023c&"
+        class="header-banner"
+        alt=""
+      />
+      <div class="success-message-box">
+        <div class="success-content">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/967f72f294f6d127529d47a90349d52e490ab79cbc802dc5aa1e724d81ae2258?apiKey=3a8ac60b581045f7adb5757904dc023c&"
+            class="success-icon"
+            alt="Success checkmark icon"
+          />
+          <h1 class="success-title">Form Submitted</h1>
+          <p class="success-description">Your form was submitted without issue!</p>
+          <button class="return-home-btn" tabindex="0">Return Home</button>
+        </div>
+      </div>
+      <footer class="footer-section">
+        <div class="footer-content">
+          <form class="subscribe-container">
+            <label for="emailInput" class="subscribe-text">Subscribe for the latest updates:</label>
+            <input type="email" id="emailInput" class="email-input" placeholder="Email Address" aria-label="Email Address" />
+          </form>
+          <nav class="footer-links">
+            <a href="#" class="footer-link" tabindex="0">FAQ</a>
+            <a href="#" class="footer-link" tabindex="0">Contact Us</a>
+            <a href="#" class="footer-link" tabindex="0">How it Works</a>
+            <a href="#" class="footer-link" tabindex="0">Countries</a>
+            <a href="#" class="footer-link" tabindex="0">Get Started</a>
+          </nav>
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9634f3683c67f50a08b69937a5fcd5d1e4e1bd958c6122dd9132b7c5642d2fcd?apiKey=3a8ac60b581045f7adb5757904dc023c&"
+            class="footer-logo-primary"
+            alt="Primary footer logo"
+          />
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&"
+            class="footer-logo-secondary"
+            alt="Secondary footer logo"
+          />
+        </div>
+      </footer>
+    </div>
