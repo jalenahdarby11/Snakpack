@@ -1,0 +1,354 @@
+<style>
+    .order-confirmation {
+      background: #fff;
+      display: flex;
+      padding: 0 0 33px;
+      flex-direction: column;
+      overflow: hidden;
+      align-items: center;
+    }
+    
+    .header-logo {
+      aspect-ratio: 6.62;
+      object-fit: contain;
+      width: 100%;
+      align-self: stretch;
+    }
+    
+    .page-title {
+      color: #000;
+      margin: 7px 0 0;
+      font: 700 24px Montserrat, sans-serif;
+    }
+    
+    .main-content {
+      margin: 49px auto 0;
+      width: 100%;
+      max-width: 1194px;
+    }
+    
+    .content-wrapper {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .form-section {
+      width: 62%;
+    }
+    
+    .form-container {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .section-title {
+      color: #000;
+      align-self: start;
+      font: 600 20px Montserrat, sans-serif;
+    }
+    
+    .input-field {
+      border-radius: 50px;
+      background: #fff;
+      margin: 13px 0 0;
+      width: 608px;
+      max-width: 100%;
+      color: #7b7b7b;
+      padding: 19px 26px;
+      font: 600 16px Montserrat, sans-serif;
+      border: 1px solid #000;
+    }
+    
+    .divider {
+      width: 100%;
+      height: 6px;
+      margin: 25px 0;
+      border: 4px solid #d9d9d9;
+    }
+    
+    .payment-section {
+      border-radius: 50px;
+      background: #fff;
+      display: flex;
+      margin: 15px 0 0;
+      width: 608px;
+      max-width: 100%;
+      align-items: start;
+      gap: 40px 100px;
+      flex-wrap: wrap;
+      padding: 16px 26px 16px 11px;
+      border: 1px solid #000;
+    }
+    
+    .card-input {
+      display: flex;
+      gap: 5px;
+      color: #7b7b7b;
+      flex: 1;
+      font: 600 16px Poppins, sans-serif;
+    }
+    
+    .payment-icon {
+      aspect-ratio: 2;
+      object-fit: contain;
+      width: 42px;
+    }
+    
+    .divider-text {
+      color: #d9d9d9;
+      letter-spacing: 0.05px;
+      text-align: center;
+      margin: 7px 0;
+      font: 400 20px/1.4 "Istok Web", sans-serif;
+    }
+    
+    .apple-pay {
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      margin: 7px 0 0;
+      width: 343px;
+      max-width: 100%;
+      color: #fff;
+      text-align: center;
+    }
+    
+    .apple-pay-button {
+      border-radius: 8px;
+      background: #000;
+      display: flex;
+      min-width: 240px;
+      min-height: 50px;
+      width: 343px;
+      align-items: center;
+      gap: 3px;
+      justify-content: center;
+      padding: 11px 16px;
+    }
+    
+    .summary-section {
+      width: 38%;
+    }
+    
+    .order-summary {
+      border-radius: 50px;
+      background: #fff;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 30px 30px;
+      border: 1px solid #000;
+      font-family: Montserrat, sans-serif;
+      color: #000;
+      text-align: center;
+    }
+    
+    .summary-title {
+      font: 500 36px Montserrat, sans-serif;
+    }
+    
+    .product-image {
+      aspect-ratio: 1;
+      object-fit: contain;
+      width: 317px;
+      margin: 15px 0 0;
+      max-width: 100%;
+    }
+    
+    .product-name {
+      font: 600 20px Montserrat, sans-serif;
+      margin: 10px 0 0;
+    }
+    
+    .summary-divider {
+      width: 100%;
+      height: 4px;
+      margin: 13px 0;
+      border: 4px solid #d9d9d9;
+    }
+    
+    .price-details {
+      display: flex;
+      margin: 19px 0 0;
+      gap: 20px;
+      font-size: 14px;
+      justify-content: space-between;
+      width: 100%;
+    }
+    
+    .price-labels {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      font-weight: 500;
+    }
+    
+    .price-values {
+      display: flex;
+      flex-direction: column;
+      font-weight: 300;
+    }
+    
+    .total {
+      font-weight: 600;
+      margin: 9px 0 0;
+    }
+    
+    .submit-button {
+      border-radius: 50px;
+      background: #a6e66e;
+      width: 576px;
+      max-width: 100%;
+      color: #000;
+      text-align: center;
+      margin: 42px 0 0 25px;
+      padding: 29px 70px;
+      font: 400 36px Montserrat, sans-serif;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .header-logo,
+      .form-container,
+      .divider,
+      .summary-section,
+      .order-summary {
+        max-width: 100%;
+      }
+    
+      .main-content {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .content-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+    
+      .form-section,
+      .summary-section {
+        width: 100%;
+      }
+    
+      .input-field,
+      .payment-section,
+      .submit-button {
+        padding: 0 20px;
+      }
+    
+      .submit-button {
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <form class="order-confirmation">
+      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2cf17b00013288e730b9195aac2518d046287f2b800598d5871f33fdc6c7e7c2?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="header-logo" />
+      <h1 class="page-title">Confirm and Pay</h1>
+      
+      <div class="main-content">
+        <div class="content-wrapper">
+          <section class="form-section">
+            <div class="form-container">
+              <h2 class="section-title">Your Info</h2>
+              
+              <label for="firstName" class="visually-hidden">First Name</label>
+              <input type="text" id="firstName" class="input-field" placeholder="First Name" required />
+              
+              <label for="lastName" class="visually-hidden">Last Name</label>
+              <input type="text" id="lastName" class="input-field" placeholder="Last Name" required />
+              
+              <h2 class="section-title">Shipping Address</h2>
+              
+              <label for="street" class="visually-hidden">Street Address</label>
+              <input type="text" id="street" class="input-field" placeholder="Street Address" required />
+              
+              <label for="apt" class="visually-hidden">Apartment/Suite</label>
+              <input type="text" id="apt" class="input-field" placeholder="Apartment/ Suite (Optional)" />
+              
+              <label for="city" class="visually-hidden">City</label>
+              <input type="text" id="city" class="input-field" placeholder="City" required />
+              
+              <label for="state" class="visually-hidden">State</label>
+              <input type="text" id="state" class="input-field" placeholder="State" required />
+              
+              <label for="postal" class="visually-hidden">Postal Code</label>
+              <input type="text" id="postal" class="input-field" placeholder="Postal Code" required />
+              
+              <h2 class="section-title">Contact</h2>
+              
+              <label for="mobile" class="visually-hidden">Mobile Number</label>
+              <input type="tel" id="mobile" class="input-field" placeholder="Mobile Number (Optional)" />
+              
+              <div class="divider"></div>
+              
+              <h2 class="section-title">Payment Information</h2>
+              
+              <div class="payment-section">
+                <div class="card-input">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0054688d81a7b4137c8818968f672be26545c12c24e0966f95738e991beb8424?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Credit card" class="payment-icon" />
+                  <span>Card Number</span>
+                </div>
+                <div class="card-icons">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ced0fe018a0d12a7f8b108d90b8f9b6cc73dae0315b28047f92ec9a532c0f1fb?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="payment-icon" />
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/1266081ec9b04f7e934344f373525f3d66a44c91c1b124ce4b09fa284131f5d3?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="payment-icon" />
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a9092c9bd8df667e7f4fb3f368faaebce97b3b05c429ccbd125ae11c3d438244?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="payment-icon" />
+                </div>
+              </div>
+              
+              <div class="divider-text">or</div>
+              
+              <button type="button" class="apple-pay">
+                <div class="apple-pay-button">
+                  <span>Pay with</span>
+                  <span>Pay</span>
+                </div>
+              </button>
+            </div>
+          </section>
+    
+          <section class="summary-section">
+            <div class="order-summary">
+              <h2 class="summary-title">Order Summary</h2>
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0ca3ff0eda14be7a202223e092f9d6916cf10466f5f5e79b8224f098a0329905?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Costa Rica Box Product" class="product-image" />
+              <h3 class="product-name">Costa Rica Box</h3>
+              
+              <div class="summary-divider"></div>
+              
+              <div class="price-details">
+                <div class="price-labels">
+                  <span>Subtotal</span>
+                  <span>Shipping</span>
+                  <span>Taxes</span>
+                  <span class="total">Today's Total</span>
+                </div>
+                <div class="price-values">
+                  <span>$14.99</span>
+                  <span>$4.99</span>
+                  <span>--</span>
+                  <span class="total">$19.99</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    
+      <button type="submit" class="submit-button">Confirm and Pay</button>
+    </form>
+    
