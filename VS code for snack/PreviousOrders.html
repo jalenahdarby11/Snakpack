@@ -1,0 +1,380 @@
+<style>
+    .orders-container {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    .header-bar {
+      background: #52B9BC;
+      width: 100%;
+      padding: 18px 0 19px;
+    }
+    
+    .logo {
+      aspect-ratio: 6.1;
+      width: 605px;
+      align-self: center;
+      max-width: 100%;
+    }
+    
+    .nav-container {
+      background: #65D7DA;
+      z-index: 10;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      margin: 5px 0 -6px;
+      padding: 0 32px 0 80px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 50px;
+      color: #EFF1EE;
+      margin: auto 0;
+      font: 600 16px Montserrat, sans-serif;
+    }
+    
+    .user-actions {
+      display: flex;
+      margin: auto 0;
+    }
+    
+    .cart-icon {
+      aspect-ratio: 0.7;
+      width: 67px;
+    }
+    
+    .profile-icon {
+      aspect-ratio: 0.97;
+      width: 60px;
+      margin: auto 0;
+    }
+    
+    .main-content {
+      margin-top: 31px;
+      width: 100%;
+      padding: 0 32px 0 68px;
+    }
+    
+    .page-title {
+      color: #000;
+      margin-left: 52px;
+      font: 600 80px Fredoka, sans-serif;
+    }
+    
+    .order-card {
+      border-radius: 10px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      margin-top: 45px;
+      width: 100%;
+      padding: 16px 10px 35px;
+      border: 1px solid #000;
+    }
+    
+    .order-header {
+      display: flex;
+      max-width: 1121px;
+      gap: 100px;
+      margin: 0 19px 0 20px;
+    }
+    
+    .order-info {
+      display: flex;
+      gap: 67px;
+      font-size: 20px;
+      color: #000;
+      flex: 1;
+    }
+    
+    .order-dates {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .info-label {
+      font: 500 20px Montserrat, sans-serif;
+    }
+    
+    .info-value {
+      font: 400 20px Poppins, sans-serif;
+      margin-top: 7px;
+    }
+    
+    .order-details {
+      align-self: start;
+      display: flex;
+      margin-top: 8px;
+      flex-direction: column;
+      font: 400 14px Poppins, sans-serif;
+      flex: 1;
+    }
+    
+    .order-number {
+      color: #000;
+      align-self: end;
+    }
+    
+    .action-links {
+      display: flex;
+      margin-top: 7px;
+      gap: 11px;
+      font-size: 16px;
+      color: #126CC7;
+    }
+    
+    .divider {
+      width: 4px;
+      height: 24px;
+      border: 4px solid #D9D9D9;
+    }
+    
+    .order-status {
+      color: #000;
+      margin: 19px 0 0 45px;
+      font: 700 30px Montserrat, sans-serif;
+    }
+    
+    .delivery-info {
+      color: #000;
+      margin: 4px 0 0 45px;
+      font: 400 20px Poppins, sans-serif;
+    }
+    
+    .product-container {
+      margin-top: 35px;
+      width: 100%;
+      max-width: 1101px;
+      display: flex;
+      gap: 20px;
+    }
+    
+    .product-image {
+      aspect-ratio: 0.95;
+      width: 246px;
+      border-radius: 36px;
+      margin-top: 52px;
+    }
+    
+    .product-details {
+      display: flex;
+      flex-direction: column;
+      font: 400 18px Montserrat, sans-serif;
+      color: #000;
+    }
+    
+    .product-title {
+      font-size: 25px;
+    }
+    
+    .product-description {
+      margin-top: 28px;
+      padding-left: 43px;
+    }
+    
+    .feedback-button {
+      border-radius: 62px;
+      background: #ECA72C;
+      margin-top: 15px;
+      width: 248px;
+      color: #000;
+      text-align: center;
+      padding: 12px 70px;
+      font: 400 20px Poppins, sans-serif;
+    }
+    
+    .footer {
+      background: #52B9BC;
+      margin-top: 83px;
+      width: 100%;
+      padding: 79px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .footer-content {
+      width: 100%;
+      max-width: 929px;
+    }
+    
+    .subscribe-container {
+      display: flex;
+      gap: 23px;
+      flex-wrap: wrap;
+    }
+    
+    .subscribe-text {
+      flex-grow: 1;
+      margin: auto 0;
+      font: 600 24px Montserrat, sans-serif;
+    }
+    
+    .email-input {
+      border-radius: 100px;
+      background: #D9D9D9;
+      flex-grow: 1;
+      padding: 9px 28px;
+      font: 300 20px Poppins, sans-serif;
+    }
+    
+    .footer-links {
+      display: flex;
+      width: 761px;
+      max-width: 100%;
+      gap: 43px;
+      margin: 50px 0 0 25px;
+      font: 275 24px Poppins, sans-serif;
+    }
+    
+    .footer-logo {
+      aspect-ratio: 6.02;
+      width: 410px;
+      margin-top: 34px;
+    }
+    
+    .footer-payment {
+      aspect-ratio: 3.51;
+      width: 260px;
+      margin: 47px 0 0 29px;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .nav-container {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      
+      .main-content {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      
+      .page-title {
+        max-width: 100%;
+        font-size: 40px;
+      }
+      
+      .order-card {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+      
+      .product-container {
+        flex-direction: column;
+      }
+      
+      .product-image {
+        margin-top: 40px;
+      }
+      
+      .footer {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+      
+      .footer-payment {
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <div class="orders-container">
+      <header class="header-bar">
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo">
+        <nav class="nav-container">
+          <div class="nav-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#countries">Countries</a>
+            <a href="#get-started">Get Started</a>
+          </div>
+          <div class="user-actions">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shopping Cart" class="cart-icon">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="User Profile" class="profile-icon">
+          </div>
+        </nav>
+      </header>
+    
+      <main class="main-content">
+        <h1 class="page-title">Previous Orders</h1>
+        
+        <article class="order-card">
+          <div class="order-header">
+            <div class="order-info">
+              <div class="order-dates">
+                <span class="info-label">Order Placed</span>
+                <span class="info-value">Month day, year</span>
+              </div>
+              <div class="order-total">
+                <span class="info-label">Total</span>
+                <span class="info-value">$0.00</span>
+              </div>
+            </div>
+            
+            <div class="order-details">
+              <span class="order-number">Order # 000 - 0000000 - 00000000</span>
+              <div class="action-links">
+                <a href="#details">View Order Details</a>
+                <span class="divider"></span>
+                <a href="#invoice">View Invoice</a>
+              </div>
+            </div>
+          </div>
+    
+          <hr class="divider">
+          
+          <h2 class="order-status">Delivered November 20, 2024</h2>
+          <p class="delivery-info">Hand delivered directly to leasing office</p>
+    
+          <div class="product-container">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5d984683ff16b34c28948c95e2854502dc118cd17813d4c9f28d4f129fd65db6?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="UK SnakPack Product Image" class="product-image">
+            
+            <div class="product-details">
+              <h3 class="product-title">UK SnakPack</h3>
+              <div class="product-description">
+                <h4>Description</h4>
+                <p>Treat yourself to a monthly delivery of deliciousness with our Snack Subscription Pack. Each month, you'll receive a handpicked selection of premium snacks, from classic British favorites to exciting international flavors. Whether you're craving crisps, chocolate, or something a little more unusual, we've got you covered. Our snacks are chosen for their quality, taste, and variety, so you can enjoy a fresh, exciting mix each time. With options to suit all dietary needs, including gluten-free and vegan, our subscription is the perfect way to satisfy your cravings without leaving the house. Sign up today and enjoy a new snacking adventure delivered straight to your door!</p>
+              </div>
+            </div>
+          </div>
+    
+          <button class="feedback-button">Customer Feedback</button>
+        </article>
+      </main>
+    
+      <footer class="footer">
+        <div class="footer-content">
+          <form class="subscribe-container">
+            <label for="email-input" class="subscribe-text">Subscribe for the latest updates:</label>
+            <input type="email" id="email-input" class="email-input" placeholder="Email Address" aria-label="Email Address">
+          </form>
+    
+          <nav class="footer-links">
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#how">How it Works</a>
+            <a href="#countries">Countries</a>
+            <a href="#start">Get Started</a>
+          </nav>
+    
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="footer-logo">
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Payment Methods Accepted" class="footer-payment">
+        </div>
+      </footer>
+    </div>
+    

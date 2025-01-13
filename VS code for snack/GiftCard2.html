@@ -1,0 +1,471 @@
+<style>
+    .gift-card-container {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    .header-nav {
+      background-color: #52B9BC;
+      width: 100%;
+      padding: 18px 0 19px;
+    }
+    
+    .logo {
+      aspect-ratio: 6.1;
+      object-fit: contain;
+      width: 605px;
+      align-self: center;
+      max-width: 100%;
+    }
+    
+    .nav-menu {
+      background-color: #65D7DA;
+      z-index: 10;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      margin: 5px 0 -6px;
+      padding: 0 32px 0 80px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 40px 50px;
+      color: #EFF1EE;
+      margin: auto 0;
+      font: 600 16px Montserrat, sans-serif;
+    }
+    
+    .nav-icons {
+      display: flex;
+      margin: auto 0;
+    }
+    
+    .profile-icon {
+      aspect-ratio: 0.7;
+      object-fit: contain;
+      width: 67px;
+    }
+    
+    .cart-icon {
+      aspect-ratio: 0.97;
+      object-fit: contain;
+      width: 60px;
+      margin: auto 0;
+    }
+    
+    .main-content {
+      display: flex;
+      margin-top: 52px;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      font-family: Poppins, sans-serif;
+      color: #000;
+      font-weight: 400;
+      padding: 0 80px;
+    }
+    
+    .page-title {
+      margin-left: 33px;
+      font: 600 80px Fredoka, sans-serif;
+    }
+    
+    .balance-card {
+      border-radius: 10px;
+      width: 100%;
+      display: flex;
+      margin-top: 66px;
+      flex-direction: column;
+      align-items: start;
+      padding: 27px 73px;
+      font: 24px Montserrat, sans-serif;
+      border: 1px solid #000;
+    }
+    
+    .balance-amount {
+      margin: 16px 0 0 121px;
+    }
+    
+    .history-title {
+      margin: 86px 0 0 32px;
+      font: 30px Montserrat, sans-serif;
+    }
+    
+    .history-table {
+      border-radius: 10px;
+      width: 100%;
+      display: flex;
+      margin-top: 55px;
+      flex-direction: column;
+      padding: 21px 0;
+      font: 15px Istok Web, sans-serif;
+      border: 1px solid #000;
+    }
+    
+    .table-header {
+      display: flex;
+      margin-left: 17px;
+      width: 100%;
+      max-width: 993px;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font: 20px Montserrat, sans-serif;
+    }
+    
+    .amount-columns {
+      display: flex;
+      gap: 40px 81px;
+    }
+    
+    .table-row {
+      background-color: #EFF1EE;
+      display: flex;
+      margin-top: 13px;
+      align-items: start;
+      gap: 40px 100px;
+      text-align: center;
+      letter-spacing: 0.05px;
+      line-height: 28px;
+      padding: 16px 73px 32px;
+    }
+    
+    .date-cell {
+      flex-grow: 1;
+      width: 111px;
+    }
+    
+    .description-cell {
+      align-self: stretch;
+      flex-grow: 1;
+      width: 225px;
+    }
+    
+    .amount-cell {
+      flex-grow: 1;
+      width: 118px;
+    }
+    
+    .add-card-section {
+      margin: 92px 0 0 24px;
+      font: 30px Montserrat, sans-serif;
+    }
+    
+    .card-form {
+      margin-top: 33px;
+    }
+    
+    .card-input {
+      border-radius: 50px;
+      background-color: #fff;
+      display: flex;
+      gap: 5px;
+      font-size: 16px;
+      color: #7B7B7B;
+      font-weight: 600;
+      flex-wrap: wrap;
+      margin: 33px 0 0 119px;
+      padding: 16px 11px;
+      border: 1px solid #000;
+    }
+    
+    .card-icon {
+      aspect-ratio: 2;
+      object-fit: contain;
+      width: 42px;
+      align-self: start;
+    }
+    
+    .input-group {
+      display: flex;
+      gap: 38px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.5);
+      margin: 22px 0 0 119px;
+    }
+    
+    .submit-button {
+      border-radius: 112px;
+      background-color: #ECA72C;
+      align-self: center;
+      margin-top: 99px;
+      width: 447px;
+      max-width: 100%;
+      font-size: 45px;
+      text-align: center;
+      padding: 44px 70px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .footer {
+      background-color: #52B9BC;
+      display: flex;
+      margin-top: 86px;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      color: #000;
+      justify-content: center;
+      padding: 79px 80px;
+    }
+    
+    .footer-content {
+      display: flex;
+      width: 100%;
+      max-width: 929px;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .subscribe-section {
+      align-self: stretch;
+      display: flex;
+      gap: 23px;
+      flex-wrap: wrap;
+    }
+    
+    .subscribe-text {
+      flex-grow: 1;
+      margin: auto 0;
+      font: 600 24px Montserrat, sans-serif;
+    }
+    
+    .email-input {
+      border-radius: 100px;
+      background-color: #D9D9D9;
+      flex-grow: 1;
+      width: fit-content;
+      padding: 9px 28px;
+      font: 300 20px Poppins, sans-serif;
+      border: none;
+    }
+    
+    .footer-links {
+      display: flex;
+      width: 761px;
+      max-width: 100%;
+      gap: 40px 43px;
+      margin: 50px 0 0 25px;
+      font: 275 24px Poppins, sans-serif;
+    }
+    
+    .footer-logo {
+      aspect-ratio: 6.02;
+      object-fit: contain;
+      width: 410px;
+      margin-top: 34px;
+      max-width: 100%;
+    }
+    
+    .footer-image {
+      aspect-ratio: 3.51;
+      object-fit: contain;
+      width: 260px;
+      max-width: 100%;
+      margin: 47px 0 0 29px;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .nav-menu {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      
+      .main-content {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+      
+      .page-title {
+        max-width: 100%;
+        font-size: 40px;
+      }
+      
+      .balance-card {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+      
+      .balance-amount {
+        margin-left: 10px;
+      }
+      
+      .history-title {
+        margin: 40px 0 0 10px;
+      }
+      
+      .history-table {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+      
+      .table-header {
+        max-width: 100%;
+      }
+      
+      .table-row {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      
+      .add-card-section {
+        margin: 40px 0 0 10px;
+      }
+      
+      .submit-button {
+        font-size: 40px;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+      
+      .footer {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+      
+      .footer-content {
+        max-width: 100%;
+      }
+      
+      .subscribe-section {
+        max-width: 100%;
+      }
+      
+      .footer-image {
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <div class="gift-card-container">
+      <nav class="header-nav">
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo">
+        <div class="nav-menu">
+          <div class="nav-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#countries">Countries</a>
+            <a href="#get-started">Get Started</a>
+          </div>
+          <div class="nav-icons">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Profile" class="profile-icon">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shopping Cart" class="cart-icon">
+          </div>
+        </div>
+      </nav>
+    
+      <main class="main-content">
+        <h1 class="page-title">Gift Card Balance</h1>
+        
+        <div class="balance-card">
+          <label for="current-balance">Your Gift Card Balance</label>
+          <div class="balance-amount" id="current-balance" aria-live="polite">Total: $30.00</div>
+        </div>
+    
+        <h2 class="history-title">Gift Card History</h2>
+        
+        <div class="history-table" role="table" aria-label="Gift Card Transaction History">
+          <div class="table-header" role="row">
+            <div role="columnheader">Date</div>
+            <div role="columnheader">Description</div>
+            <div class="amount-columns">
+              <div role="columnheader">Amount</div>
+              <div role="columnheader">Closing Balance</div>
+            </div>
+          </div>
+    
+          <div class="table-row" role="row">
+            <div class="date-cell" role="cell">February 15, 2000</div>
+            <div class="description-cell" role="cell">Gift Card Applied to: UK SnakPack</div>
+            <div role="cell">-$30.00</div>
+            <div class="amount-cell" role="cell">$0.00</div>
+          </div>
+    
+          <div class="table-row" role="row">
+            <div class="date-cell" role="cell">January 13, 2012</div>
+            <div class="description-cell" role="cell">Gift Card Applied to: Greece SnakPack</div>
+            <div role="cell">-$30.00</div>
+            <div class="amount-cell" role="cell">$0.00</div>
+          </div>
+    
+          <div class="table-row" role="row">
+            <div class="date-cell" role="cell">January 30, 2024</div>
+            <div class="description-cell" role="cell">Gift Card Applied to: Greece SnakPack</div>
+            <div role="cell">-$30.00</div>
+            <div class="amount-cell" role="cell">$0.00</div>
+          </div>
+    
+          <div class="table-row" role="row">
+            <div class="date-cell" role="cell">January 15, 2024</div>
+            <div class="description-cell" role="cell">Gift Card Applied to: Not Used</div>
+            <div role="cell">$30.00</div>
+            <div class="amount-cell" role="cell">$30.00</div>
+          </div>
+        </div>
+    
+        <h2 class="add-card-section">Add Gift Card</h2>
+        
+        <form class="card-form">
+          <div class="card-input">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0054688d81a7b4137c8818968f672be26545c12c24e0966f95738e991beb8424?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Card Icon" class="card-icon">
+            <label for="card-number" class="visually-hidden">Card Number</label>
+            <input type="text" id="card-number" placeholder="0123 4567 8910" pattern="[0-9\s]{13,19}" maxlength="19" required>
+          </div>
+    
+          <div class="input-group">
+            <div>
+              <label for="cvc" class="visually-hidden">CVC</label>
+              <input type="text" id="cvc" placeholder="000" pattern="[0-9]{3,4}" maxlength="4" required>
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/b286329d30d9b2bad13bb365389050b35fc3d92810625e625af97b1dc622c7d8?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="CVC Icon" aria-hidden="true">
+            </div>
+    
+            <div>
+              <label for="expiry" class="visually-hidden">Expiration Date</label>
+              <input type="text" id="expiry" placeholder="MM/YYYY" pattern="(0[1-9]|1[0-2])\/20[2-9][0-9]" required>
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/671073e16f9f2bf5891eb4562370f8761ac4a0f5fcc07e7f4266b98539ca4dc0?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Calendar Icon" aria-hidden="true">
+            </div>
+          </div>
+    
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </main>
+    
+      <footer class="footer">
+        <div class="footer-content">
+          <form class="subscribe-section">
+            <label for="email-signup" class="subscribe-text">Subscribe for the latest updates:</label>
+            <input type="email" id="email-signup" class="email-input" placeholder="Email Address" required>
+          </form>
+    
+          <nav class="footer-links">
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#how-it-works">How it Works</a>
+            <a href="#countries">Countries</a>
+            <a href="#get-started">Get Started</a>
+          </nav>
+    
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="footer-logo">
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="footer-image">
+        </div>
+      </footer>
+    </div>
+    

@@ -1,0 +1,302 @@
+<style>
+    .profile-container {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    .header-banner {
+      aspect-ratio: 6.62;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    
+    .settings-wrapper {
+      display: flex;
+      width: 749px;
+      max-width: 100%;
+      flex-direction: column;
+      margin: 27px 0 0 75px;
+    }
+    
+    .profile-header {
+      display: flex;
+      width: 658px;
+      max-width: 100%;
+      align-items: start;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .settings-icon-wrapper {
+      display: flex;
+      gap: 4px;
+    }
+    
+    .icon-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      aspect-ratio: 1;
+      width: 43px;
+    }
+    
+    .icon-overlay {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .icon-base {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    
+    .settings-label {
+      color: #000;
+      align-self: start;
+      margin-top: 10px;
+      font: 400 20px Poppins, sans-serif;
+    }
+    
+    .profile-info {
+      display: flex;
+      margin-top: 16px;
+      flex-direction: column;
+    }
+    
+    .profile-name {
+      color: #000;
+      align-self: center;
+      margin-top: 7px;
+      font: 600 20px Poppins, sans-serif;
+    }
+    
+    .menu-row {
+      align-self: end;
+      display: flex;
+      margin-top: 49px;
+      width: 411px;
+      max-width: 100%;
+      gap: 20px;
+      color: #000;
+      white-space: nowrap;
+      justify-content: space-between;
+      font: 400 20px Poppins, sans-serif;
+    }
+    
+    .menu-item {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+    }
+    
+    .menu-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 33px;
+    }
+    
+    .footer-section {
+      background-color: #52B9BC;
+      display: flex;
+      margin-top: 212px;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      color: #000;
+      justify-content: center;
+      padding: 78px 80px;
+    }
+    
+    .footer-content {
+      display: flex;
+      width: 100%;
+      max-width: 929px;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .subscribe-container {
+      align-self: stretch;
+      display: flex;
+      gap: 23px;
+      flex-wrap: wrap;
+    }
+    
+    .subscribe-text {
+      flex-grow: 1;
+      flex-basis: auto;
+      margin: auto 0;
+      font: 600 24px Montserrat, sans-serif;
+    }
+    
+    .email-input {
+      border-radius: 100px;
+      background-color: #D9D9D9;
+      flex-grow: 1;
+      width: fit-content;
+      padding: 9px 28px 25px;
+      font: 300 20px Poppins, sans-serif;
+    }
+    
+    .footer-links {
+      display: flex;
+      width: 761px;
+      max-width: 100%;
+      gap: 40px 43px;
+      margin: 50px 0 0 25px;
+      font: 275 24px Poppins, sans-serif;
+    }
+    
+    .footer-link {
+      flex-grow: 1;
+      min-width: 100px;
+    }
+    
+    .footer-logo-primary {
+      aspect-ratio: 6.02;
+      object-fit: contain;
+      object-position: center;
+      width: 410px;
+      margin-top: 34px;
+      max-width: 100%;
+    }
+    
+    .footer-logo-secondary {
+      aspect-ratio: 3.51;
+      object-fit: contain;
+      object-position: center;
+      width: 260px;
+      max-width: 100%;
+      margin: 47px 0 0 29px;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .header-banner {
+        max-width: 100%;
+      }
+      
+      .menu-row {
+        margin-top: 40px;
+        white-space: initial;
+      }
+      
+      .footer-section {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+      
+      .footer-content {
+        max-width: 100%;
+      }
+      
+      .subscribe-container {
+        max-width: 100%;
+      }
+      
+      .email-input {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      
+      .footer-links {
+        margin-top: 40px;
+      }
+      
+      .footer-logo-secondary {
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <div class="profile-container">
+      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2cf17b00013288e730b9195aac2518d046287f2b800598d5871f33fdc6c7e7c2?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="header-banner" />
+      <div class="settings-wrapper">
+        <div class="profile-header">
+          <div class="settings-icon-wrapper">
+            <div class="icon-container">
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/20e45d0af8d5b007980fd59c035a8a7f47ec389e41efe4232241cc8f6a7203f0?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="icon-overlay" />
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/20e45d0af8d5b007980fd59c035a8a7f47ec389e41efe4232241cc8f6a7203f0?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Settings icon" class="icon-base" />
+            </div>
+            <div class="settings-label">Settings</div>
+          </div>
+          <div class="profile-info">
+            <div class="icon-container">
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a6394445ad4dbfec8a217896a539e31a0b14b531a33e8b0bbee33ff58d764eca?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="icon-overlay" />
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a6394445ad4dbfec8a217896a539e31a0b14b531a33e8b0bbee33ff58d764eca?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Profile picture" class="icon-base" />
+            </div>
+            <div class="profile-name">JOHN DOE</div>
+          </div>
+        </div>
+        
+        <div class="menu-row">
+          <div class="menu-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/efd2e2b30867af16826e24fc74173863437f2338737fabc9818d709d960d3954?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Email icon" class="menu-icon" />
+            <div>Email</div>
+          </div>
+          <div class="menu-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/273d3abf8b74118f31a844ae0b3319eff42b2ee3f21f666e9afed8dc043dd055?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Subscriptions icon" class="menu-icon" />
+            <div>Subscriptions</div>
+          </div>
+        </div>
+        
+        <div class="menu-row">
+          <div class="menu-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/8f8acb6d1a75b8b847c0512a2a88a18298a7d49d4b729664e7039e127cf84b0b?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Billing icon" class="menu-icon" />
+            <div>Billing address</div>
+          </div>
+          <div class="menu-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/3e0ce1bc04cc5bceaebc0769ea5091dedb582c5313c6c39059b8c9beb23ca308?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Referrals icon" class="menu-icon" />
+            <div>Referrals</div>
+          </div>
+        </div>
+        
+        <div class="menu-item">
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ac4fac169a47cbe0abdcd00436bdb04c7cbf1d7f06f8b751eb77c6a7f78e1498?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Orders icon" class="menu-icon" />
+          <div>Orders</div>
+        </div>
+      </div>
+    
+      <footer class="footer-section">
+        <div class="footer-content">
+          <form class="subscribe-container">
+            <div class="subscribe-text">Subscribe for the latest updates:</div>
+            <label for="emailSubscribe" class="visually-hidden">Email Address</label>
+            <input type="email" id="emailSubscribe" class="email-input" placeholder="Email Address" />
+          </form>
+          
+          <nav class="footer-links">
+            <a href="#" class="footer-link">FAQ</a>
+            <a href="#" class="footer-link">Contact Us</a>
+            <a href="#" class="footer-link">How it Works</a>
+            <a href="#" class="footer-link">Countries</a>
+            <a href="#" class="footer-link">Get Started</a>
+          </nav>
+          
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Primary footer logo" class="footer-logo-primary" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Secondary footer logo" class="footer-logo-secondary" />
+        </div>
+      </footer>
+    </div>

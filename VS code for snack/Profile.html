@@ -1,0 +1,456 @@
+<style>
+    .profile-container {
+      background-color: rgba(255, 255, 255, 1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .header-banner {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      min-height: 193px;
+      width: 100%;
+    }
+    @media (max-width: 991px) {
+      .header-banner {
+        max-width: 100%;
+      }
+    }
+    .banner-image {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .banner-overlay {
+      aspect-ratio: 6.62;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    @media (max-width: 991px) {
+      .banner-overlay {
+        max-width: 100%;
+      }
+    }
+    .main-content {
+      display: flex;
+      width: 759px;
+      max-width: 100%;
+      flex-direction: column;
+      margin: 19px 0 0 68px;
+    }
+    .top-nav {
+      display: flex;
+      width: 668px;
+      max-width: 100%;
+      align-items: start;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .settings-wrapper {
+      display: flex;
+      gap: 4px;
+    }
+    .icon-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      aspect-ratio: 1;
+      width: 43px;
+    }
+    .settings-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    .settings-text {
+      color: rgba(0, 0, 0, 1);
+      align-self: start;
+      margin-top: 10px;
+      font: 400 20px Poppins, sans-serif;
+    }
+    .name-section {
+      display: flex;
+      margin-top: 17px;
+      flex-direction: column;
+    }
+    .name-icon-wrapper {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      aspect-ratio: 1;
+      width: 100%;
+    }
+    .name-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    .name-text {
+      color: rgba(0, 0, 0, 1);
+      align-self: center;
+      margin-top: 7px;
+      font: 400 20px Poppins, sans-serif;
+    }
+    .email-section {
+      align-self: end;
+      display: flex;
+      margin-top: 7px;
+      width: 413px;
+      max-width: 100%;
+      gap: 8px;
+    }
+    .email-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 33px;
+      align-self: end;
+      margin-top: 78px;
+    }
+    @media (max-width: 991px) {
+      .email-icon {
+        margin-top: 40px;
+      }
+    }
+    .email-wrapper {
+      display: flex;
+      align-items: flex-start;
+      color: rgba(0, 0, 0, 1);
+      white-space: nowrap;
+      font: 400 20px Poppins, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .email-wrapper {
+        white-space: initial;
+      }
+    }
+    .email-text {
+      align-self: end;
+      margin-top: 81px;
+      flex-grow: 1;
+    }
+    @media (max-width: 991px) {
+      .email-text {
+        margin-top: 40px;
+      }
+    }
+    .email-badge {
+      aspect-ratio: 1.19;
+      object-fit: contain;
+      object-position: center;
+      width: 104px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      align-self: start;
+      max-width: 100%;
+    }
+    .subscription-section {
+      align-self: start;
+      display: flex;
+      margin-top: 4px;
+    }
+    .subscription-icon-wrapper {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      position: relative;
+      aspect-ratio: 1.047;
+      width: 112px;
+      align-items: start;
+      padding: 74px 22px 0;
+    }
+    @media (max-width: 991px) {
+      .subscription-icon-wrapper {
+        padding: 0 20px;
+      }
+    }
+    .subscription-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 33px;
+    }
+    .subscription-text {
+      color: rgba(0, 0, 0, 1);
+      align-self: start;
+      margin-top: 74px;
+      flex-basis: auto;
+      font: 400 20px Poppins, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .subscription-text {
+        margin-top: 40px;
+      }
+    }
+    .billing-referral-section {
+      align-self: end;
+      display: flex;
+      width: 366px;
+      max-width: 100%;
+      align-items: start;
+      gap: 20px;
+      color: rgba(0, 0, 0, 1);
+      justify-content: space-between;
+      margin: 10px 47px 0 0;
+      font: 400 20px Poppins, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .billing-referral-section {
+        margin-right: 10px;
+      }
+    }
+    .billing-wrapper {
+      display: flex;
+      gap: 8px;
+    }
+    .billing-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 33px;
+      align-self: start;
+    }
+    .billing-text {
+      flex-basis: auto;
+    }
+    .referral-wrapper {
+      display: flex;
+      margin-top: 4px;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    @media (max-width: 991px) {
+      .referral-wrapper {
+        white-space: initial;
+      }
+    }
+    .referral-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 33px;
+      align-self: start;
+    }
+    .orders-section {
+      align-self: center;
+      display: flex;
+      width: 109px;
+      max-width: 100%;
+      gap: 8px;
+      color: rgba(0, 0, 0, 1);
+      white-space: nowrap;
+      margin: 13px 0 0 21px;
+      font: 400 20px Poppins, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .orders-section {
+        white-space: initial;
+      }
+    }
+    .orders-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 33px;
+    }
+    .footer {
+      background-color: rgba(82, 185, 188, 1);
+      display: flex;
+      margin-top: 182px;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      color: rgba(0, 0, 0, 1);
+      justify-content: center;
+      padding: 79px 80px;
+    }
+    @media (max-width: 991px) {
+      .footer {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+    }
+    .footer-content {
+      display: flex;
+      width: 100%;
+      max-width: 929px;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 991px) {
+      .footer-content {
+        max-width: 100%;
+      }
+    }
+    .subscribe-section {
+      align-self: stretch;
+      display: flex;
+      gap: 23px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 991px) {
+      .subscribe-section {
+        max-width: 100%;
+      }
+    }
+    .subscribe-text {
+      flex-grow: 1;
+      flex-basis: auto;
+      margin: auto 0;
+      font: 600 24px Montserrat, sans-serif;
+    }
+    .email-input {
+      border-radius: 100px;
+      background-color: rgba(217, 217, 217, 1);
+      flex-grow: 1;
+      width: fit-content;
+      padding: 9px 28px 25px;
+      font: 300 20px Poppins, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .email-input {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+    }
+    .footer-links {
+      display: flex;
+      width: 761px;
+      max-width: 100%;
+      gap: 40px 43px;
+      margin: 50px 0 0 25px;
+      font: 275 24px Poppins, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .footer-links {
+        margin-top: 40px;
+      }
+    }
+    .contact-link {
+      text-align: center;
+      flex-grow: 1;
+      width: 120px;
+    }
+    .how-it-works-link {
+      flex-grow: 1;
+      width: 134px;
+    }
+    .countries-link {
+      flex-grow: 1;
+      width: 101px;
+    }
+    .get-started-link {
+      flex-grow: 1;
+      width: 122px;
+    }
+    .footer-logo-1 {
+      aspect-ratio: 6.02;
+      object-fit: contain;
+      object-position: center;
+      width: 410px;
+      margin-top: 34px;
+      max-width: 100%;
+    }
+    .footer-logo-2 {
+      aspect-ratio: 3.51;
+      object-fit: contain;
+      object-position: center;
+      width: 260px;
+      max-width: 100%;
+      margin: 47px 0 0 29px;
+    }
+    @media (max-width: 991px) {
+      .footer-logo-2 {
+        margin-top: 40px;
+      }
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+  </style>
+  
+  <div class="profile-container">
+    <div class="header-banner">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2cf17b00013288e730b9195aac2518d046287f2b800598d5871f33fdc6c7e7c2?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="banner-image" alt="" />
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2cf17b00013288e730b9195aac2518d046287f2b800598d5871f33fdc6c7e7c2?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="banner-overlay" alt="" />
+    </div>
+    <div class="main-content">
+      <div class="top-nav">
+        <div class="settings-wrapper">
+          <div class="icon-container">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/20e45d0af8d5b007980fd59c035a8a7f47ec389e41efe4232241cc8f6a7203f0?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="banner-image" alt="" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/20e45d0af8d5b007980fd59c035a8a7f47ec389e41efe4232241cc8f6a7203f0?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="settings-icon" alt="Settings icon" />
+          </div>
+          <div class="settings-text">Settings</div>
+        </div>
+        <div class="name-section">
+          <div class="name-icon-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a6394445ad4dbfec8a217896a539e31a0b14b531a33e8b0bbee33ff58d764eca?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="banner-image" alt="" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a6394445ad4dbfec8a217896a539e31a0b14b531a33e8b0bbee33ff58d764eca?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="name-icon" alt="Profile icon" />
+          </div>
+          <div class="name-text">NAME</div>
+        </div>
+      </div>
+      <div class="email-section">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/efd2e2b30867af16826e24fc74173863437f2338737fabc9818d709d960d3954?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="email-icon" alt="Email icon" />
+        <div class="email-wrapper">
+          <div class="email-text">Email</div>
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/50c4cf0ce4629757f3035bd16eb811b952e18e6860b90ef06c52a1f6d0d4a657?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="email-badge" alt="Email verification badge" />
+        </div>
+        <div class="subscription-section">
+          <div class="subscription-icon-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e274b0c809977296a4a1cd3c62f71e8bd21c314179f2652026dc754ca2c296c?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="banner-image" alt="" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/273d3abf8b74118f31a844ae0b3319eff42b2ee3f21f666e9afed8dc043dd055?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="subscription-icon" alt="Subscription icon" />
+          </div>
+          <div class="subscription-text">Subscriptions</div>
+        </div>
+      </div>
+      <div class="billing-referral-section">
+        <div class="billing-wrapper">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/8f8acb6d1a75b8b847c0512a2a88a18298a7d49d4b729664e7039e127cf84b0b?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="billing-icon" alt="Billing icon" />
+          <div class="billing-text">Billing address</div>
+        </div>
+        <div class="referral-wrapper">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/3e0ce1bc04cc5bceaebc0769ea5091dedb582c5313c6c39059b8c9beb23ca308?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="referral-icon" alt="Referral icon" />
+          <div>Referrals</div>
+        </div>
+      </div>
+      <div class="orders-section">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0365de014c2206231aa7d276d00773bef712138d4e2e4550d0a284d56c2d737d?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="orders-icon" alt="Orders icon" />
+        <div>Orders</div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <form class="subscribe-section">
+          <label for="emailSubscribe" class="subscribe-text">Subscribe for the latest updates:</label>
+          <input type="email" id="emailSubscribe" class="email-input" placeholder="Email Address" aria-label="Email Address" />
+        </form>
+        <nav class="footer-links">
+          <a href="#faq" class="faq-link">FAQ</a>
+          <a href="#contact" class="contact-link">Contact Us</a>
+          <a href="#how-it-works" class="how-it-works-link">How it Works</a>
+          <a href="#countries" class="countries-link">Countries</a>
+          <a href="#get-started" class="get-started-link">Get Started</a>
+        </nav>
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="footer-logo-1" alt="Company logo" />
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" class="footer-logo-2" alt="Secondary logo" />
+      </div>
+    </footer>
+  </div>
+  

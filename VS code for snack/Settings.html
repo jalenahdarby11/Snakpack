@@ -1,0 +1,298 @@
+<style>
+    .settings-container {
+      background-color: rgba(255, 255, 255, 1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      align-items: center;
+    }
+    .header-logo {
+      aspect-ratio: 6.62;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      align-self: stretch;
+    }
+    @media (max-width: 991px) {
+      .header-logo {
+        max-width: 100%;
+      }
+    }
+    .page-title {
+      color: rgba(0, 0, 0, 1);
+      margin-top: 39px;
+      font: 600 80px Fredoka, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .page-title {
+        font-size: 40px;
+      }
+    }
+    .options-grid-top {
+      margin-top: 45px;
+      width: 100%;
+      max-width: 1133px;
+    }
+    @media (max-width: 991px) {
+      .options-grid-top {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    }
+    .options-row {
+      gap: 20px;
+      display: flex;
+    }
+    @media (max-width: 991px) {
+      .options-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+    }
+    .option-column {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 33%;
+      margin-left: 0;
+    }
+    @media (max-width: 991px) {
+      .option-column {
+        width: 100%;
+      }
+    }
+    .option-card {
+      background-color: rgba(251, 251, 251, 1);
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      color: rgba(0, 0, 0, 1);
+      width: 100%;
+      font: 600 18px Montserrat, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .option-card {
+        margin-top: 40px;
+      }
+    }
+    .option-content {
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      padding: 34px 62px 34px 23px;
+      border: 3px solid rgba(137, 137, 137, 1);
+    }
+    @media (max-width: 991px) {
+      .option-content {
+        padding: 0 20px;
+      }
+    }
+    .option-title {
+      align-self: start;
+    }
+    .option-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 118px;
+      align-self: center;
+      margin-top: 9px;
+      max-width: 100%;
+    }
+    .footer-section {
+      background-color: rgba(82, 185, 188, 1);
+      align-self: stretch;
+      display: flex;
+      margin-top: 115px;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      color: rgba(0, 0, 0, 1);
+      justify-content: center;
+      padding: 79px 80px;
+    }
+    @media (max-width: 991px) {
+      .footer-section {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+    }
+    .footer-content {
+      display: flex;
+      width: 100%;
+      max-width: 929px;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 991px) {
+      .footer-content {
+        max-width: 100%;
+      }
+    }
+    .subscribe-container {
+      align-self: stretch;
+      display: flex;
+      gap: 23px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 991px) {
+      .subscribe-container {
+        max-width: 100%;
+      }
+    }
+    .subscribe-text {
+      flex-grow: 1;
+      flex-basis: auto;
+      margin: auto 0;
+      font: 600 24px Montserrat, sans-serif;
+    }
+    .email-input {
+      border-radius: 100px;
+      background-color: rgba(217, 217, 217, 1);
+      flex-grow: 1;
+      width: fit-content;
+      padding: 9px 28px 25px;
+      font: 300 20px Poppins, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .email-input {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+    }
+    .footer-links {
+      display: flex;
+      width: 761px;
+      max-width: 100%;
+      gap: 40px 43px;
+      margin: 50px 0 0 25px;
+      font: 275 24px Poppins, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .footer-links {
+        margin-top: 40px;
+      }
+    }
+    .footer-link {
+      flex-grow: 1;
+      width: 120px;
+      text-align: center;
+    }
+    .footer-logo-primary {
+      aspect-ratio: 6.02;
+      object-fit: contain;
+      object-position: center;
+      width: 410px;
+      margin-top: 34px;
+      max-width: 100%;
+    }
+    .footer-logo-secondary {
+      aspect-ratio: 3.51;
+      object-fit: contain;
+      object-position: center;
+      width: 260px;
+      max-width: 100%;
+      margin: 47px 0 0 29px;
+    }
+    @media (max-width: 991px) {
+      .footer-logo-secondary {
+        margin-top: 40px;
+      }
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+  
+  <div class="settings-container">
+    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2cf17b00013288e730b9195aac2518d046287f2b800598d5871f33fdc6c7e7c2?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="header-logo" />
+    <h1 class="page-title">Settings</h1>
+    
+    <div class="options-grid-top">
+      <div class="options-row">
+        <div class="option-column">
+          <div class="option-card">
+            <div class="option-content" tabindex="0" role="button">
+              <span class="option-title">Change Address</span>
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/e64a37b06ca9614ed18c1311508ae38d192f757def8ca85109d0e952455fb2b6?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Change address icon" class="option-icon" />
+            </div>
+          </div>
+        </div>
+        <div class="option-column">
+          <div class="option-card">
+            <div class="option-content" tabindex="0" role="button">
+              <span class="option-title">Feedback</span>
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/e67b10e280fd8acd07ba5697609a1b540cb1a4fb4a8df2d16f4c09cff3a2ddc4?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Feedback icon" class="option-icon" />
+            </div>
+          </div>
+        </div>
+        <div class="option-column">
+          <div class="option-card">
+            <div class="option-content" tabindex="0" role="button">
+              <span class="option-title">Payment Information</span>
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/6d50c94c0b86ec3e72ed7289c8b14a5fd7527de68b0813f41227ad2cd311881e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Payment information icon" class="option-icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="options-grid-top">
+      <div class="options-row">
+        <div class="option-column">
+          <div class="option-card">
+            <div class="option-content" tabindex="0" role="button">
+              <span class="option-title">Gift Cards</span>
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/071dddd56793132a1d18c2805633c79b139fcdb15e67d7376c1d4c02d47aa401?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Gift cards icon" class="option-icon" />
+            </div>
+          </div>
+        </div>
+        <div class="option-column">
+          <div class="option-card">
+            <div class="option-content" tabindex="0" role="button">
+              <span class="option-title">Previous Orders</span>
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5af9bda6ba0ccf0d79c361164c8c9969146848b076901036bccc2f3769bddc47?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Previous orders icon" class="option-icon" />
+            </div>
+          </div>
+        </div>
+        <div class="option-column">
+          <div class="option-card">
+            <div class="option-content" tabindex="0" role="button">
+              <span class="option-title">Contact Us</span>
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/3c11867e3b36a6085f251be52f6fc734ff999ea338d60dc89efcbbb96c176cf2?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Contact us icon" class="option-icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <footer class="footer-section">
+      <div class="footer-content">
+        <form class="subscribe-container">
+          <label for="email-subscribe" class="subscribe-text">Subscribe for the latest updates:</label>
+          <input type="email" id="email-subscribe" class="email-input" placeholder="Email Address" aria-label="Email Address" />
+        </form>
+        
+        <nav class="footer-links">
+          <a href="#" class="footer-link">FAQ</a>
+          <a href="#" class="footer-link">Contact Us</a>
+          <a href="#" class="footer-link">How it Works</a>
+          <a href="#" class="footer-link">Countries</a>
+          <a href="#" class="footer-link">Get Started</a>
+        </nav>
+  
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Primary footer logo" class="footer-logo-primary" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Secondary footer logo" class="footer-logo-secondary" />
+      </div>
+    </footer>
+  </div>
+  

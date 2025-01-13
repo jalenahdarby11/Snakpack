@@ -1,0 +1,379 @@
+<style>
+    .section-wrapper {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .header-image {
+      aspect-ratio: 6.49;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      align-self: stretch;
+    }
+    
+    .section-title {
+      color: #000;
+      margin: 55px 0 0;
+      font: 600 50px Montserrat, sans-serif;
+    }
+    
+    .steps-container {
+      margin: 65px auto 0;
+      width: 861px;
+      max-width: 100%;
+    }
+    
+    .steps-grid {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .step-column {
+      display: flex;
+      flex-direction: column;
+      width: 33%;
+    }
+    
+    .step-content {
+      display: flex;
+      margin-top: 7px;
+      flex-grow: 1;
+      flex-direction: column;
+      align-items: center;
+      color: #000;
+    }
+    
+    .step-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 96px;
+    }
+    
+    .step-heading {
+      margin: 14px 0 0;
+      font: 600 24px Montserrat, sans-serif;
+    }
+    
+    .step-description {
+      text-align: center;
+      margin: 12px 0 0;
+      font: 400 16px Poppins, sans-serif;
+    }
+    
+    .cta-button {
+      border-radius: 30px;
+      background-color: #ECA72C;
+      margin: 50px 0 0;
+      width: 274px;
+      max-width: 100%;
+      padding: 17px 70px;
+      font: 400 22px Inter, sans-serif;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .about-section {
+      color: #000;
+      margin: 78px 0 0;
+      font: 600 50px Montserrat, sans-serif;
+    }
+    
+    .about-text {
+      color: #000;
+      text-align: center;
+      margin: 41px 0 0;
+      font: 400 24px Poppins, sans-serif;
+    }
+    
+    .mission-heading {
+      color: #000;
+      margin: 98px 0 0;
+      font: 600 50px Montserrat, sans-serif;
+    }
+    
+    .mission-text {
+      color: #000;
+      text-align: center;
+      margin: 28px 0 0;
+      font: 400 24px Poppins, sans-serif;
+    }
+    
+    .faq-section {
+      color: #000;
+      margin: 123px 0 0;
+      font: 600 50px Montserrat, sans-serif;
+    }
+    
+    .faq-item {
+      border-radius: 100px;
+      background-color: #D9D9D9;
+      display: flex;
+      margin: 10px 0;
+      width: 100%;
+      max-width: 997px;
+      gap: 20px;
+      justify-content: space-between;
+      padding: 5px 44px;
+      align-items: center;
+    }
+    
+    .faq-question {
+      font: 600 32px Montserrat, sans-serif;
+      margin: auto 0;
+    }
+    
+    .faq-icon {
+      aspect-ratio: 1.04;
+      object-fit: contain;
+      width: 80px;
+    }
+    
+    .faq-button {
+      border-radius: 30px;
+      background-color: #ECA72C;
+      margin: 31px 0 0;
+      width: 274px;
+      max-width: 100%;
+      padding: 14px 70px;
+      font: 400 30px Inter, sans-serif;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .footer {
+      background-color: #52B9BC;
+      width: 100%;
+      margin: 107px 0 0;
+      padding: 79px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .footer-content {
+      width: 100%;
+      max-width: 929px;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      gap: 23px;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .newsletter-label {
+      font: 600 24px Montserrat, sans-serif;
+      flex-grow: 1;
+    }
+    
+    .newsletter-input {
+      border-radius: 100px;
+      background-color: #D9D9D9;
+      padding: 9px 28px;
+      font: 300 20px Poppins, sans-serif;
+      border: none;
+      flex-grow: 1;
+    }
+    
+    .footer-nav {
+      display: flex;
+      width: 761px;
+      max-width: 100%;
+      gap: 43px;
+      margin: 50px 0 0 25px;
+      font: 275 24px Poppins, sans-serif;
+      justify-content: space-between;
+    }
+    
+    .footer-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .footer-logo {
+      aspect-ratio: 6.02;
+      object-fit: contain;
+      width: 410px;
+      margin: 34px 0 0;
+      max-width: 100%;
+    }
+    
+    .footer-social {
+      aspect-ratio: 3.51;
+      object-fit: contain;
+      width: 260px;
+      max-width: 100%;
+      margin: 47px 0 0 29px;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .header-image {
+        max-width: 100%;
+        margin-right: 3px;
+      }
+      
+      .section-title {
+        margin-top: 40px;
+        font-size: 40px;
+      }
+      
+      .steps-container {
+        margin-top: 40px;
+      }
+      
+      .steps-grid {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+      
+      .step-column {
+        width: 100%;
+      }
+      
+      .step-content {
+        margin-top: 40px;
+      }
+      
+      .cta-button {
+        margin-top: 40px;
+        padding: 17px 20px;
+      }
+      
+      .about-section {
+        margin-top: 40px;
+        font-size: 40px;
+      }
+      
+      .about-text {
+        margin-top: 40px;
+      }
+      
+      .mission-heading {
+        margin-top: 40px;
+        font-size: 40px;
+      }
+      
+      .faq-section {
+        margin-top: 40px;
+        font-size: 40px;
+      }
+      
+      .faq-item {
+        padding: 5px 20px;
+      }
+      
+      .footer {
+        margin-top: 40px;
+        padding: 40px 20px;
+      }
+      
+      .footer-nav {
+        margin-top: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .footer-social {
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <section class="section-wrapper">
+      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ead4d5de06a1616bae65ef7d3f484d629b42a1e8976d5c7487376fd9a467bfce?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="How It Works section header" class="header-image">
+      
+      <h1 class="section-title">How it Works</h1>
+      
+      <div class="steps-container">
+        <div class="steps-grid">
+          <div class="step-column">
+            <div class="step-content">
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/926e62645c0bb34a6b8fdb8ce51b497edcfcefe94ef12635047c8de9955f8c90?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Start subscription icon" class="step-icon">
+              <h2 class="step-heading">START</h2>
+              <p class="step-description">Start your subscription today to enjoy a new box delivered every month—pause or cancel anytime. Or, share the experience and gift a box to someone special! You can't go wrong!</p>
+            </div>
+          </div>
+          
+          <div class="step-column">
+            <div class="step-content">
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/630e7fa82465f0ff69aa871408331fd4f306df765f0c53ff2706058dbc9a83fc?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shipping process icon" class="step-icon">
+              <h2 class="step-heading">SHIP</h2>
+              <p class="step-description">Your first box will be shipped by the date provided during sign-up. After that, all future boxes will be sent out by the 15th of each month.</p>
+            </div>
+          </div>
+          
+          <div class="step-column">
+            <div class="step-content">
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ace2d2ba79aae47c186d290c76b6d55b99d34dffb99b34e5935fc1c645e83a42?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Snack enjoyment icon" class="step-icon">
+              <h2 class="step-heading">SNACK</h2>
+              <p class="step-description">Receive your box of Yums and embark on an unforgettable flavor adventure! Need a break? Cancel anytime with a simple, one-step process.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <button class="cta-button">Get Started</button>
+    
+      <h2 class="about-section">About Us</h2>
+      <p class="about-text">Welcome to <strong>Snakpack</strong>, where we turn every snack into a global adventure! At Snakpack, we believe food is a universal language that connects people to cultures, stories, and experiences around the world. Our subscription service delivers carefully curated snack boxes from different countries each month, packed with delicious treats, unique flavors, and fun cultural insights. We go beyond just snacks—our boxes include physical infographics, themed stickers, and recipes that immerse you in the traditions of each country. Whether you're a food lover exploring new flavors, a traveler longing for familiar tastes, or someone curious about the world, Snakpack is your ticket to a global journey from the comfort of home. Personalized to your taste buds and dietary needs, our user-friendly website makes discovering and enjoying international snacks seamless and exciting. Join us as we celebrate diversity, culture, and connection—one snack at a time!</p>
+    
+      <h2 class="mission-heading">Mission Statement</h2>
+      <p class="mission-text">At Snakpack, our mission is to connect people to the world through snacks, delivering curated boxes that celebrate diverse cultures, flavors, and stories. We aim to inspire curiosity and delight with every bite, offering a personalized, interactive experience that brings global culinary traditions right to your doorstep.</p>
+    
+      <h2 class="faq-section">FAQ</h2>
+      
+      <div class="faq-item">
+        <h3 class="faq-question">What's in the snack box?</h3>
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/1a2bc9c43cd4df89404bc8a2ec9beaad67a6f8319f63d077783be035ef348187?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="faq-icon">
+      </div>
+    
+      <div class="faq-item">
+        <h3 class="faq-question">What type of snacks are included?</h3>
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/1a2bc9c43cd4df89404bc8a2ec9beaad67a6f8319f63d077783be035ef348187?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="faq-icon">
+      </div>
+    
+      <div class="faq-item">
+        <h3 class="faq-question">Can I customize my box?</h3>
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/1a2bc9c43cd4df89404bc8a2ec9beaad67a6f8319f63d077783be035ef348187?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="faq-icon">
+      </div>
+    
+      <button class="faq-button">All FAQs</button>
+    
+      <footer class="footer">
+        <div class="footer-content">
+          <form class="newsletter-form">
+            <label for="email" class="newsletter-label">Subscribe for the latest updates:</label>
+            <input type="email" id="email" class="newsletter-input" placeholder="Email Address" aria-label="Email Address">
+          </form>
+    
+          <nav class="footer-nav">
+            <a href="#faq" class="footer-link">FAQ</a>
+            <a href="#contact" class="footer-link">Contact Us</a>
+            <a href="#how-it-works" class="footer-link">How it Works</a>
+            <a href="#countries" class="footer-link">Countries</a>
+            <a href="#get-started" class="footer-link">Get Started</a>
+          </nav>
+    
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Snakpack logo" class="footer-logo">
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Social media links" class="footer-social">
+        </div>
+      </footer>
+    </section>
