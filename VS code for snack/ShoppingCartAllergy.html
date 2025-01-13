@@ -1,0 +1,439 @@
+<style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    
+    .shopping-cart {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    .header-image {
+      aspect-ratio: 6.62;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    
+    .main-container {
+      background-color: rgba(217, 217, 217, 0.11);
+      box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+      align-self: center;
+      display: flex;
+      margin-top: 52px;
+      width: 1093px;
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 26px 80px 68px;
+      border: 5px solid #000;
+    }
+    
+    .content-wrapper {
+      display: flex;
+      margin-left: 12px;
+      width: 701px;
+      max-width: 100%;
+      flex-direction: column;
+    }
+    
+    .section-title {
+      color: #000;
+      align-self: center;
+      font: 700 32px Montserrat, sans-serif;
+    }
+    
+    .items-container {
+      background-color: #fff;
+      box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.25);
+      display: flex;
+      margin-top: 12px;
+      flex-direction: column;
+      align-items: center;
+      padding: 85px 70px 38px;
+      border: 3px solid #000;
+    }
+    
+    .item-grid {
+      display: flex;
+      width: 482px;
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .item-card {
+      border-radius: 10px;
+      background-color: #ECA72C;
+      align-self: stretch;
+      padding: 18px 39px;
+      display: flex;
+      gap: 20px;
+    }
+    
+    .item-image {
+      width: 73%;
+      aspect-ratio: 1.45;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+    
+    .nutrition-info {
+      width: 27%;
+      background-color: #fff;
+      padding: 1px 0;
+      font: 700 6px Crimson Text, sans-serif;
+      color: #000;
+    }
+    
+    .nutrition-card {
+      background-color: #F6F7F5;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+      padding: 4px;
+      border: 1px solid #000;
+    }
+    
+    .nutrition-icon {
+      aspect-ratio: 0.75;
+      width: 91px;
+      object-fit: contain;
+    }
+    
+    .ingredients-list {
+      background-color: rgba(217, 217, 217, 0.11);
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+      padding: 4px 18px 4px 5px;
+      border: 1px solid #000;
+    }
+    
+    .quantity-control {
+      border-radius: 10px;
+      background-color: #65D7DA;
+      display: flex;
+      width: 120px;
+      gap: 18px;
+      padding: 11px 18px;
+      font: 500 14px Montserrat, sans-serif;
+    }
+    
+    .quantity-input {
+      border-radius: 2px;
+      background-color: #fff;
+      display: flex;
+      gap: 7px;
+      font-size: 10px;
+      flex: 1;
+    }
+    
+    .quantity-buttons {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .increment-btn {
+      background-color: #A6E66E;
+      padding: 0 1px;
+    }
+    
+    .decrement-btn {
+      background-color: #D9D9D9;
+      height: 11px;
+    }
+    
+    .confirm-btn {
+      border-radius: 31px;
+      background-color: #A6E66E;
+      margin-top: 68px;
+      width: 352px;
+      max-width: 100%;
+      padding: 18px 48px;
+      font: 400 22px Montserrat, sans-serif;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .footer {
+      background-color: #52B9BC;
+      margin-top: 21px;
+      padding: 79px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .footer-content {
+      width: 100%;
+      max-width: 929px;
+    }
+    
+    .subscribe-section {
+      display: flex;
+      gap: 23px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    
+    .subscribe-text {
+      flex-grow: 1;
+      font: 600 24px Montserrat, sans-serif;
+    }
+    
+    .email-form {
+      flex-grow: 1;
+    }
+    
+    .email-input {
+      border-radius: 100px;
+      background-color: #D9D9D9;
+      padding: 9px 28px;
+      width: 100%;
+      font: 300 20px Poppins, sans-serif;
+      border: none;
+    }
+    
+    .footer-links {
+      display: flex;
+      width: 761px;
+      max-width: 100%;
+      gap: 40px 43px;
+      margin: 50px 0 0 25px;
+      font: 275 24px Poppins, sans-serif;
+    }
+    
+    .footer-link {
+      flex-grow: 1;
+      text-decoration: none;
+      color: #000;
+    }
+    
+    .footer-logo {
+      aspect-ratio: 6.02;
+      width: 410px;
+      margin-top: 34px;
+    }
+    
+    .footer-image {
+      aspect-ratio: 3.51;
+      width: 260px;
+      margin: 47px 0 0 29px;
+    }
+    
+    @media (max-width: 991px) {
+      .main-container {
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+      
+      .items-container {
+        padding: 0 20px;
+      }
+      
+      .item-card {
+        flex-direction: column;
+        padding: 0 20px;
+      }
+      
+      .item-image {
+        width: 100%;
+        margin-top: 40px;
+      }
+      
+      .nutrition-info {
+        width: 100%;
+        margin-top: 40px;
+      }
+      
+      .confirm-btn {
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+      
+      .footer {
+        padding: 0 20px;
+      }
+      
+      .email-input {
+        padding: 0 20px;
+      }
+      
+      .footer-links {
+        margin-top: 40px;
+      }
+      
+      .footer-image {
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <div class="shopping-cart">
+      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2cf17b00013288e730b9195aac2518d046287f2b800598d5871f33fdc6c7e7c2?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="header-image" />
+      
+      <main class="main-container">
+        <div class="content-wrapper">
+          <h1 class="section-title">Choose What Suites You</h1>
+          
+          <div class="items-container">
+            <div class="item-grid">
+              <div class="item-card">
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/552804b966a7e2b8101c635eeb47e6645a7917fa90517a99e3cfe021282ce585?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Sweet snack item" class="item-image" />
+                <div class="nutrition-info">
+                  <div class="nutrition-card">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/34e43c948a5fad13ff77ad2b46788b2a34a70ddf8f31625dea74e60cdc69b3a0?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Nutrition facts" class="nutrition-icon" />
+                    <div class="ingredients-list">
+                      <div>Ingredients:</div>
+                      <div>Contains:</div>
+                      <div>May Contain:</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="quantity-control">
+                <div class="quantity-input">
+                  <div class="quantity-buttons">
+                    <button class="increment-btn" aria-label="Increase quantity">+</button>
+                    <button class="decrement-btn" aria-label="Decrease quantity"></button>
+                  </div>
+                  <span aria-label="Current quantity">1</span>
+                </div>
+                <span>Sweet</span>
+              </div>
+    
+              <div class="item-card">
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/e8a201433ef51d64ee9de09686cf001e55b55bc41111b477099250dc27061107?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Salty snack item" class="item-image" />
+                <div class="nutrition-info">
+                  <div class="nutrition-card">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/19306993ce17bf45ec4387bc4d9f74af8e1dad469149d9f4fccb9141dd8c80d8?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Nutrition facts" class="nutrition-icon" />
+                    <div class="ingredients-list">
+                      <div>Ingredients:</div>
+                      <div>Contains:</div>
+                      <div>May Contain:</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="quantity-control">
+                <div class="quantity-input">
+                  <div class="quantity-buttons">
+                    <button class="increment-btn" aria-label="Increase quantity">+</button>
+                    <button class="decrement-btn" aria-label="Decrease quantity"></button>
+                  </div>
+                  <span aria-label="Current quantity">1</span>
+                </div>
+                <span>Salty</span>
+              </div>
+    
+              <div class="item-card">
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a0300c69bd7826995462dde6c173e0c3bf7137f2af7c3aa8e7fc79ae8f8dc1d4?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Spicy snack item" class="item-image" />
+                <div class="nutrition-info">
+                  <div class="nutrition-card">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/59c1bf95674f01ced5291d94a338ed0340d3b064ebad6e73fc528669fdea0fb6?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Nutrition facts" class="nutrition-icon" />
+                    <div class="ingredients-list">
+                      <div>Ingredients:</div>
+                      <div>Contains:</div>
+                      <div>May Contain:</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="quantity-control">
+                <div class="quantity-input">
+                  <div class="quantity-buttons">
+                    <button class="increment-btn" aria-label="Increase quantity">+</button>
+                    <button class="decrement-btn" aria-label="Decrease quantity"></button>
+                  </div>
+                  <span aria-label="Current quantity">1</span>
+                </div>
+                <span>Spicy</span>
+              </div>
+    
+              <div class="item-card">
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d58bfd21a02ec254f4aa82c72ef203907db23c6864c09cf2fd424e8b2f21aa2c?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Fruity snack item" class="item-image" />
+                <div class="nutrition-info">
+                  <div class="nutrition-card">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/8dc225cbcd499f6acec566687a96389c6a1f3a1d58a10949b6968ab457d18936?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Nutrition facts" class="nutrition-icon" />
+                    <div class="ingredients-list">
+                      <div>Ingredients:</div>
+                      <div>Contains:</div>
+                      <div>May Contain:</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="quantity-control">
+                <div class="quantity-input">
+                  <div class="quantity-buttons">
+                    <button class="increment-btn" aria-label="Increase quantity">+</button>
+                    <button class="decrement-btn" aria-label="Decrease quantity"></button>
+                  </div>
+                  <span aria-label="Current quantity">1</span>
+                </div>
+                <span>Fruity</span>
+              </div>
+    
+              <div class="item-card">
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/e70513783bb218b65f6cb7a6b2f88ef562c0d0e248a15028aa2afa4989618789?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Tart snack item" class="item-image" />
+                <div class="nutrition-info">
+                  <div class="nutrition-card">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ce1b0851c3fc00f91d208b04e57ba0a7683bf6fb262658d71ee7dd77e66a2ed3?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Nutrition facts" class="nutrition-icon" />
+                    <div class="ingredients-list">
+                      <div>Ingredients:</div>
+                      <div>Contains:</div>
+                      <div>May Contain:</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="quantity-control">
+                <div class="quantity-input">
+                  <div class="quantity-buttons">
+                    <button class="increment-btn" aria-label="Increase quantity">+</button>
+                    <button class="decrement-btn" aria-label="Decrease quantity"></button>
+                  </div>
+                  <span aria-label="Current quantity">1</span>
+                </div>
+                <span>Tart</span>
+              </div>
+    
+              <button class="confirm-btn">Confirm and Pay</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    
+      <footer class="footer">
+        <div class="footer-content">
+          <form class="subscribe-section">
+            <label for="email-input" class="subscribe-text">Subscribe for the latest updates:</label>
+            <div class="email-form">
+              <input type="email" id="email-input" class="email-input" placeholder="Email Address" aria-label="Email Address" />
+            </div>
+          </form>
+    
+          <nav class="footer-links">
+            <a href="#faq" class="footer-link">FAQ</a>
+            <a href="#contact" class="footer-link">Contact Us</a>
+            <a href="#how-it-works" class="footer-link">How it Works</a>
+            <a href="#countries" class="footer-link">Countries</a>
+            <a href="#get-started" class="footer-link">Get Started</a>
+          </nav>
+    
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9634f3683c67f50a08b69937a5fcd5d1e4e1bd958c6122dd9132b7c5642d2fcd?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="footer-logo" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="footer-image" />
+        </div>
+      </footer>
+    </div>
