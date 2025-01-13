@@ -1,0 +1,128 @@
+<style>
+    .order-confirmation {
+      background-color: #fff;
+      display: flex;
+      padding-bottom: 37px;
+      flex-direction: column;
+      overflow: hidden;
+      font-family: Montserrat, sans-serif;
+      color: #000;
+      font-weight: 400;
+      text-align: center;
+    }
+    
+    .header-banner {
+      aspect-ratio: 6.62;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    
+    .confirmation-container {
+      background-color: rgba(217, 217, 217, 0.11);
+      box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+      align-self: center;
+      display: flex;
+      margin-top: 15px;
+      width: 753px;
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 33px 80px 73px;
+      border: 5px solid #000;
+    }
+    
+    .content-wrapper {
+      display: flex;
+      width: 415px;
+      max-width: 100%;
+      flex-direction: column;
+    }
+    
+    .confirmation-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 58px;
+      align-self: center;
+    }
+    
+    .confirmation-title {
+      font-size: 48px;
+    }
+    
+    .confirmation-message {
+      font-size: 24px;
+      margin-top: 87px;
+    }
+    
+    .home-button {
+      border-radius: 50px;
+      background-color: #ECA72C;
+      width: 369px;
+      max-width: 100%;
+      font-size: 32px;
+      margin: 146px 23px 0;
+      padding: 30px 42px 50px;
+      cursor: pointer;
+      border: none;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .header-banner {
+        max-width: 100%;
+      }
+      
+      .confirmation-container {
+        padding: 0 20px;
+      }
+      
+      .confirmation-title {
+        font-size: 40px;
+      }
+      
+      .confirmation-message {
+        margin: 40px 4px 0;
+      }
+      
+      .home-button {
+        margin: 40px 10px 0;
+        padding: 0 20px;
+      }
+    }
+    </style>
+    
+    <div class="order-confirmation">
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2cf17b00013288e730b9195aac2518d046287f2b800598d5871f33fdc6c7e7c2?apiKey=3a8ac60b581045f7adb5757904dc023c&"
+        class="header-banner"
+        alt=""
+      />
+      <div class="confirmation-container">
+        <div class="content-wrapper">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/967f72f294f6d127529d47a90349d52e490ab79cbc802dc5aa1e724d81ae2258?apiKey=3a8ac60b581045f7adb5757904dc023c&"
+            class="confirmation-icon"
+            alt="Order confirmation checkmark"
+          />
+          <h1 class="confirmation-title">Order Confirmed!</h1>
+          <p class="confirmation-message">
+            Check your email for confirmation and shipping updates!
+          </p>
+          <button class="home-button" tabindex="0">Return Home</button>
+        </div>
+      </div>
+    </div>
