@@ -1,309 +1,82 @@
-<style>
-    .address-form {
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    
-    .header-nav {
-      background: #52B9BC;
-      width: 100%;
-      padding: 0 0 19px;
-    }
-    
-    .nav-container {
-      background: #52B9BC;
-      width: 100%;
-      padding: 18px 0 0;
-    }
-    
-    .logo {
-      aspect-ratio: 6.1;
-      object-fit: contain;
-      width: 605px;
-      align-self: center;
-      max-width: 100%;
-    }
-    
-    .nav-menu {
-      background: #65D7DA;
-      z-index: 10;
-      display: flex;
-      width: 100%;
-      align-items: center;
-      gap: 20px;
-      justify-content: space-between;
-      margin: 5px 0 -6px;
-      padding: 0 32px 0 80px;
-    }
-    
-    .nav-links {
-      display: flex;
-      gap: 40px 50px;
-      color: #EFF1EE;
-      margin: auto 0;
-      font: 600 16px Montserrat, sans-serif;
-    }
-    
-    .nav-icons {
-      display: flex;
-      margin: auto 0;
-    }
-    
-    .profile-icon {
-      aspect-ratio: 0.7;
-      object-fit: contain;
-      width: 67px;
-    }
-    
-    .cart-icon {
-      aspect-ratio: 0.97;
-      object-fit: contain;
-      width: 60px;
-      margin: auto 0;
-    }
-    
-    .form-container {
-      align-self: center;
-      display: flex;
-      margin-top: 59px;
-      width: 100%;
-      max-width: 1009px;
-      flex-direction: column;
-      align-items: end;
-      color: #7B7B7B;
-      font: 600 25px Poppins, sans-serif;
-    }
-    
-    .page-title {
-      color: #000;
-      align-self: start;
-      font: 80px Fredoka, sans-serif;
-    }
-    
-    .section-title {
-      color: #000;
-      align-self: start;
-      margin-top: 87px;
-      font: 32px Montserrat, sans-serif;
-    }
-    
-    .form-input {
-      border-radius: 79px;
-      background: #fff;
-      margin-top: 20px;
-      width: 959px;
-      max-width: 100%;
-      padding: 26px 70px;
-      border: 2px solid #000;
-    }
-    
-    .submit-button {
-      border-radius: 112px;
-      background: #ECA72C;
-      align-self: center;
-      margin-top: 159px;
-      width: 447px;
-      max-width: 100%;
-      font: 400 45px Poppins, sans-serif;
-      color: #000;
-      text-align: center;
-      padding: 44px 70px;
-    }
-    
-    .footer {
-      background: #52B9BC;
-      display: flex;
-      margin-top: 158px;
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      color: #000;
-      justify-content: center;
-      padding: 79px 80px;
-    }
-    
-    .footer-content {
-      display: flex;
-      width: 100%;
-      max-width: 929px;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .subscribe-section {
-      align-self: stretch;
-      display: flex;
-      gap: 23px;
-      flex-wrap: wrap;
-    }
-    
-    .subscribe-text {
-      flex-grow: 1;
-      margin: auto 0;
-      font: 600 24px Montserrat, sans-serif;
-    }
-    
-    .email-input {
-      border-radius: 100px;
-      background: #D9D9D9;
-      flex-grow: 1;
-      width: fit-content;
-      padding: 9px 28px 25px;
-      font: 300 20px Poppins, sans-serif;
-    }
-    
-    .footer-links {
-      display: flex;
-      width: 761px;
-      max-width: 100%;
-      gap: 40px 43px;
-      margin: 50px 0 0 25px;
-      font: 275 24px Poppins, sans-serif;
-    }
-    
-    .footer-link {
-      flex-grow: 1;
-      width: auto;
-    }
-    
-    .footer-logo-primary {
-      aspect-ratio: 6.02;
-      object-fit: contain;
-      width: 410px;
-      margin-top: 34px;
-      max-width: 100%;
-    }
-    
-    .footer-logo-secondary {
-      aspect-ratio: 3.51;
-      object-fit: contain;
-      width: 260px;
-      max-width: 100%;
-      margin: 47px 0 0 29px;
-    }
-    
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
-    }
-    
-    @media (max-width: 991px) {
-      .header-nav,
-      .nav-container,
-      .nav-menu,
-      .form-container,
-      .footer,
-      .footer-content {
-        max-width: 100%;
-      }
-      
-      .nav-menu {
-        padding: 0 20px;
-      }
-      
-      .page-title {
-        font-size: 40px;
-      }
-      
-      .section-title,
-      .form-input,
-      .submit-button {
-        margin-top: 40px;
-        padding: 0 20px;
-      }
-      
-      .submit-button {
-        font-size: 40px;
-        white-space: normal;
-      }
-      
-      .footer {
-        margin-top: 40px;
-        padding: 0 20px;
-      }
-      
-      .footer-logo-secondary {
-        margin-top: 40px;
-      }
-    }
-    </style>
-    
-    <form class="address-form">
-      <nav class="header-nav">
-        <div class="nav-container">
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo" />
-          <div class="nav-menu">
-            <div class="nav-links">
-              <a href="#" class="nav-link">How It Works</a>
-              <a href="#" class="nav-link">Countries</a>
-              <a href="#" class="nav-link">Get Started</a>
-            </div>
-            <div class="nav-icons">
-              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Profile" class="profile-icon" />
-              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shopping Cart" class="cart-icon" />
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Address</title>
+  <link rel="stylesheet" href="ChangeAddress.css">
+</head>
+<body>
+  <form class="address-form">
+    <nav class="header-nav">
+      <div class="nav-container">
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo" />
+        <div class="nav-menu">
+          <div class="nav-links">
+            <a href="#" class="nav-link">How It Works</a>
+            <a href="#" class="nav-link">Countries</a>
+            <a href="#" class="nav-link">Get Started</a>
+          </div>
+          <div class="nav-icons">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Profile" class="profile-icon" />
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shopping Cart" class="cart-icon" />
           </div>
         </div>
-      </nav>
-    
-      <div class="form-container">
-        <h1 class="page-title">Change Address</h1>
-        
-        <h2 class="section-title">Your Info</h2>
-        <label for="firstName" class="visually-hidden">First Name</label>
-        <input type="text" id="firstName" class="form-input" required />
-        
-        <label for="lastName" class="visually-hidden">Last Name</label>
-        <input type="text" id="lastName" class="form-input" required />
-        
-        <h2 class="section-title">Shipping Address</h2>
-        <label for="street" class="visually-hidden">Street Address</label>
-        <input type="text" id="street" class="form-input" required />
-        
-        <label for="apt" class="visually-hidden">Apartment/Suite</label>
-        <input type="text" id="apt" class="form-input" />
-        
-        <label for="city" class="visually-hidden">City</label>
-        <input type="text" id="city" class="form-input" required />
-        
-        <label for="state" class="visually-hidden">State</label>
-        <input type="text" id="state" class="form-input" required />
-        
-        <label for="postal" class="visually-hidden">Postal Code</label>
-        <input type="text" id="postal" class="form-input" required />
-        
-        <h2 class="section-title">Contact</h2>
-        <label for="mobile" class="visually-hidden">Mobile Number</label>
-        <input type="tel" id="mobile" class="form-input" />
-        
-        <button type="submit" class="submit-button">Submit</button>
       </div>
-    
-      <footer class="footer">
-        <div class="footer-content">
-          <form class="subscribe-section">
-            <label for="email" class="subscribe-text">Subscribe for the latest updates:</label>
-            <input type="email" id="email" class="email-input" required />
-          </form>
-          
-          <nav class="footer-links">
-            <a href="#" class="footer-link">FAQ</a>
-            <a href="#" class="footer-link">Contact Us</a>
-            <a href="#" class="footer-link">How it Works</a>
-            <a href="#" class="footer-link">Countries</a>
-            <a href="#" class="footer-link">Get Started</a>
-          </nav>
-          
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9634f3683c67f50a08b69937a5fcd5d1e4e1bd958c6122dd9132b7c5642d2fcd?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Primary Footer Logo" class="footer-logo-primary" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Secondary Footer Logo" class="footer-logo-secondary" />
-        </div>
-      </footer>
-    </form>
+    </nav>
+
+    <div class="form-container">
+      <h1 class="page-title">Change Address</h1>
+
+      <h2 class="section-title">Your Info</h2>
+      <label for="firstName" class="visually-hidden">First Name</label>
+      <input type="text" id="firstName" class="form-input" required />
+
+      <label for="lastName" class="visually-hidden">Last Name</label>
+      <input type="text" id="lastName" class="form-input" required />
+
+      <h2 class="section-title">Shipping Address</h2>
+      <label for="street" class="visually-hidden">Street Address</label>
+      <input type="text" id="street" class="form-input" required />
+
+      <label for="apt" class="visually-hidden">Apartment/Suite</label>
+      <input type="text" id="apt" class="form-input" />
+
+      <label for="city" class="visually-hidden">City</label>
+      <input type="text" id="city" class="form-input" required />
+
+      <label for="state" class="visually-hidden">State</label>
+      <input type="text" id="state" class="form-input" required />
+
+      <label for="postal" class="visually-hidden">Postal Code</label>
+      <input type="text" id="postal" class="form-input" required />
+
+      <h2 class="section-title">Contact</h2>
+      <label for="mobile" class="visually-hidden">Mobile Number</label>
+      <input type="tel" id="mobile" class="form-input" />
+
+      <button type="submit" class="submit-button">Submit</button>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <form class="subscribe-section">
+          <label for="email" class="subscribe-text">Subscribe for the latest updates:</label>
+          <input type="email" id="email" class="email-input" required />
+        </form>
+
+        <nav class="footer-links">
+          <a href="#" class="footer-link">FAQ</a>
+          <a href="#" class="footer-link">Contact Us</a>
+          <a href="#" class="footer-link">How it Works</a>
+          <a href="#" class="footer-link">Countries</a>
+          <a href="#" class="footer-link">Get Started</a>
+        </nav>
+
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9634f3683c67f50a08b69937a5fcd5d1e4e1bd958c6122dd9132b7c5642d2fcd?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Primary Footer Logo" class="footer-logo-primary" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Secondary Footer Logo" class="footer-logo-secondary" />
+      </div>
+    </footer>
+  </form>
+</body>
+</html>
