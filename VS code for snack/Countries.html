@@ -1,469 +1,69 @@
-<style>
-    .countries-container {
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      align-items: center;
-    }
-    
-    .header-section {
-      background-color: #52B9BC;
-      align-self: stretch;
-      display: flex;
-      width: 100%;
-      padding: 18px 0 0;
-      flex-direction: column;
-    }
-    
-    .logo {
-      aspect-ratio: 6.1;
-      object-fit: contain;
-      width: 605px;
-      align-self: center;
-      max-width: 100%;
-    }
-    
-    .nav-container {
-      background-color: #65D7DA;
-      z-index: 10;
-      display: flex;
-      width: 100%;
-      align-items: flex-start;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 5px 0 -6px;
-      padding: 0 32px 0 80px;
-    }
-    
-    .nav-links {
-      align-self: end;
-      display: flex;
-      margin-top: 25px;
-      gap: 40px 50px;
-      color: #EFF1EE;
-      font: 600 16px Montserrat, sans-serif;
-    }
-    
-    .nav-dropdown {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .dropdown-icon {
-      aspect-ratio: 15.87;
-      object-fit: contain;
-      width: 80px;
-      margin-top: 4px;
-    }
-    
-    .nav-icons {
-      display: flex;
-      margin: auto 0;
-    }
-    
-    .social-icon {
-      aspect-ratio: 0.7;
-      object-fit: contain;
-      width: 67px;
-    }
-    
-    .cart-icon {
-      aspect-ratio: 0.97;
-      object-fit: contain;
-      width: 60px;
-      margin: auto 0;
-    }
-    
-    .featured-section {
-      width: 100%;
-      max-width: 1105px;
-      margin: 45px 0 0 26px;
-    }
-    
-    .featured-content {
-      gap: 20px;
-      display: flex;
-    }
-    
-    .featured-text {
-      display: flex;
-      flex-direction: column;
-      line-height: normal;
-      width: 35%;
-    }
-    
-    .featured-description {
-      display: flex;
-      flex-direction: column;
-      align-self: stretch;
-      font-family: Montserrat, sans-serif;
-      color: #000;
-      text-align: center;
-      margin: auto 0;
-    }
-    
-    .featured-title {
-      font-size: 60px;
-      font-weight: 700;
-      align-self: center;
-    }
-    
-    .featured-paragraph {
-      margin-top: 37px;
-      font: 400 20px Poppins, sans-serif;
-    }
-    
-    .cta-button {
-      border-radius: 36px;
-      background-color: #ECA72C;
-      align-self: end;
-      margin-top: 28px;
-      font-size: 32px;
-      font-weight: 600;
-      padding: 17px 64px;
-    }
-    
-    .featured-image {
-      display: flex;
-      flex-direction: column;
-      line-height: normal;
-      width: 65%;
-      margin-left: 20px;
-    }
-    
-    .box-preview {
-      border-radius: 30px;
-      background-color: #52B9BC;
-      display: flex;
-      flex-grow: 1;
-      flex-direction: column;
-      color: #000;
-      text-align: center;
-      width: 100%;
-      padding: 29px 68px 57px;
-      font: 600 40px Montserrat, sans-serif;
-    }
-    
-    .box-image {
-      aspect-ratio: 1.03;
-      object-fit: contain;
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 40px;
-    }
-    
-    .section-title {
-      color: #000;
-      text-align: center;
-      margin-top: 80px;
-      font: 600 48px Montserrat, sans-serif;
-    }
-    
-    .map-image {
-      aspect-ratio: 2.17;
-      object-fit: contain;
-      width: 100%;
-      align-self: stretch;
-      margin-top: 39px;
-    }
-    
-    .boxes-grid {
-      margin-top: 75px;
-      width: 100%;
-      max-width: 1127px;
-    }
-    
-    .boxes-container {
-      gap: 20px;
-      display: flex;
-    }
-    
-    .box-card {
-      display: flex;
-      flex-direction: column;
-      line-height: normal;
-      width: 33%;
-    }
-    
-    .box-content {
-      border-radius: 10px;
-      background-color: #ECA72C;
-      display: flex;
-      flex-grow: 1;
-      flex-direction: column;
-      align-items: center;
-      font-family: Montserrat, sans-serif;
-      color: #000;
-      text-align: center;
-      width: 100%;
-      padding: 13px 21px 23px;
-    }
-    
-    .box-title {
-      font-size: 32px;
-      font-weight: 500;
-    }
-    
-    .box-preview-image {
-      aspect-ratio: 0.98;
-      object-fit: contain;
-      width: 100%;
-      border-radius: 10px;
-      align-self: stretch;
-      margin-top: 22px;
-    }
-    
-    .box-description {
-      margin-top: 15px;
-      font: 400 16px Poppins, sans-serif;
-    }
-    
-    .box-button {
-      border-radius: 16px;
-      background-color: #52B9BC;
-      margin-top: 27px;
-      width: 136px;
-      max-width: 100%;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 8px 27px;
-    }
-    
-    .footer {
-      background-color: #52B9BC;
-      align-self: stretch;
-      display: flex;
-      margin-top: 41px;
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      color: #000;
-      justify-content: center;
-      padding: 79px 80px;
-    }
-    
-    .footer-content {
-      display: flex;
-      width: 100%;
-      max-width: 929px;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .subscribe-section {
-      align-self: stretch;
-      display: flex;
-      gap: 23px;
-      flex-wrap: wrap;
-    }
-    
-    .subscribe-text {
-      flex-grow: 1;
-      flex-basis: auto;
-      margin: auto 0;
-      font: 600 24px Montserrat, sans-serif;
-    }
-    
-    .email-input {
-      border-radius: 100px;
-      background-color: #D9D9D9;
-      flex-grow: 1;
-      width: fit-content;
-      padding: 9px 28px;
-      font: 300 20px Poppins, sans-serif;
-    }
-    
-    .footer-links {
-      display: flex;
-      width: 761px;
-      max-width: 100%;
-      gap: 40px 43px;
-      margin: 50px 0 0 25px;
-      font: 275 24px Poppins, sans-serif;
-    }
-    
-    .footer-logo {
-      aspect-ratio: 6.02;
-      object-fit: contain;
-      width: 410px;
-      margin-top: 34px;
-      max-width: 100%;
-    }
-    
-    .footer-image {
-      aspect-ratio: 3.51;
-      object-fit: contain;
-      width: 260px;
-      max-width: 100%;
-      margin: 47px 0 0 29px;
-    }
-    
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
-    }
-    
-    @media (max-width: 991px) {
-      .header-section,
-      .nav-container,
-      .featured-section,
-      .box-preview,
-      .boxes-grid,
-      .footer {
-        max-width: 100%;
-      }
-    
-      .nav-container {
-        padding: 0 20px;
-      }
-    
-      .nav-dropdown {
-        white-space: initial;
-      }
-    
-      .featured-content,
-      .boxes-container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-      }
-    
-      .featured-text,
-      .featured-image,
-      .box-card {
-        width: 100%;
-        margin-left: 0;
-      }
-    
-      .featured-description,
-      .box-preview,
-      .box-content {
-        margin-top: 40px;
-        padding: 0 20px;
-      }
-    
-      .featured-title {
-        font-size: 40px;
-      }
-    
-      .cta-button,
-      .box-button {
-        padding: 0 20px;
-      }
-    
-      .section-title {
-        margin-top: 40px;
-        font-size: 40px;
-      }
-    
-      .footer {
-        margin-top: 40px;
-        padding: 0 20px;
-      }
-    
-      .footer-links {
-        margin-top: 40px;
-      }
-    
-      .footer-image {
-        margin-top: 40px;
-      }
-    }
-    </style>
-    
-    <div class="countries-container">
-      <header class="header-section">
-        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo" />
-        <nav class="nav-container">
-          <div class="nav-links">
-            <a href="#how-it-works">How It Works</a>
-            <div class="nav-dropdown">
-              <span>Countries</span>
-              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/52d9f67f1d913a50a68a64c2a5f769519e534687cb87be7165468add0375b852?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="dropdown-icon" />
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Countries</title>
+      <link rel="stylesheet" href="countries.css">
+    </head>
+    <body>
+      <div class="countries-container">
+        <header class="header-section">
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo">
+          <nav class="nav-container">
+            <div class="nav-links">
+              <a href="#how-it-works">How It Works</a>
+              <div class="nav-dropdown">
+                <span>Countries</span>
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/52d9f67f1d913a50a68a64c2a5f769519e534687cb87be7165468add0375b852?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="dropdown-icon">
+              </div>
+              <a href="#get-started">Get Started</a>
             </div>
-            <a href="#get-started">Get Started</a>
-          </div>
-          <div class="nav-icons">
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Social Media Icon" class="social-icon" />
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shopping Cart" class="cart-icon" />
-          </div>
-        </nav>
-      </header>
-    
-      <section class="featured-section">
-        <div class="featured-content">
-          <div class="featured-text">
-            <div class="featured-description">
-              <h1 class="featured-title">Costa Rica</h1>
-              <p class="featured-paragraph">Costa Rican snacks reflect the country's vibrant culture, tropical climate, and love for fresh, flavorful ingredients. This box is perfect for those who enjoy fresh, bold flavors and a mix of savory and sweet options, making them a great representation of the country's rich culinary heritage.</p>
-              <button class="cta-button">Get Started</button>
+            <div class="nav-icons">
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Social Media Icon" class="social-icon">
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shopping Cart" class="cart-icon">
             </div>
-          </div>
-          <div class="featured-image">
-            <div class="box-preview">
-              <h2>Box of the Month</h2>
-              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/98dcdb1a283cad2b8ec27a78438040b8a780639522dcda07cb98b0859521b654?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Costa Rica Box of the Month Preview" class="box-image" />
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <h2 class="section-title">Explore Countries</h2>
-      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ca8b50844eabc3ca369fb0099d555a8c42a26603912321da68c263d1b5d97e3b?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="World Map with Available Countries" class="map-image" />
-    
-      <h2 class="section-title">Previous Boxes</h2>
-      <section class="boxes-grid">
-        <div class="boxes-container">
-          <div class="box-card">
-            <div class="box-content">
-              <h3 class="box-title">Brazil</h3>
-              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/498e0c9ddc541803d4791007ba70695065512936594f4fed447390350476ee6a?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Brazil Snack Box Preview" class="box-preview-image" />
-              <p class="box-description">Experience the vibrant flavors of Brazil with our handpicked snack selection that embodies the country's lively culinary heritage. From bold, savory bites inspired by street food to sweet treats infused with rich tropical ingredients, each snack offers a taste of Brazil's dynamic culture and festive spirit.</p>
-              <button class="box-button">Get Started</button>
-            </div>
-          </div>
-          <div class="box-card">
-            <div class="box-content">
-              <h3 class="box-title">India</h3>
-              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f645f27fd655f392366a54eb6cf63d83f75d202f4b94d38ba2bd6dd81340b21d?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="India Snack Box Preview" class="box-preview-image" />
-              <p class="box-description">The country known for inventing chess, sizable spice markets, and breathtaking natural wonders such as sparkling salt deserts. Across this unique nation, you'll also find towering monuments, colorful wildlife, and a feast of delicious culinary creations!</p>
-              <button class="box-button">Get Started</button>
-            </div>
-          </div>
-          <div class="box-card">
-            <div class="box-content">
-              <h3 class="box-title">France</h3>
-              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/e6a9ab587d41c74b74f415f108787e21cb046431bfecfb4606d3d3e4348dee46?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="France Snack Box Preview" class="box-preview-image" />
-              <p class="box-description">Located in Western Europe, is a nation of remarkable natural landscapes, profound history, and a lively cultural scene. Within its borders, one can discover breathtaking scenery, iconic cathedrals, and partake in some of the most exquisite cuisine worldwide.</p>
-              <button class="box-button">Get Started</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <footer class="footer">
-        <div class="footer-content">
-          <form class="subscribe-section">
-            <label for="email-input" class="subscribe-text">Subscribe for the latest updates:</label>
-            <input type="email" id="email-input" class="email-input" placeholder="Email Address" aria-label="Email Address" />
-          </form>
-          <nav class="footer-links">
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact Us</a>
-            <a href="#how-it-works">How it Works</a>
-            <a href="#countries">Countries</a>
-            <a href="#get-started">Get Started</a>
           </nav>
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9634f3683c67f50a08b69937a5fcd5d1e4e1bd958c6122dd9132b7c5642d2fcd?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo" class="footer-logo" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="footer-image" />
-        </div>
-      </footer>
-    </div>
+        </header>
+        <section class="featured-section">
+          <div class="featured-content">
+            <div class="featured-text">
+              <div class="featured-description">
+                <h1 class="featured-title">Costa Rica</h1>
+                <p class="featured-paragraph">Costa Rican snacks reflect the country's vibrant culture...</p>
+                <button class="cta-button">Get Started</button>
+              </div>
+            </div>
+            <div class="featured-image">
+              <div class="box-preview">
+                <h2>Box of the Month</h2>
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/98dcdb1a283cad2b8ec27a78438040b8a780639522dcda07cb98b0859521b654?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Costa Rica Box of the Month Preview" class="box-image">
+              </div>
+            </div>
+          </div>
+        </section>
+        <h2 class="section-title">Explore Countries</h2>
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ca8b50844eabc3ca369fb0099d555a8c42a26603912321da68c263d1b5d97e3b?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="World Map with Available Countries" class="map-image">
+        <h2 class="section-title">Previous Boxes</h2>
+        <section class="boxes-grid">
+          <div class="boxes-container">
+            <!-- Box Card Content -->
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer-content">
+            <form class="subscribe-section">
+              <label for="email-input" class="subscribe-text">Subscribe for the latest updates:</label>
+              <input type="email" id="email-input" class="email-input" placeholder="Email Address" aria-label="Email Address">
+            </form>
+            <nav class="footer-links">
+              <a href="#faq">FAQ</a>
+              <a href="#contact">Contact Us</a>
+            </nav>
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9634f3683c67f50a08b69937a5fcd5d1e4e1bd958c6122dd9132b7c5642d2fcd?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo" class="footer-logo">
+          </div>
+        </footer>
+      </div>
+    </body>
+    </html>
+    
