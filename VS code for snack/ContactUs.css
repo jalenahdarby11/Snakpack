@@ -1,0 +1,168 @@
+.contact-section {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .header-nav {
+    background-color: #52B9BC;
+    width: 100%;
+    padding: 18px 0 19px;
+  }
+  
+  .logo {
+    aspect-ratio: 6.1;
+    object-fit: contain;
+    width: 605px;
+    align-self: center;
+    max-width: 100%;
+  }
+  
+  .nav-container {
+    background-color: #65D7DA;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0 -6px;
+    padding: 0 32px 0 80px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 50px;
+    color: #EFF1EE;
+    margin: auto 0;
+    font: 600 16px Montserrat, sans-serif;
+  }
+  
+  .nav-icons {
+    display: flex;
+    margin: auto 0;
+  }
+  
+  .profile-icon, .cart-icon {
+    aspect-ratio: 0.7;
+    object-fit: contain;
+    width: 67px;
+  }
+  
+  .contact-form-container {
+    align-self: center;
+    margin-top: 84px;
+    width: 100%;
+    max-width: 972px;
+    color: #000;
+    font: 600 20px Poppins, sans-serif;
+  }
+  
+  .page-title {
+    font: 80px Fredoka, sans-serif;
+  }
+  
+  .form-label {
+    font-family: Montserrat, sans-serif;
+    margin: 77px 0 0 35px;
+  }
+  
+  .problem-textarea {
+    border-radius: 50px;
+    width: 903px;
+    height: 296px;
+    margin-top: 20px;
+    padding: 15px;
+  }
+  
+  .order-input {
+    width: 903px;
+    height: 56px;
+    margin-top: 25px;
+  }
+  
+  .contact-input-container {
+    display: flex;
+    gap: 9px;
+    margin: 33px 0 0 48px;
+    padding: 16px 47px;
+  }
+  
+  .input-icon {
+    aspect-ratio: 1;
+    width: 24px;
+  }
+  
+  .submit-button {
+    border-radius: 112px;
+    width: 447px;
+    font-size: 45px;
+    margin: 127px 0 0 34px;
+    padding: 44px 70px;
+    background-color: #ECA72C;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .footer {
+    background-color: #52B9BC;
+    padding: 79px 80px;
+    color: #000;
+  }
+  
+  .footer-content {
+    max-width: 929px;
+    margin: 0 auto;
+  }
+  
+  .subscribe-container {
+    display: flex;
+    gap: 23px;
+    align-items: center;
+  }
+  
+  .subscribe-text {
+    font: 600 24px Montserrat, sans-serif;
+  }
+  
+  .email-input {
+    border-radius: 100px;
+    background-color: #D9D9D9;
+    padding: 9px 28px;
+    font: 300 20px Poppins, sans-serif;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 43px;
+    margin: 50px 0 0 25px;
+    font: 275 24px Poppins, sans-serif;
+  }
+  
+  .footer-logo, .footer-social {
+    aspect-ratio: 6.02;
+    object-fit: contain;
+    width: 410px;
+    margin-top: 34px;
+  }
+  
+  @media (max-width: 991px) {
+    .contact-form-container {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  
+    .submit-button {
+      font-size: 40px;
+      margin-top: 40px;
+    }
+  
+    .footer {
+      padding: 0 20px;
+    }
+  
+    .footer-content {
+      max-width: 100%;
+    }
+  }
+  
