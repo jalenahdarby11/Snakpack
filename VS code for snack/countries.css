@@ -75,6 +75,7 @@
     margin: auto 0;
   }
   
+  /* Featured Section */
   .featured-section {
     width: 100%;
     max-width: 1105px;
@@ -153,6 +154,7 @@
     margin-top: 40px;
   }
   
+  /* Explore Countries */
   .section-title {
     color: #000;
     text-align: center;
@@ -168,6 +170,7 @@
     margin-top: 39px;
   }
   
+  /* Previous Boxes */
   .boxes-grid {
     margin-top: 75px;
     width: 100%;
@@ -230,6 +233,7 @@
     padding: 8px 27px;
   }
   
+  /* Footer */
   .footer {
     background-color: #52B9BC;
     align-self: stretch;
@@ -299,6 +303,7 @@
     margin: 47px 0 0 29px;
   }
   
+  /* Accessibility */
   .visually-hidden {
     position: absolute;
     width: 1px;
@@ -310,6 +315,7 @@
     border: 0;
   }
   
+  /* Responsive */
   @media (max-width: 991px) {
     .header-section,
     .nav-container,
@@ -376,3 +382,4 @@
       margin-top: 40px;
     }
   }
+  
