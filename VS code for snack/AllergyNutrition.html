@@ -1,339 +1,75 @@
-<style>
-    .featured-section {
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-    }
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AllergyNutrition</title>
+        <link rel="stylesheet" href="AllergyNutrition.css">
+    </head>
+    <body>
+        <section class="featured-section">
+            <nav class="navigation-bar">
+                <div class="nav-container">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Website Logo" class="logo" />
+                    <div class="menu-wrapper">
+                        <div class="nav-links">
+                            <a href="#how-it-works" class="nav-item">How It Works</a>
+                            <a href="#countries" class="nav-item">Countries</a>
+                            <div class="nav-button-wrapper">
+                                <a href="#get-started" class="nav-item">Get Started</a>
+                                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/fd19d80648e22140ef24e8412b01f8dde1f242b4961a97a65d66b6c22883e1c9?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="nav-indicator" />
+                            </div>
+                        </div>
+                        <div class="social-icons">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Social Media Icon" class="social-icon" />
+                            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Social Media Icon" class="social-icon-alt" />
+                        </div>
+                    </div>
+                </div>
+            </nav>
     
-    .navigation-bar {
-      background-color: #52B9BC;
-      padding: 20px 0 19px;
-    }
-    
-    .nav-container {
-      background-color: #52B9BC;
-      width: 100%;
-    }
-    
-    .logo {
-      aspect-ratio: 6.1;
-      width: 605px;
-      align-self: center;
-      max-width: 100%;
-    }
-    
-    .menu-wrapper {
-      background-color: #65D7DA;
-      z-index: 10;
-      display: flex;
-      width: 100%;
-      align-items: flex-start;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 5px 0 -6px;
-      padding: 0 32px 0 80px;
-    }
-    
-    .nav-links {
-      align-self: end;
-      display: flex;
-      margin-top: 25px;
-      gap: 40px 52px;
-      color: #EFF1EE;
-      font: 600 16px Montserrat, sans-serif;
-    }
-    
-    .nav-item {
-      flex-basis: auto;
-    }
-    
-    .nav-button-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .nav-indicator {
-      aspect-ratio: 18.87;
-      width: 95px;
-      margin-top: 4px;
-    }
-    
-    .social-icons {
-      display: flex;
-      margin: auto 0;
-    }
-    
-    .social-icon {
-      aspect-ratio: 0.7;
-      width: 67px;
-    }
-    
-    .social-icon-alt {
-      aspect-ratio: 0.97;
-      width: 60px;
-      margin: auto 0;
-    }
-    
-    .featured-content {
-      align-self: center;
-      margin-top: 43px;
-      width: 100%;
-      max-width: 959px;
-    }
-    
-    .country-section {
-      gap: 20px;
-      display: flex;
-    }
-    
-    .country-info {
-      display: flex;
-      margin-top: 8px;
-      flex-grow: 1;
-      flex-direction: column;
-      align-items: center;
-      color: #000;
-      text-align: center;
-      font: 400 20px Inter, sans-serif;
-    }
-    
-    .country-name {
-      margin-top: 17px;
-      font: 700 36px Montserrat, sans-serif;
-    }
-    
-    .country-description {
-      align-self: stretch;
-      margin-top: 27px;
-      font: 15px Poppins, sans-serif;
-    }
-    
-    .cta-button {
-      border-radius: 50px;
-      background-color: #ECA72C;
-      margin-top: 32px;
-      width: 285px;
-      max-width: 100%;
-      padding: 23px 70px;
-    }
-    
-    .country-image {
-      aspect-ratio: 0.87;
-      width: 100%;
-      border-radius: 23px;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
-      flex-grow: 1;
-    }
-    
-    .newsletter-section {
-      background-color: #52B9BC;
-      margin-top: 109px;
-      width: 100%;
-      padding: 79px 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: #000;
-    }
-    
-    .newsletter-container {
-      width: 100%;
-      max-width: 929px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .subscribe-form {
-      align-self: stretch;
-      display: flex;
-      gap: 23px;
-      flex-wrap: wrap;
-    }
-    
-    .subscribe-heading {
-      flex-grow: 1;
-      margin: auto 0;
-      font: 600 24px Montserrat, sans-serif;
-    }
-    
-    .email-input {
-      border-radius: 100px;
-      background-color: #D9D9D9;
-      flex-grow: 1;
-      width: fit-content;
-      padding: 9px 28px;
-      font: 300 20px Poppins, sans-serif;
-    }
-    
-    .footer-links {
-      display: flex;
-      width: 761px;
-      max-width: 100%;
-      gap: 40px 43px;
-      margin: 50px 0 0 25px;
-      font: 275 24px Poppins, sans-serif;
-    }
-    
-    .footer-logo {
-      aspect-ratio: 6.02;
-      width: 410px;
-      margin-top: 34px;
-      max-width: 100%;
-    }
-    
-    .footer-image {
-      aspect-ratio: 3.51;
-      width: 260px;
-      max-width: 100%;
-      margin: 47px 0 0 29px;
-    }
-    
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
-    
-    @media (max-width: 991px) {
-      .navigation-bar {
-        max-width: 100%;
-        margin-right: 4px;
-      }
-      
-      .nav-container {
-        max-width: 100%;
-      }
-      
-      .menu-wrapper {
-        max-width: 100%;
-        padding: 0 20px;
-      }
-      
-      .nav-indicator {
-        margin-right: 5px;
-      }
-      
-      .featured-content {
-        max-width: 100%;
-        margin-top: 40px;
-      }
-      
-      .country-section {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-      }
-      
-      .country-info {
-        margin-top: 40px;
-        width: 100%;
-      }
-      
-      .cta-button {
-        padding: 23px 20px;
-      }
-      
-      .country-image {
-        max-width: 100%;
-        margin-top: 40px;
-      }
-      
-      .newsletter-section {
-        max-width: 100%;
-        margin-top: 40px;
-        padding: 40px 20px;
-      }
-      
-      .newsletter-container {
-        max-width: 100%;
-      }
-      
-      .subscribe-form {
-        max-width: 100%;
-      }
-      
-      .email-input {
-        max-width: 100%;
-        padding: 9px 20px;
-      }
-      
-      .footer-links {
-        margin-top: 40px;
-      }
-      
-      .footer-image {
-        margin-top: 40px;
-      }
-    }
-    </style>
-    
-    <section class="featured-section">
-      <nav class="navigation-bar">
-        <div class="nav-container">
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Website Logo" class="logo" />
-          <div class="menu-wrapper">
-            <div class="nav-links">
-              <a href="#how-it-works" class="nav-item">How It Works</a>
-              <a href="#countries" class="nav-item">Countries</a>
-              <div class="nav-button-wrapper">
-                <a href="#get-started" class="nav-item">Get Started</a>
-                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/fd19d80648e22140ef24e8412b01f8dde1f242b4961a97a65d66b6c22883e1c9?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="nav-indicator" />
-              </div>
+            <div class="featured-content">
+                <div class="country-section">
+                    <div class="country-info">
+                        <p>We recommend...</p>
+                        <h2 class="country-name">Costa Rica</h2>
+                        <p class="country-description">In Costa Rica, snacks like chips and pretzels are enjoyed...</p>
+                        <button class="cta-button">Purchase Here</button>
+                    </div>
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/61ad5e5e04646d3cf69828e9c6bfd2b68e26523eba4d433e416fb728805282f1?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Costa Rican snacks display" class="country-image" />
+                </div>
             </div>
-            <div class="social-icons">
-              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Social Media Icon" class="social-icon" />
-              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Social Media Icon" class="social-icon-alt" />
+    
+            <div class="featured-content">
+                <div class="country-section">
+                    <div class="country-info">
+                        <p>Or try our box of the month!</p>
+                        <h2 class="country-name">Chad</h2>
+                        <p class="country-description">In Chad, snacks often reflect the country's diverse...</p>
+                        <button class="cta-button">Purchase Here</button>
+                    </div>
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f3cbe5c8c50b9dcf8bea9cde224954602d9a05404621537c3d8e6a7fa70cb30c?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Traditional Chad snacks" class="country-image" />
+                </div>
             </div>
-          </div>
-        </div>
-      </nav>
     
-      <div class="featured-content">
-        <div class="country-section">
-          <div class="country-info">
-            <p>We recommend...</p>
-            <h2 class="country-name">Costa Rica</h2>
-            <p class="country-description">In Costa Rica, snacks like chips and pretzels are enjoyed in various forms, with local ingredients and flavors giving them a unique twist. Tostones, crispy twice-fried slices of green plantains, are a popular alternative to regular chips, often served with a sprinkle of salt or garlic. Yuca chips, made from cassava, offer a denser, crunchier alternative to traditional potato chips, while chifles, thinly sliced fried plantains, are a light, savory snack commonly found in local markets. While plantains and yuca are central to Costa Rican snack culture, traditional potato chips are also widely available, often in familiar flavors like salted or lime.</p>
-            <button class="cta-button">Purchase Here</button>
-          </div>
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/61ad5e5e04646d3cf69828e9c6bfd2b68e26523eba4d433e416fb728805282f1?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Costa Rican snacks display" class="country-image" />
-        </div>
-      </div>
+            <footer class="newsletter-section">
+                <div class="newsletter-container">
+                    <form class="subscribe-form">
+                        <label for="email" class="subscribe-heading">Subscribe for the latest updates:</label>
+                        <input type="email" id="email" class="email-input" placeholder="Email Address" aria-label="Email Address" />
+                    </form>
+                    <nav class="footer-links">
+                        <a href="#faq">FAQ</a>
+                        <a href="#contact">Contact Us</a>
+                        <a href="#how-it-works">How it Works</a>
+                        <a href="#countries">Countries</a>
+                        <a href="#get-started">Get Started</a>
+                    </nav>
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d7ddb679f76bffbb7a37ab0ce72aba7e44a8705f7d31ef7a0b420de91dcdba9b?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo" class="footer-logo" />
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="footer-image" />
+                </div>
+            </footer>
+        </section>
+    </body>
+    </html>
     
-      <div class="featured-content">
-        <div class="country-section">
-          <div class="country-info">
-            <p>Or try our box of the month!</p>
-            <h2 class="country-name">Chad</h2>
-            <p class="country-description">In Chad, snacks often reflect the country's diverse culinary traditions, blending local ingredients and flavors in simple yet delicious ways. One of the most popular snacks is fritters (boules de farine), which are deep-fried dough balls made from wheat flour, sugar, and sometimes a bit of vanilla or cinnamon. Another popular snack is koki, a savory dish made from black-eyed peas or beans that are steamed in banana leaves, resulting in a dense, flavorful, and protein-packed snack. Chips (fries) are also common in Chad, usually made from fresh potatoes, sliced thin and fried until crispy.</p>
-            <button class="cta-button">Purchase Here</button>
-          </div>
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f3cbe5c8c50b9dcf8bea9cde224954602d9a05404621537c3d8e6a7fa70cb30c?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Traditional Chad snacks" class="country-image" />
-        </div>
-      </div>
-    
-      <footer class="newsletter-section">
-        <div class="newsletter-container">
-          <form class="subscribe-form">
-            <label for="email" class="subscribe-heading">Subscribe for the latest updates:</label>
-            <input type="email" id="email" class="email-input" placeholder="Email Address" aria-label="Email Address" />
-          </form>
-          <nav class="footer-links">
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact Us</a>
-            <a href="#how-it-works">How it Works</a>
-            <a href="#countries">Countries</a>
-            <a href="#get-started">Get Started</a>
-          </nav>
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d7ddb679f76bffbb7a37ab0ce72aba7e44a8705f7d31ef7a0b420de91dcdba9b?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo" class="footer-logo" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="footer-image" />
-        </div>
-      </footer>
-    </section>
