@@ -1,0 +1,211 @@
+/* General Styling */
+.order-confirmation {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 33px;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  .header-logo {
+    aspect-ratio: 6.62;
+    object-fit: contain;
+    width: 100%;
+  }
+  
+  .page-title {
+    color: #000;
+    margin: 7px 0 0;
+    font: 700 24px Montserrat, sans-serif;
+  }
+  
+  /* Main Content Styling */
+  .main-content {
+    margin: 49px auto 0;
+    width: 100%;
+    max-width: 1194px;
+  }
+  
+  .content-wrapper {
+    gap: 20px;
+    display: flex;
+  }
+  
+  .form-section {
+    width: 62%;
+  }
+  
+  .form-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Form Inputs */
+  .section-title {
+    color: #000;
+    align-self: start;
+    font: 600 20px Montserrat, sans-serif;
+  }
+  
+  .input-field {
+    border-radius: 50px;
+    background: #fff;
+    margin: 13px 0 0;
+    width: 608px;
+    max-width: 100%;
+    color: #7b7b7b;
+    padding: 19px 26px;
+    font: 600 16px Montserrat, sans-serif;
+    border: 1px solid #000;
+  }
+  
+  .divider {
+    width: 100%;
+    height: 6px;
+    margin: 25px 0;
+    border: 4px solid #d9d9d9;
+  }
+  
+  /* Payment Section */
+  .payment-section {
+    border-radius: 50px;
+    background: #fff;
+    display: flex;
+    margin: 15px 0 0;
+    width: 608px;
+    max-width: 100%;
+    align-items: start;
+    gap: 40px 100px;
+    flex-wrap: wrap;
+    padding: 16px 26px 16px 11px;
+    border: 1px solid #000;
+  }
+  
+  .card-input {
+    display: flex;
+    gap: 5px;
+    color: #7b7b7b;
+    flex: 1;
+    font: 600 16px Poppins, sans-serif;
+  }
+  
+  .payment-icon {
+    aspect-ratio: 2;
+    object-fit: contain;
+    width: 42px;
+  }
+  
+  .divider-text {
+    color: #d9d9d9;
+    letter-spacing: 0.05px;
+    text-align: center;
+    margin: 7px 0;
+    font: 400 20px/1.4 "Istok Web", sans-serif;
+  }
+  
+  .apple-pay {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    margin: 7px 0 0;
+    width: 343px;
+    max-width: 100%;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .apple-pay-button {
+    border-radius: 8px;
+    background: #000;
+    display: flex;
+    min-width: 240px;
+    min-height: 50px;
+    width: 343px;
+    align-items: center;
+    gap: 3px;
+    justify-content: center;
+    padding: 11px 16px;
+  }
+  
+  /* Order Summary Section */
+  .summary-section {
+    width: 38%;
+  }
+  
+  .order-summary {
+    border-radius: 50px;
+    background: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 30px 30px;
+    border: 1px solid #000;
+    font-family: Montserrat, sans-serif;
+    color: #000;
+    text-align: center;
+  }
+  
+  .summary-title {
+    font: 500 36px Montserrat, sans-serif;
+  }
+  
+  .product-image {
+    aspect-ratio: 1;
+    object-fit: contain;
+    width: 317px;
+    margin: 15px 0 0;
+    max-width: 100%;
+  }
+  
+  .product-name {
+    font: 600 20px Montserrat, sans-serif;
+    margin: 10px 0 0;
+  }
+  
+  .summary-divider {
+    width: 100%;
+    height: 4px;
+    margin: 13px 0;
+    border: 4px solid #d9d9d9;
+  }
+  
+  .price-details {
+    display: flex;
+    margin: 19px 0 0;
+    gap: 20px;
+    font-size: 14px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .price-labels {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-weight: 500;
+  }
+  
+  .price-values {
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+  }
+  
+  .total {
+    font-weight: 600;
+    margin: 9px 0 0;
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    border-radius: 50px;
+    background: #a6e66e;
+    width: 576px;
+    max-width: 100%;
+    color: #000;
+    text-ali
+  
