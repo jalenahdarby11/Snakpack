@@ -1,431 +1,125 @@
-<style>
-    .quiz-container {
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    
-    .navigation-bar {
-      background-color: #52B9BC;
-      width: 100%;
-      padding: 18px 0 19px;
-    }
-    
-    .nav-logo {
-      aspect-ratio: 6.1;
-      object-fit: contain;
-      width: 605px;
-      align-self: center;
-      max-width: 100%;
-    }
-    
-    .nav-menu {
-      background-color: #65D7DA;
-      z-index: 10;
-      display: flex;
-      width: 100%;
-      align-items: flex-start;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 5px 0 -6px;
-      padding: 0 32px 0 80px;
-    }
-    
-    .menu-items {
-      align-self: end;
-      display: flex;
-      margin-top: 25px;
-      gap: 40px 52px;
-      color: #EFF1EE;
-      font: 600 16px Montserrat, sans-serif;
-    }
-    
-    .menu-link {
-      flex-basis: auto;
-    }
-    
-    .get-started-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .get-started-underline {
-      aspect-ratio: 18.87;
-      object-fit: contain;
-      width: 95px;
-      margin-top: 4px;
-    }
-    
-    .user-actions {
-      display: flex;
-      margin: auto 0;
-    }
-    
-    .user-icon {
-      aspect-ratio: 0.7;
-      object-fit: contain;
-      width: 67px;
-    }
-    
-    .cart-icon {
-      aspect-ratio: 0.97;
-      object-fit: contain;
-      width: 60px;
-      margin: auto 0;
-    }
-    
-    .quiz-header {
-      border-radius: 10px;
-      align-self: center;
-      display: flex;
-      margin-top: 19px;
-      width: 632px;
-      max-width: 100%;
-      flex-direction: column;
-      color: #EFF1EE;
-      justify-content: center;
-      padding: 6px;
-      font: 600 40px Montserrat, sans-serif;
-      border: 1px solid #000;
-    }
-    
-    .quiz-title {
-      border-radius: 10px;
-      background-color: #52B9BC;
-      padding: 9px 63px;
-    }
-    
-    .quiz-content {
-      background-color: rgba(217, 217, 217, 0.11);
-      box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
-      align-self: center;
-      display: flex;
-      margin-top: 33px;
-      width: 753px;
-      max-width: 100%;
-      flex-direction: column;
-      align-items: center;
-      color: #000;
-      justify-content: center;
-      padding: 32px 80px;
-      font: 400 14px Poppins, sans-serif;
-      border: 5px solid #000;
-    }
-    
-    .quiz-form {
-      display: flex;
-      width: 536px;
-      max-width: 100%;
-      flex-direction: column;
-    }
-    
-    .quiz-question {
-      font-size: 24px;
-      margin: 0 35px 0 50px;
-    }
-    
-    .options-grid {
-      display: flex;
-      margin-top: 26px;
-      gap: 40px 58px;
-      white-space: nowrap;
-      flex-wrap: wrap;
-    }
-    
-    .region-option {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    
-    .option-button {
-      border-radius: 10px;
-      background-color: #65D7DA;
-      border: 2px solid #000;
-      border-bottom-width: 3px;
-      display: flex;
-      gap: 20px;
-      justify-content: space-between;
-      padding: 3px 12px;
-      cursor: pointer;
-    }
-    
-    .checkbox-wrapper {
-      display: flex;
-      gap: 10px;
-      margin: auto 0;
-    }
-    
-    .custom-checkbox {
-      border-radius: 10px;
-      background-color: #F5F5F5;
-      width: 62px;
-      height: 62px;
-    }
-    
-    .region-name {
-      margin: auto 0;
-    }
-    
-    .region-icon {
-      aspect-ratio: 1;
-      object-fit: contain;
-      width: 72px;
-    }
-    
-    .submit-button {
-      border-radius: 50px;
-      background-color: #ECA72C;
-      align-self: center;
-      margin-top: 30px;
-      width: 200px;
-      max-width: 100%;
-      font-size: 20px;
-      text-align: center;
-      padding: 18px 50px;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .footer {
-      background-color: #52B9BC;
-      display: flex;
-      margin-top: 88px;
-      flex-direction: column;
-      align-items: center;
-      color: #000;
-      justify-content: center;
-      padding: 79px 80px;
-    }
-    
-    .footer-content {
-      display: flex;
-      width: 100%;
-      max-width: 929px;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .newsletter-section {
-      align-self: stretch;
-      display: flex;
-      gap: 23px;
-      flex-wrap: wrap;
-    }
-    
-    .newsletter-heading {
-      flex-grow: 1;
-      margin: auto 0;
-      font: 600 24px Montserrat, sans-serif;
-    }
-    
-    .email-input {
-      border-radius: 100px;
-      background-color: #D9D9D9;
-      flex-grow: 1;
-      width: fit-content;
-      padding: 9px 28px;
-      font: 300 20px Poppins, sans-serif;
-      border: none;
-    }
-    
-    .footer-links {
-      display: flex;
-      width: 761px;
-      max-width: 100%;
-      gap: 40px 43px;
-      margin: 50px 0 0 25px;
-      font: 275 24px Poppins, sans-serif;
-    }
-    
-    .footer-link {
-      flex-grow: 1;
-      text-align: center;
-      min-width: 100px;
-    }
-    
-    .footer-logo {
-      aspect-ratio: 6.02;
-      object-fit: contain;
-      width: 410px;
-      margin-top: 34px;
-      max-width: 100%;
-    }
-    
-    .footer-image {
-      aspect-ratio: 3.51;
-      object-fit: contain;
-      width: 260px;
-      max-width: 100%;
-      margin: 47px 0 0 29px;
-    }
-    
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
-    }
-    
-    @media (max-width: 991px) {
-      .navigation-bar,
-      .nav-menu,
-      .quiz-content,
-      .quiz-question,
-      .options-grid,
-      .submit-button,
-      .footer,
-      .newsletter-section,
-      .footer-links,
-      .footer-logo,
-      .footer-image {
-        max-width: 100%;
-        padding: 0 20px;
-      }
-      
-      .nav-menu {
-        padding: 0 20px;
-      }
-      
-      .get-started-underline {
-        margin-right: 5px;
-      }
-      
-      .footer {
-        margin-top: 40px;
-      }
-      
-      .footer-links {
-        margin-top: 40px;
-      }
-      
-      .footer-image {
-        margin-top: 40px;
-      }
-    }
-    </style>
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - Snack Preference Quiz</title>
+    <link rel="stylesheet" href="GetStartedQ3.css">
+</head>
+<body>
     <div class="quiz-container">
-      <nav class="navigation-bar">
-        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="nav-logo" />
-        <div class="nav-menu">
-          <div class="menu-items">
-            <a href="#how-it-works" class="menu-link">How It Works</a>
-            <a href="#countries" class="menu-link">Countries</a>
-            <div class="get-started-wrapper">
-              <a href="#get-started" class="menu-link">Get Started</a>
-              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/fd19d80648e22140ef24e8412b01f8dde1f242b4961a97a65d66b6c22883e1c9?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="get-started-underline" />
-            </div>
-          </div>
-          <div class="user-actions">
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="User Profile" class="user-icon" />
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shopping Cart" class="cart-icon" />
-          </div>
-        </div>
-      </nav>
-    
-      <header class="quiz-header">
-        <h1 class="quiz-title">Snack Preference Quiz</h1>
-      </header>
-    
-      <main class="quiz-content">
-        <form class="quiz-form">
-          <h2 class="quiz-question">Which parts of the world interest you?</h2>
-          
-          <div class="options-grid">
-            <div class="region-option">
-              <button type="button" class="option-button" role="checkbox" aria-checked="false" tabindex="0">
-                <div class="checkbox-wrapper">
-                  <span class="custom-checkbox" aria-hidden="true"></span>
-                  <span class="region-name">Asia</span>
+        <nav class="navigation-bar">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="nav-logo" />
+            <div class="nav-menu">
+                <div class="menu-items">
+                    <a href="#how-it-works" class="menu-link">How It Works</a>
+                    <a href="#countries" class="menu-link">Countries</a>
+                    <div class="get-started-wrapper">
+                        <a href="#get-started" class="menu-link">Get Started</a>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/fd19d80648e22140ef24e8412b01f8dde1f242b4961a97a65d66b6c22883e1c9?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="get-started-underline" />
+                    </div>
                 </div>
-                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/78f60836958de5d7732ac6d60ee960e6a9f19c6e9a298c574c9d7c6c65395a9f?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Asia Region Icon" class="region-icon" />
-              </button>
-            </div>
-    
-            <div class="region-option">
-              <button type="button" class="option-button" role="checkbox" aria-checked="false" tabindex="0">
-                <div class="checkbox-wrapper">
-                  <span class="custom-checkbox" aria-hidden="true"></span>
-                  <span class="region-name">Africa</span>
+                <div class="user-actions">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="User Profile" class="user-icon" />
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shopping Cart" class="cart-icon" />
                 </div>
-                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/61518d3f8e7959563b5724fc9b2d49e338ec887882db6b28512a05bb29fd8164?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Africa Region Icon" class="region-icon" />
-              </button>
             </div>
-          </div>
+        </nav>
     
-          <div class="options-grid">
-            <div class="region-option">
-              <button type="button" class="option-button" role="checkbox" aria-checked="false" tabindex="0">
-                <div class="checkbox-wrapper">
-                  <span class="custom-checkbox" aria-hidden="true"></span>
-                  <span class="region-name">Europe</span>
+        <header class="quiz-header">
+            <h1 class="quiz-title">Snack Preference Quiz</h1>
+        </header>
+    
+        <main class="quiz-content">
+            <form class="quiz-form">
+                <h2 class="quiz-question">Which parts of the world interest you?</h2>
+                
+                <div class="options-grid">
+                    <div class="region-option">
+                        <button type="button" class="option-button" role="checkbox" aria-checked="false" tabindex="0">
+                            <div class="checkbox-wrapper">
+                                <span class="custom-checkbox" aria-hidden="true"></span>
+                                <span class="region-name">Asia</span>
+                            </div>
+                            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/78f60836958de5d7732ac6d60ee960e6a9f19c6e9a298c574c9d7c6c65395a9f?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Asia Region Icon" class="region-icon" />
+                        </button>
+                    </div>
+                    <div class="region-option">
+                        <button type="button" class="option-button" role="checkbox" aria-checked="false" tabindex="0">
+                            <div class="checkbox-wrapper">
+                                <span class="custom-checkbox" aria-hidden="true"></span>
+                                <span class="region-name">Africa</span>
+                            </div>
+                            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/61518d3f8e7959563b5724fc9b2d49e338ec887882db6b28512a05bb29fd8164?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Africa Region Icon" class="region-icon" />
+                        </button>
+                    </div>
                 </div>
-                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/1e1f4adbcd46cbf159cadc19de201e0b60b98d1f15b6691bbe70f81618f528a9?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Europe Region Icon" class="region-icon" />
-              </button>
-            </div>
     
-            <div class="region-option">
-              <button type="button" class="option-button" role="checkbox" aria-checked="false" tabindex="0">
-                <div class="checkbox-wrapper">
-                  <span class="custom-checkbox" aria-hidden="true"></span>
-                  <span class="region-name">North America</span>
+                <div class="options-grid">
+                    <div class="region-option">
+                        <button type="button" class="option-button" role="checkbox" aria-checked="false" tabindex="0">
+                            <div class="checkbox-wrapper">
+                                <span class="custom-checkbox" aria-hidden="true"></span>
+                                <span class="region-name">Europe</span>
+                            </div>
+                            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/1e1f4adbcd46cbf159cadc19de201e0b60b98d1f15b6691bbe70f81618f528a9?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Europe Region Icon" class="region-icon" />
+                        </button>
+                    </div>
+                    <div class="region-option">
+                        <button type="button" class="option-button" role="checkbox" aria-checked="false" tabindex="0">
+                            <div class="checkbox-wrapper">
+                                <span class="custom-checkbox" aria-hidden="true"></span>
+                                <span class="region-name">North America</span>
+                            </div>
+                            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2d2f199b4298c52e4ea06519f3d47dadb7f87583c278240805a1ae6d71d652b5?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="North America Region Icon" class="region-icon" />
+                        </button>
+                    </div>
                 </div>
-                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2d2f199b4298c52e4ea06519f3d47dadb7f87583c278240805a1ae6d71d652b5?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="North America Region Icon" class="region-icon" />
-              </button>
-            </div>
-          </div>
     
-          <div class="options-grid">
-            <div class="region-option">
-              <button type="button" class="option-button" role="checkbox" aria-checked="false" tabindex="0">
-                <div class="checkbox-wrapper">
-                  <span class="custom-checkbox" aria-hidden="true"></span>
-                  <span class="region-name">Oceania</span>
+                <div class="options-grid">
+                    <div class="region-option">
+                        <button type="button" class="option-button" role="checkbox" aria-checked="false" tabindex="0">
+                            <div class="checkbox-wrapper">
+                                <span class="custom-checkbox" aria-hidden="true"></span>
+                                <span class="region-name">Oceania</span>
+                            </div>
+                            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/6a5e8038d0a811bda11263eda7f7731d5ef57b4d3d391e628312a506753af91f?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Oceania Region Icon" class="region-icon" />
+                        </button>
+                    </div>
+                    <div class="region-option">
+                        <button type="button" class="option-button" role="checkbox" aria-checked="false" tabindex="0">
+                            <div class="checkbox-wrapper">
+                                <span class="custom-checkbox" aria-hidden="true"></span>
+                                <span class="region-name">South America</span>
+                            </div>
+                            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d27eca16e7a3fdd24975424f883f5287291daf0d8a4c55843be1d5e8784bcfda?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="South America Region Icon" class="region-icon" />
+                        </button>
+                    </div>
                 </div>
-                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/6a5e8038d0a811bda11263eda7f7731d5ef57b4d3d391e628312a506753af91f?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Oceania Region Icon" class="region-icon" />
-              </button>
+    
+                <button type="submit" class="submit-button">Finish Quiz</button>
+            </form>
+        </main>
+    
+        <footer class="footer">
+            <div class="footer-content">
+                <form class="newsletter-section">
+                    <label for="email" class="newsletter-heading">Subscribe for the latest updates:</label>
+                    <input type="email" id="email" class="email-input" placeholder="Email Address" aria-label="Email Address" />
+                </form>
+    
+                <nav class="footer-links">
+                    <a href="#faq" class="footer-link">FAQ</a>
+                    <a href="#contact" class="footer-link">Contact Us</a>
+                    <a href="#how-it-works" class="footer-link">How it Works</a>
+                    <a href="#countries" class="footer-link">Countries</a>
+                    <a href="#get-started" class="footer-link">Get Started</a>
+                </nav>
+    
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo" class="footer-logo" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="footer-image" />
             </div>
-    
-            <div class="region-option">
-              <button type="button" class="option-button" role="checkbox" aria-checked="false" tabindex="0">
-                <div class="checkbox-wrapper">
-                  <span class="custom-checkbox" aria-hidden="true"></span>
-                  <span class="region-name">South America</span>
-                </div>
-                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d27eca16e7a3fdd24975424f883f5287291daf0d8a4c55843be1d5e8784bcfda?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="South America Region Icon" class="region-icon" />
-              </button>
-            </div>
-          </div>
-    
-          <button type="submit" class="submit-button">Finish Quiz</button>
-        </form>
-      </main>
-    
-      <footer class="footer">
-        <div class="footer-content">
-          <form class="newsletter-section">
-            <label for="email" class="newsletter-heading">Subscribe for the latest updates:</label>
-            <input type="email" id="email" class="email-input" placeholder="Email Address" aria-label="Email Address" />
-          </form>
-    
-          <nav class="footer-links">
-            <a href="#faq" class="footer-link">FAQ</a>
-            <a href="#contact" class="footer-link">Contact Us</a>
-            <a href="#how-it-works" class="footer-link">How it Works</a>
-            <a href="#countries" class="footer-link">Countries</a>
-            <a href="#get-started" class="footer-link">Get Started</a>
-          </nav>
-    
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo" class="footer-logo" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="footer-image" />
-        </div>
-      </footer>
+        </footer>
     </div>
-    
+</body>
+</html>
