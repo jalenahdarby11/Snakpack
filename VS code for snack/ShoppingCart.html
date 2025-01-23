@@ -1,83 +1,25 @@
-<style>
-    .cart-container {
-      border-radius: 10px;
-      background-color: #fff;
-      display: flex;
-      max-width: 190px;
-      flex-direction: column;
-      overflow: hidden;
-      align-items: center;
-      font-family: Montserrat, sans-serif;
-      color: #000;
-      font-weight: 400;
-      padding: 11px 20px;
-    }
-    
-    .cart-title {
-      font-size: 15px;
-    }
-    
-    .product-container {
-      align-self: stretch;
-      display: flex;
-      margin-top: 16px;
-      gap: 11px;
-      font: 12px Poppins, sans-serif;
-    }
-    
-    .product-image {
-      aspect-ratio: 1.09;
-      object-fit: contain;
-      object-position: center;
-      width: 47px;
-      border-radius: 10px;
-    }
-    
-    .product-name {
-      margin: auto 0;
-    }
-    
-    .find-more {
-      color: #3EC3FF;
-      margin-top: 86px;
-      font: 700 10px Poppins, sans-serif;
-    }
-    
-    .checkout-button {
-      border-radius: 30px;
-      background-color: #A6E66E;
-      font-size: 8px;
-      font-weight: 500;
-      text-align: center;
-      padding: 14px 21px;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
-    </style>
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shopping-cart.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
     <div class="cart-container" role="region" aria-label="Shopping Cart">
-      <h2 class="cart-title">Your Cart</h2>
-      <div class="product-container">
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/6fbebe967ebe5095249b45ab867940d2eab18a9fff7bfd9d935c1d7a99d14866?apiKey=3a8ac60b581045f7adb5757904dc023c&"
-          class="product-image"
-          alt="Costa Rica Box product image"
-        />
-        <div class="product-name">Costa Rica Box</div>
-      </div>
-      <button class="find-more" tabindex="0">Find Another box!</button>
-      <button class="checkout-button" tabindex="0">Proceed to Checkout</button>
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="product-container">
+            <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/6fbebe967ebe5095249b45ab867940d2eab18a9fff7bfd9d935c1d7a99d14866?apiKey=3a8ac60b581045f7adb5757904dc023c&"
+                class="product-image"
+                alt="Costa Rica Box product image"
+            />
+            <div class="product-name">Costa Rica Box</div>
+        </div>
+        <button class="find-more" tabindex="0">Find Another box!</button>
+        <button class="checkout-button" tabindex="0">Proceed to Checkout</button>
     </div>
-    
+</body>
+</html>
