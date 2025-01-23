@@ -1,0 +1,171 @@
+.quiz-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .nav-header {
+    background-color: #52B9BC;
+    width: 100%;
+    padding: 18px 0 19px;
+  }
+  
+  .logo {
+    aspect-ratio: 6.1;
+    width: 605px;
+    align-self: center;
+    max-width: 100%;
+  }
+  
+  .nav-menu {
+    background-color: #65D7DA;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px 0 -6px;
+    padding: 0 32px 0 80px;
+  }
+  
+  .nav-links {
+    align-self: end;
+    display: flex;
+    margin-top: 25px;
+    gap: 40px 52px;
+    color: #EFF1EE;
+    font: 600 16px Montserrat, sans-serif;
+  }
+  
+  .nav-dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-indicator {
+    aspect-ratio: 18.87;
+    width: 95px;
+    margin-top: 4px;
+  }
+  
+  .nav-icons {
+    display: flex;
+    margin: auto 0;
+  }
+  
+  .quiz-title-container {
+    padding: 0 27px 10px;
+    margin-top: 34px;
+  }
+  
+  .quiz-title {
+    color: #065356;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .question-text {
+    font: 400 24px Montserrat, sans-serif;
+  }
+  
+  .flavor-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .flavor-row {
+    display: flex;
+    gap: 15px;
+    margin-top: 23px;
+  }
+  
+  .flavor-option {
+    display: block;
+    color: #655F5F;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #B7B7B7;
+    background-color: #fff;
+    margin-right: 7px;
+    position: relative;
+  }
+  
+  .checkbox-container .checkbox:checked {
+    background-color: #52B9BC;
+  }
+  
+  .checkbox-container .checkbox:checked::before {
+    content: "✔";
+    color: #fff;
+    position: absolute;
+    top: 1px;
+    left: 4px;
+  }
+  
+  .flavor-icon {
+    margin-top: 10px;
+  }
+  
+  .next-button {
+    padding: 10px 30px;
+    background-color: #65D7DA;
+    border: none;
+    font: 600 16px Montserrat, sans-serif;
+    cursor: pointer;
+  }
+  
+  .footer {
+    background-color: #FFFFFF;
+    padding: 90px 0 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .footer-content {
+    text-align: center;
+  }
+  
+  .subscribe-section {
+    margin-bottom: 40px;
+  }
+  
+  .email-input {
+    padding: 10px;
+    border: 2px solid #B7B7B7;
+    width: 250px;
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #B3B3B3;
+    font-size: 14px;
+    margin: 5px 10px;
+    text-decoration: none;
+  }
+  
+  .footer-logo {
+    margin-top: 40px;
+    width: 120px;
+  }
+  
+  .footer-image {
+    margin-top: 30px;
+    width: 120px;
+  }
+  
