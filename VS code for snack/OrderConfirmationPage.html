@@ -1,379 +1,110 @@
-<style>
-    .order-confirmation {
-      background: #fff;
-      display: flex;
-      padding-bottom: 33px;
-      flex-direction: column;
-      overflow: hidden;
-      align-items: center;
-    }
-    
-    .header-logo {
-      aspect-ratio: 6.62;
-      object-fit: contain;
-      object-position: center;
-      width: 100%;
-      align-self: stretch;
-    }
-    
-    .page-title {
-      color: #000;
-      margin-top: 7px;
-      font: 700 24px Montserrat, sans-serif;
-    }
-    
-    .main-content {
-      margin-top: 49px;
-      width: 100%;
-      max-width: 1194px;
-    }
-    
-    .content-wrapper {
-      gap: 20px;
-      display: flex;
-    }
-    
-    .form-column {
-      display: flex;
-      flex-direction: column;
-      line-height: normal;
-      width: 62%;
-    }
-    
-    .form-container {
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .section-title {
-      color: #000;
-      align-self: start;
-      font: 600 20px Montserrat, sans-serif;
-    }
-    
-    .input-field {
-      border-radius: 50px;
-      background: #fff;
-      margin-top: 13px;
-      width: 608px;
-      max-width: 100%;
-      color: #7b7b7b;
-      padding: 19px 26px;
-      font: 600 16px Montserrat, sans-serif;
-      border: 1px solid #000;
-    }
-    
-    .divider {
-      align-self: stretch;
-      margin-top: 25px;
-      height: 6px;
-      border: 4px solid #d9d9d9;
-    }
-    
-    .payment-section {
-      border-radius: 50px;
-      background: #fff;
-      display: flex;
-      margin-top: 15px;
-      width: 608px;
-      max-width: 100%;
-      align-items: start;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 16px 26px 16px 11px;
-      border: 1px solid #000;
-    }
-    
-    .card-info {
-      display: flex;
-      gap: 5px;
-      color: #7b7b7b;
-      font: 600 16px Poppins, sans-serif;
-    }
-    
-    .payment-icon {
-      aspect-ratio: 2;
-      object-fit: contain;
-      object-position: center;
-      width: 42px;
-      align-self: start;
-    }
-    
-    .divider-text {
-      color: #d9d9d9;
-      letter-spacing: 0.05px;
-      text-align: center;
-      margin-top: 7px;
-      font: 400 20px/1.4 "Istok Web", sans-serif;
-    }
-    
-    .apple-pay-wrapper {
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      display: flex;
-      margin-top: 7px;
-      width: 343px;
-      max-width: 100%;
-      align-items: start;
-      color: #fff;
-      text-align: center;
-    }
-    
-    .apple-pay-button {
-      border-radius: 8px;
-      background: #000;
-      display: flex;
-      min-width: 240px;
-      min-height: 50px;
-      width: 343px;
-      align-items: center;
-      gap: 3px;
-      justify-content: center;
-      padding: 11px 16px;
-    }
-    
-    .summary-column {
-      display: flex;
-      flex-direction: column;
-      line-height: normal;
-      width: 38%;
-      margin-left: 20px;
-    }
-    
-    .order-summary {
-      display: flex;
-      flex-direction: column;
-      font-family: Montserrat, sans-serif;
-      color: #000;
-      text-align: center;
-    }
-    
-    .summary-container {
-      border-radius: 50px;
-      background: #fff;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      padding: 8px 30px 30px;
-      border: 1px solid #000;
-    }
-    
-    .summary-title {
-      font: 500 36px Montserrat, sans-serif;
-    }
-    
-    .product-image {
-      aspect-ratio: 1;
-      object-fit: contain;
-      object-position: center;
-      width: 317px;
-      margin-top: 15px;
-      max-width: 100%;
-    }
-    
-    .product-name {
-      font: 600 20px Montserrat, sans-serif;
-      margin-top: 10px;
-    }
-    
-    .summary-divider {
-      align-self: stretch;
-      margin-top: 13px;
-      width: 100%;
-      height: 4px;
-      border: 4px solid #d9d9d9;
-    }
-    
-    .price-details {
-      align-self: stretch;
-      display: flex;
-      margin-top: 19px;
-      gap: 20px;
-      font-size: 14px;
-      justify-content: space-between;
-    }
-    
-    .price-labels {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      font-weight: 500;
-    }
-    
-    .price-values {
-      display: flex;
-      flex-direction: column;
-      font-weight: 300;
-    }
-    
-    .total-price {
-      font-weight: 600;
-      align-self: start;
-      margin-top: 12px;
-    }
-    
-    .confirm-button {
-      border-radius: 50px;
-      background: #a6e66e;
-      width: 576px;
-      max-width: 100%;
-      color: #000;
-      text-align: center;
-      margin: 42px 0 0 25px;
-      padding: 29px 70px;
-      font: 400 36px Montserrat, sans-serif;
-    }
-    
-    @media (max-width: 991px) {
-      .main-content {
-        max-width: 100%;
-        margin-top: 40px;
-      }
-    
-      .content-wrapper {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-      }
-    
-      .form-column,
-      .summary-column {
-        width: 100%;
-        margin-left: 0;
-      }
-    
-      .form-container {
-        max-width: 100%;
-        margin-top: 40px;
-      }
-    
-      .input-field {
-        white-space: initial;
-        padding: 0 20px;
-      }
-    
-      .payment-section {
-        padding-right: 20px;
-      }
-    
-      .order-summary {
-        margin-top: 40px;
-      }
-    
-      .summary-container {
-        padding: 0 20px;
-      }
-    
-      .confirm-button {
-        margin-top: 40px;
-        padding: 0 20px;
-      }
-    }
-    
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-    </style>
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="OrderConfirmationPage.css">
+</head>
+<body>
     <div class="order-confirmation">
-      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2cf17b00013288e730b9195aac2518d046287f2b800598d5871f33fdc6c7e7c2?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="header-logo" />
-      <h1 class="page-title">Confirm and Pay</h1>
-      
-      <div class="main-content">
-        <div class="content-wrapper">
-          <div class="form-column">
-            <form class="form-container">
-              <h2 class="section-title">Your Info</h2>
-              <label for="firstName" class="visually-hidden">First Name</label>
-              <input type="text" id="firstName" class="input-field" value="John" aria-label="First Name" />
-              
-              <label for="lastName" class="visually-hidden">Last Name</label>
-              <input type="text" id="lastName" class="input-field" value="Doe" aria-label="Last Name" />
-              
-              <h2 class="section-title">Shipping Address</h2>
-              <label for="street" class="visually-hidden">Street Address</label>
-              <input type="text" id="street" class="input-field" value="123 Sesame Street" aria-label="Street Address" />
-              
-              <label for="unit" class="visually-hidden">Unit Number</label>
-              <input type="text" id="unit" class="input-field" value="B4" aria-label="Unit Number" />
-              
-              <label for="city" class="visually-hidden">City</label>
-              <input type="text" id="city" class="input-field" value="Orlando" aria-label="City" />
-              
-              <label for="state" class="visually-hidden">State</label>
-              <input type="text" id="state" class="input-field" value="FL" aria-label="State" />
-              
-              <label for="zip" class="visually-hidden">ZIP Code</label>
-              <input type="text" id="zip" class="input-field" value="32181" aria-label="ZIP Code" />
-              
-              <h2 class="section-title">Contact</h2>
-              <label for="phone" class="visually-hidden">Phone Number</label>
-              <input type="tel" id="phone" class="input-field" value="(123) 456-7890" aria-label="Phone Number" />
-              
-              <div class="divider"></div>
-              
-              <h2 class="section-title">Payment Information</h2>
-              <div class="payment-section">
-                <div class="card-info">
-                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0054688d81a7b4137c8818968f672be26545c12c24e0966f95738e991beb8424?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Credit Card Icon" class="payment-icon" />
-                  <span>0123 4567 8910</span>
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2cf17b00013288e730b9195aac2518d046287f2b800598d5871f33fdc6c7e7c2?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
+             alt="Company Logo" 
+             class="header-logo" />
+        <h1 class="page-title">Confirm and Pay</h1>
+
+        <div class="main-content">
+            <div class="content-wrapper">
+                <div class="form-column">
+                    <form class="form-container">
+                        <h2 class="section-title">Your Info</h2>
+                        <label for="firstName" class="visually-hidden">First Name</label>
+                        <input type="text" id="firstName" class="input-field" value="John" aria-label="First Name">
+
+                        <label for="lastName" class="visually-hidden">Last Name</label>
+                        <input type="text" id="lastName" class="input-field" value="Doe" aria-label="Last Name">
+
+                        <h2 class="section-title">Shipping Address</h2>
+                        <label for="street" class="visually-hidden">Street Address</label>
+                        <input type="text" id="street" class="input-field" value="123 Sesame Street" aria-label="Street Address">
+
+                        <label for="unit" class="visually-hidden">Unit Number</label>
+                        <input type="text" id="unit" class="input-field" value="B4" aria-label="Unit Number">
+
+                        <label for="city" class="visually-hidden">City</label>
+                        <input type="text" id="city" class="input-field" value="Orlando" aria-label="City">
+
+                        <label for="state" class="visually-hidden">State</label>
+                        <input type="text" id="state" class="input-field" value="FL" aria-label="State">
+
+                        <label for="zip" class="visually-hidden">ZIP Code</label>
+                        <input type="text" id="zip" class="input-field" value="32181" aria-label="ZIP Code">
+
+                        <h2 class="section-title">Contact</h2>
+                        <label for="phone" class="visually-hidden">Phone Number</label>
+                        <input type="tel" id="phone" class="input-field" value="(123) 456-7890" aria-label="Phone Number">
+
+                        <div class="divider"></div>
+
+                        <h2 class="section-title">Payment Information</h2>
+                        <div class="payment-section">
+                            <div class="card-info">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0054688d81a7b4137c8818968f672be26545c12c24e0966f95738e991beb8424?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
+                                     alt="Credit Card Icon" 
+                                     class="payment-icon">
+                                <span>0123 4567 8910</span>
+                            </div>
+                            <div class="card-icons">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ced0fe018a0d12a7f8b108d90b8f9b6cc73dae0315b28047f92ec9a532c0f1fb?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
+                                     alt="Payment Method Icon" 
+                                     class="payment-icon">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/1266081ec9b04f7e934344f373525f3d66a44c91c1b124ce4b09fa284131f5d3?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
+                                     alt="Payment Method Icon" 
+                                     class="payment-icon">
+                            </div>
+                        </div>
+
+                        <div class="divider-text">or</div>
+
+                        <button class="apple-pay-wrapper">
+                            <div class="apple-pay-button">
+                                <span>Pay with</span>
+                                <span>Pay</span>
+                            </div>
+                        </button>
+                    </form>
                 </div>
-                <div class="card-icons">
-                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ced0fe018a0d12a7f8b108d90b8f9b6cc73dae0315b28047f92ec9a532c0f1fb?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Payment Method Icon" class="payment-icon" />
-                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/1266081ec9b04f7e934344f373525f3d66a44c91c1b124ce4b09fa284131f5d3?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Payment Method Icon" class="payment-icon" />
-                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a9092c9bd8df667e7f4fb3f368faaebce97b3b05c429ccbd125ae11c3d438244?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Payment Method Icon" class="payment-icon" />
+
+                <div class="summary-column">
+                    <div class="order-summary">
+                        <div class="summary-container">
+                            <h2 class="summary-title">Order Summary</h2>
+                            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0ca3ff0eda14be7a202223e092f9d6916cf10466f5f5e79b8224f098a0329905?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
+                                 alt="Costa Rica Box Product Image" 
+                                 class="product-image">
+                            <h3 class="product-name">Costa Rica Box</h3>
+                            <div class="summary-divider"></div>
+                            <div class="price-details">
+                                <div class="price-labels">
+                                    <span>Subtotal</span>
+                                    <span>Shipping</span>
+                                    <span>Taxes</span>
+                                    <span>Today's Total</span>
+                                </div>
+                                <div class="price-values">
+                                    <span>$14.99</span>
+                                    <span>$4.99</span>
+                                    <span>--</span>
+                                    <span class="total-price">$19.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              
-              <div class="divider-text">or</div>
-              
-              <button class="apple-pay-wrapper">
-                <div class="apple-pay-button">
-                  <span>Pay with</span>
-                  <span>Pay</span>
-                </div>
-              </button>
-            </form>
-          </div>
-    
-          <div class="summary-column">
-            <div class="order-summary">
-              <div class="summary-container">
-                <h2 class="summary-title">Order Summary</h2>
-                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0ca3ff0eda14be7a202223e092f9d6916cf10466f5f5e79b8224f098a0329905?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Costa Rica Box Product Image" class="product-image" />
-                <h3 class="product-name">Costa Rica Box</h3>
-                <div class="summary-divider"></div>
-                <div class="price-details">
-                  <div class="price-labels">
-                    <span>Subtotal</span>
-                    <span>Shipping</span>
-                    <span>Taxes</span>
-                    <span>Today's Total</span>
-                  </div>
-                  <div class="price-values">
-                    <span>$14.99</span>
-                    <span>$4.99</span>
-                    <span>--</span>
-                    <span class="total-price">$19.99</span>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    
-      <button type="submit" class="confirm-button">Confirm and Pay</button>
+
+        <button type="submit" class="confirm-button">Confirm and Pay</button>
     </div>
+</body>
+</html>
