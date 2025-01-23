@@ -1,407 +1,100 @@
-<style>
-    .feedback-container {
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    
-    .header-nav {
-      background: #52B9BC;
-      width: 100%;
-      padding: 18px 0 19px;
-    }
-    
-    .logo-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 5px;
-    }
-    
-    .logo {
-      aspect-ratio: 6.1;
-      width: 605px;
-      max-width: 100%;
-    }
-    
-    .nav-container {
-      background: #65D7DA;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 80px 0 80px;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    
-    .nav-links {
-      display: flex;
-      gap: 50px;
-      color: #EFF1EE;
-      font: 600 16px Montserrat, sans-serif;
-    }
-    
-    .nav-icons {
-      display: flex;
-      gap: 10px;
-    }
-    
-    .profile-icon {
-      aspect-ratio: 0.7;
-      width: 67px;
-    }
-    
-    .menu-icon {
-      aspect-ratio: 0.97;
-      width: 60px;
-      margin: auto 0;
-    }
-    
-    .main-content {
-      max-width: 1008px;
-      width: 100%;
-      margin: 84px auto 0;
-      padding: 0 20px;
-    }
-    
-    .page-title {
-      color: #000;
-      font: 600 80px Fredoka, sans-serif;
-    }
-    
-    .rating-labels {
-      display: flex;
-      justify-content: space-between;
-      margin: 61px 0 20px;
-      color: #000;
-      font: 600 16px Montserrat, sans-serif;
-    }
-    
-    .rating-group {
-      margin-bottom: 20px;
-    }
-    
-    .rating-question {
-      color: #000;
-      font: 600 16px Montserrat, sans-serif;
-      margin-right: 52px;
-    }
-    
-    .rating-options {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-    }
-    
-    .rating-option {
-      border-radius: 10px;
-      background: rgba(217,217,217,0.11);
-      border: 2px solid #7B7B7B;
-      padding: 24px 29px;
-    }
-    
-    .radio-circle {
-      border-radius: 50%;
-      width: 63px;
-      height: 63px;
-      border: 2px solid #7B7B7B;
-    }
-    
-    .feedback-text {
-      color: #000;
-      font: 600 20px Montserrat, sans-serif;
-      margin: 87px 0 38px 35px;
-    }
-    
-    .feedback-textarea {
-      border-radius: 50px;
-      box-shadow: 0 4px 4px rgba(0,0,0,0.25);
-      width: 903px;
-      max-width: 100%;
-      height: 255px;
-      border: 1px solid #000;
-    }
-    
-    .order-input {
-      border-radius: 50px;
-      box-shadow: 0 4px 4px rgba(0,0,0,0.25);
-      width: 898px;
-      max-width: 100%;
-      height: 65px;
-      border: 1px solid #000;
-      margin: 38px 0;
-    }
-    
-    .contact-options {
-      display: flex;
-      gap: 69px;
-      color: #000;
-      font: 600 16px Montserrat, sans-serif;
-      margin: 48px 0 0 137px;
-    }
-    
-    .radio-option {
-      display: flex;
-      gap: 13px;
-      align-items: center;
-    }
-    
-    .radio-button {
-      border-radius: 50%;
-      width: 21px;
-      height: 21px;
-      border: 1px solid #000;
-    }
-    
-    .submit-button {
-      border-radius: 112px;
-      background: #ECA72C;
-      width: 447px;
-      max-width: 100%;
-      color: #000;
-      text-align: center;
-      margin: 70px auto;
-      padding: 44px 70px;
-      font: 400 45px Poppins, sans-serif;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .footer {
-      background: #52B9BC;
-      width: 100%;
-      padding: 79px 80px;
-      margin-top: 181px;
-    }
-    
-    .footer-content {
-      max-width: 929px;
-      margin: 0 auto;
-    }
-    
-    .subscribe-section {
-      display: flex;
-      gap: 23px;
-      flex-wrap: wrap;
-      margin-bottom: 50px;
-    }
-    
-    .subscribe-text {
-      color: #000;
-      font: 600 24px Montserrat, sans-serif;
-      margin: auto 0;
-    }
-    
-    .email-input {
-      border-radius: 100px;
-      background: #D9D9D9;
-      padding: 9px 28px;
-      font: 300 20px Poppins, sans-serif;
-      border: none;
-    }
-    
-    .footer-links {
-      display: flex;
-      gap: 43px;
-      font: 275 24px Poppins, sans-serif;
-      justify-content: center;
-      margin-bottom: 34px;
-    }
-    
-    .footer-logo {
-      aspect-ratio: 6.02;
-      width: 410px;
-      max-width: 100%;
-      margin: 0 auto;
-      display: block;
-    }
-    
-    .footer-image {
-      aspect-ratio: 3.51;
-      width: 260px;
-      max-width: 100%;
-      margin: 47px auto 0;
-      display: block;
-    }
-    
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
-    }
-    
-    @media (max-width: 991px) {
-      .nav-container {
-        padding: 0 20px;
-      }
-      
-      .main-content {
-        margin-top: 40px;
-      }
-      
-      .page-title {
-        font-size: 40px;
-      }
-      
-      .rating-labels {
-        margin: 40px 6px 0 0;
-      }
-      
-      .feedback-text {
-        margin: 40px 0 0 10px;
-      }
-      
-      .submit-button {
-        font-size: 40px;
-        margin-top: 40px;
-        padding: 20px;
-      }
-      
-      .footer {
-        margin-top: 40px;
-        padding: 40px 20px;
-      }
-    }
-    </style>
-    
-    <div class="feedback-container">
-      <nav class="header-nav">
-        <div class="logo-wrapper">
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+  <div class="feedback-container">
+    <nav class="header-nav">
+      <div class="logo-wrapper">
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo">
+      </div>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="#how">How It Works</a>
+          <a href="#countries">Countries</a>
+          <a href="#start">Get Started</a>
         </div>
-        <div class="nav-container">
-          <div class="nav-links">
-            <a href="#how">How It Works</a>
-            <a href="#countries">Countries</a>
-            <a href="#start">Get Started</a>
-          </div>
-          <div class="nav-icons">
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Profile" class="profile-icon">
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Menu" class="menu-icon">
+        <div class="nav-icons">
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Profile" class="profile-icon">
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Menu" class="menu-icon">
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <h1 class="page-title">Customer Feedback Survey</h1>
+      <form>
+        <div class="rating-labels">
+          <span>Very Satisfied</span>
+          <span>Satisfied</span>
+          <span>Neutral</span>
+          <span>Unsatisfied</span>
+          <span>Very Unsatisfied</span>
+        </div>
+
+        <div class="rating-group">
+          <label class="rating-question">How satisfied are you with our product?</label>
+          <div class="rating-options" role="radiogroup">
+            <div class="rating-option" role="radio" tabindex="0">
+              <div class="radio-circle"></div>
+            </div>
+            <div class="rating-option" role="radio" tabindex="0">
+              <div class="radio-circle"></div>
+            </div>
+            <div class="rating-option" role="radio" tabindex="0">
+              <div class="radio-circle"></div>
+            </div>
+            <div class="rating-option" role="radio" tabindex="0">
+              <div class="radio-circle"></div>
+            </div>
+            <div class="rating-option" role="radio" tabindex="0">
+              <div class="radio-circle"></div>
+            </div>
           </div>
         </div>
-      </nav>
-    
-      <main class="main-content">
-        <h1 class="page-title">Customer Feedback Survey</h1>
-    
-        <form>
-          <div class="rating-labels">
-            <span>Very Satisfied</span>
-            <span>Satisfied</span>
-            <span>Neutral</span>
-            <span>Unsatisfied</span>
-            <span>Very Unsatisfied</span>
+
+        <label for="feedback" class="feedback-text">Tell us how we can improve</label>
+        <textarea id="feedback" class="feedback-textarea" aria-label="Feedback text"></textarea>
+
+        <label for="order" class="feedback-text">If this is about a specific order, please type in the order number</label>
+        <input type="text" id="order" class="order-input" aria-label="Order number">
+
+        <label class="feedback-text">Would you like a representative to contact you?</label>
+        <div class="contact-options">
+          <div class="radio-option">
+            <input type="radio" id="contact-yes" name="contact" class="visually-hidden">
+            <label for="contact-yes">Yes</label>
           </div>
-    
-          <div class="rating-group">
-            <label class="rating-question">How satisfied are you with our product?</label>
-            <div class="rating-options" role="radiogroup">
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-            </div>
+          <div class="radio-option">
+            <input type="radio" id="contact-no" name="contact" class="visually-hidden">
+            <label for="contact-no">No</label>
           </div>
-    
-          <div class="rating-group">
-            <label class="rating-question">How satisfied are you with our service?</label>
-            <div class="rating-options" role="radiogroup">
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-            </div>
-          </div>
-    
-          <div class="rating-group">
-            <label class="rating-question">How satisfied are you with our team?</label>
-            <div class="rating-options" role="radiogroup">
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-              <div class="rating-option" role="radio" tabindex="0">
-                <div class="radio-circle"></div>
-              </div>
-            </div>
-          </div>
-    
-          <label for="feedback" class="feedback-text">Tell us how we can improve</label>
-          <textarea id="feedback" class="feedback-textarea" aria-label="Feedback text"></textarea>
-    
-          <label for="order" class="feedback-text">If this is about a specific order, please type in the order number</label>
-          <input type="text" id="order" class="order-input" aria-label="Order number">
-    
-          <label class="feedback-text">Would you like a representative to contact you?</label>
-          <div class="contact-options">
-            <div class="radio-option">
-              <input type="radio" id="contact-yes" name="contact" class="visually-hidden">
-              <label for="contact-yes">Yes</label>
-            </div>
-            <div class="radio-option">
-              <input type="radio" id="contact-no" name="contact" class="visually-hidden">
-              <label for="contact-no">No</label>
-            </div>
-          </div>
-    
-          <button type="submit" class="submit-button">Submit</button>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <form class="subscribe-section">
+          <label for="email" class="subscribe-text">Subscribe for the latest updates:</label>
+          <input type="email" id="email" class="email-input" placeholder="Email Address" aria-label="Email Address">
         </form>
-      </main>
-    
-      <footer class="footer">
-        <div class="footer-content">
-          <form class="subscribe-section">
-            <label for="email" class="subscribe-text">Subscribe for the latest updates:</label>
-            <input type="email" id="email" class="email-input" placeholder="Email Address" aria-label="Email Address">
-          </form>
-    
-          <nav class="footer-links">
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact Us</a>
-            <a href="#how">How it Works</a>
-            <a href="#countries">Countries</a>
-            <a href="#start">Get Started</a>
-          </nav>
-    
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo" class="footer-logo">
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="footer-image">
-        </div>
-      </footer>
-    </div>
-    
+        <nav class="footer-links">
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact Us</a>
+          <a href="#how">How it Works</a>
+          <a href="#countries">Countries</a>
+          <a href="#start">Get Started</a>
+        </nav>
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo" class="footer-logo">
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
