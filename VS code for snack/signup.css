@@ -1,0 +1,215 @@
+.signup-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .header {
+    background-color: #52B9BC;
+    display: flex;
+    width: 100%;
+    padding: 12px 0;
+    flex-direction: column;
+  }
+  
+  .logo {
+    aspect-ratio: 6.1;
+    object-fit: contain;
+    width: 605px;
+    align-self: center;
+    z-index: 10;
+    max-width: 100%;
+  }
+  
+  .nav-container {
+    background-color: #65D7DA;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 80px 0 80px;
+  }
+  
+  .nav-links {
+    align-self: end;
+    display: flex;
+    margin-top: 31px;
+    gap: 40px 50px;
+    color: #EFF1EE;
+    font: 600 16px Montserrat, sans-serif;
+  }
+  
+  .social-icons {
+    display: flex;
+    margin: auto 0;
+  }
+  
+  .social-icon {
+    aspect-ratio: 0.7;
+    object-fit: contain;
+    width: 67px;
+  }
+  
+  .social-icon-alt {
+    aspect-ratio: 0.97;
+    object-fit: contain;
+    width: 60px;
+    align-self: start;
+    margin-top: 22px;
+  }
+  
+  .signup-form {
+    border-radius: 10px;
+    background-color: rgba(217, 217, 217, 0.11);
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    align-self: center;
+    display: flex;
+    margin-top: 25px;
+    width: 753px;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 29px 66px 0;
+    border: 5px solid #000;
+  }
+  
+  .social-button {
+    position: relative;
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin-bottom: 11px;
+  }
+  
+  .button-container {
+    border-radius: 50px;
+    background-color: #fff;
+    width: 100%;
+    height: 46px;
+    border: 1px solid #000;
+  }
+  
+  .button-text {
+    color: #000;
+    font: 400 16px Inter, sans-serif;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .form-divider {
+    display: flex;
+    margin-top: 7px;
+    width: 329px;
+    max-width: 100%;
+    gap: 20px;
+    font: 400 15px Inter, sans-serif;
+    color: #000;
+    justify-content: space-between;
+  }
+  
+  .form-group {
+    margin: 7px 0;
+  }
+  
+  .form-label {
+    color: #000;
+    font: 400 15px Inter, sans-serif;
+    margin-bottom: 4px;
+    display: block;
+  }
+  
+  .input-container {
+    position: relative;
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    padding: 13px 27px;
+  }
+  
+  .form-input {
+    border-radius: 50px;
+    background-color: #fff;
+    width: 100%;
+    height: 46px;
+    border: 1px solid #000;
+  }
+  
+  .input-placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    font: 400 14px Inter, sans-serif;
+  }
+  
+  .submit-button {
+    aspect-ratio: 1.09;
+    width: 156px;
+    align-self: center;
+    margin: 22px 0 -49px;
+  }
+  
+  .footer {
+    background-color: #52B9BC;
+    display: flex;
+    margin-top: 97px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    justify-content: center;
+    padding: 79px 80px;
+  }
+  
+  .footer-content {
+    display: flex;
+    width: 100%;
+    max-width: 929px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .subscribe-container {
+    align-self: stretch;
+    display: flex;
+    gap: 23px;
+    flex-wrap: wrap;
+  }
+  
+  .subscribe-text {
+    flex-grow: 1;
+    margin: auto 0;
+    font: 600 32px Montserrat, sans-serif;
+  }
+  
+  .email-input {
+    min-height: 42px;
+    padding: 13px 27px;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 50px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 36px;
+    font: 600 15px Montserrat, sans-serif;
+  }
+  
+  .footer-logo {
+    align-self: center;
+    margin-top: 44px;
+    max-width: 100%;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    max-width: 100%;
+  }
+  
