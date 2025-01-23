@@ -1,0 +1,156 @@
+/* Base styles for the profile layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  .profile-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header-banner {
+    position: relative;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .main-content {
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .settings-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-container {
+    margin-right: 10px;
+  }
+  
+  .settings-text {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .name-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .name-icon-wrapper {
+    margin-right: 10px;
+  }
+  
+  .name-text {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .email-section {
+    margin-top: 20px;
+  }
+  
+  .email-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .email-badge {
+    margin-left: 10px;
+  }
+  
+  .subscription-section {
+    margin-top: 20px;
+  }
+  
+  .subscription-text {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .billing-referral-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .billing-wrapper, .referral-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .orders-section {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .footer {
+    background-color: #2e2e2e;
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo-1, .footer-logo-2 {
+    width: 100px;
+    margin-top: 20px;
+  }
+  
+  .footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .subscribe-text {
+    font-size: 16px;
+  }
+  
+  .email-input {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .email-input:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
