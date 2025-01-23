@@ -207,5 +207,58 @@
     width: 576px;
     max-width: 100%;
     color: #000;
-    text-ali
+    text-align: center;
+    margin: 42px 0 0 25px;
+    padding: 29px 70px;
+    font: 400 36px Montserrat, sans-serif;
+  }
+  
+  /* Accessibility */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 991px) {
+    .header-logo,
+    .form-container,
+    .divider,
+    .summary-section,
+    .order-summary {
+      max-width: 100%;
+    }
+  
+    .main-content {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  
+    .content-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  
+    .form-section,
+    .summary-section {
+      width: 100%;
+    }
+  
+    .input-field,
+    .payment-section,
+    .submit-button {
+      padding: 0 20px;
+    }
+  
+    .submit-button {
+      margin-top: 40px;
+    }
+  }
   
