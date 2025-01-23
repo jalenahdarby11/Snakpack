@@ -1,426 +1,103 @@
-<style>
-  .snack-quiz-container {
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  
-  .top-nav {
-    background: #52B9BC;
-    padding: 18px 0 19px;
-    width: 100%;
-  }
-  
-  .nav-logo {
-    aspect-ratio: 6.1;
-    object-fit: contain;
-    width: 605px;
-    align-self: center;
-    max-width: 100%;
-  }
-  
-  .nav-menu {
-    background: #65D7DA;
-    display: flex;
-    width: 100%;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 5px 0 -6px;
-    padding: 0 32px 0 80px;
-  }
-  
-  .menu-items {
-    align-self: end;
-    display: flex;
-    margin-top: 25px;
-    gap: 40px 52px;
-    color: #EFF1EE;
-    font: 600 16px Montserrat, sans-serif;
-  }
-  
-  .menu-link {
-    flex-basis: auto;
-  }
-  
-  .get-started-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .get-started-underline {
-    aspect-ratio: 18.87;
-    object-fit: contain;
-    width: 95px;
-    margin-top: 4px;
-  }
-  
-  .nav-icons {
-    display: flex;
-    margin: auto 0;
-  }
-  
-  .icon-1 {
-    aspect-ratio: 0.7;
-    object-fit: contain;
-    width: 67px;
-  }
-  
-  .icon-2 {
-    aspect-ratio: 0.97;
-    object-fit: contain;
-    width: 60px;
-    margin: auto 0;
-  }
-  
-  .quiz-title-wrapper {
-    border-radius: 10px;
-    align-self: center;
-    margin-top: 15px;
-    width: 632px;
-    max-width: 100%;
-    padding: 6px;
-    border: 1px solid #000;
-  }
-  
-  .quiz-title {
-    border-radius: 10px;
-    background: #52B9BC;
-    color: #EFF1EE;
-    padding: 9px 63px;
-    font: 600 40px Montserrat, sans-serif;
-    text-align: center;
-  }
-  
-  .quiz-container {
-    background: rgba(217, 217, 217, 0.11);
-    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
-    align-self: center;
-    margin-top: 33px;
-    width: 753px;
-    max-width: 100%;
-    padding: 33px 80px;
-    border: 5px solid #000;
-  }
-  
-  .quiz-question {
-    color: #000;
-    margin-left: 12px;
-    font: 400 24px Poppins, sans-serif;
-  }
-  
-  .options-grid {
-    margin-top: 33px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .option-checkbox {
-    border-radius: 10px;
-    border: 2px solid #000;
-    border-bottom-width: 3px;
-    padding: 1px;
-  }
-  
-  .option-content {
-    border-radius: 9px;
-    background: #65D7DA;
-    display: flex;
-    gap: 6px;
-    padding: 9px 12px;
-    border: 1px solid #000;
-    align-items: center;
-  }
-  
-  .checkbox {
-    border-radius: 9px;
-    background: #F5F5F5;
-    width: 40px;
-    height: 35px;
-  }
-  
-  .option-label {
-    color: #000;
-    font: 400 13px Poppins, sans-serif;
-    margin: auto 0;
-  }
-  
-  .option-icon {
-    aspect-ratio: 1;
-    object-fit: contain;
-    width: 24px;
-    margin: auto 0;
-  }
-  
-  .next-button {
-    border-radius: 50px;
-    background: #ECA72C;
-    color: #000;
-    font: 400 20px Poppins, sans-serif;
-    text-align: center;
-    padding: 20px 70px;
-    margin-top: 36px;
-    cursor: pointer;
-  }
-  
-  .footer {
-    background: #52B9BC;
-    margin-top: 88px;
-    width: 100%;
-    padding: 79px 80px;
-    color: #000;
-  }
-  
-  .footer-content {
-    max-width: 929px;
-    margin: 0 auto;
-  }
-  
-  .subscribe-section {
-    display: flex;
-    gap: 23px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
-  .subscribe-text {
-    font: 600 24px Montserrat, sans-serif;
-  }
-  
-  .email-input {
-    border-radius: 100px;
-    background: #D9D9D9;
-    padding: 9px 28px;
-    font: 300 20px Poppins, sans-serif;
-    border: none;
-  }
-  
-  .footer-links {
-    display: flex;
-    gap: 40px;
-    margin: 50px 0 0 25px;
-    font: 275 24px Poppins, sans-serif;
-  }
-  
-  .footer-link {
-    color: #000;
-    text-decoration: none;
-  }
-  
-  .footer-logo-1 {
-    aspect-ratio: 6.02;
-    width: 410px;
-    margin-top: 34px;
-  }
-  
-  .footer-logo-2 {
-    aspect-ratio: 3.51;
-    width: 260px;
-    margin: 47px 0 0 29px;
-  }
-  
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
-  }
-  
-  @media (max-width: 991px) {
-    .nav-menu {
-      padding: 0 20px;
-    }
-    
-    .get-started-underline {
-      margin-right: 5px;
-    }
-    
-    .quiz-title {
-      padding: 0 20px;
-    }
-    
-    .quiz-container {
-      padding: 0 20px;
-    }
-    
-    .options-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .next-button {
-      padding: 0 20px;
-    }
-    
-    .footer {
-      padding: 0 20px;
-      margin-top: 40px;
-    }
-    
-    .footer-links {
-      margin-top: 40px;
-    }
-    
-    .footer-logo-2 {
-      margin-top: 40px;
-    }
-  }
-  </style>
-  
-  <div class="snack-quiz-container">
-    <nav class="top-nav">
-      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="nav-logo" />
-      <div class="nav-menu">
-        <div class="menu-items">
-          <a href="#how-it-works" class="menu-link">How It Works</a>
-          <a href="#countries" class="menu-link">Countries</a>
-          <div class="get-started-wrapper">
-            <a href="#get-started" class="menu-link">Get Started</a>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/fd19d80648e22140ef24e8412b01f8dde1f242b4961a97a65d66b6c22883e1c9?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="get-started-underline" />
-          </div>
-        </div>
-        <div class="nav-icons">
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Navigation Icon 1" class="icon-1" />
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Navigation Icon 2" class="icon-2" />
-        </div>
-      </div>
-    </nav>
-  
-    <div class="quiz-title-wrapper">
-      <h1 class="quiz-title">Snack Preference Quiz</h1>
-    </div>
-  
-    <form class="quiz-container">
-      <h2 class="quiz-question">Do you have any dietary restrictions?</h2>
-      
-      <div class="options-grid">
-        <div class="option-checkbox">
-          <label class="option-content">
-            <input type="checkbox" class="visually-hidden" name="dietary" value="milk" />
-            <span class="checkbox"></span>
-            <span class="option-label">Milk</span>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/bc1a1778664cb5c0105d28394c289cc48751a6430af36678c16f06a93aab08ae?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Milk Icon" class="option-icon" />
-          </label>
-        </div>
-  
-        <div class="option-checkbox">
-          <label class="option-content">
-            <input type="checkbox" class="visually-hidden" name="dietary" value="wheat" />
-            <span class="checkbox"></span>
-            <span class="option-label">Wheat</span>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/7d64da4644ec3101894c84ccd09825ec188770eed31f15066fdbfbdb0e5c057d?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Wheat Icon" class="option-icon" />
-          </label>
-        </div>
-  
-        <div class="option-checkbox">
-          <label class="option-content">
-            <input type="checkbox" class="visually-hidden" name="dietary" value="tree-nuts" />
-            <span class="checkbox"></span>
-            <span class="option-label">Tree Nuts</span>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/af5fcbffc584b49931c0fbbce9f8ac7ecdb7b322051e26626f7d433dd3de3a99?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Tree Nuts Icon" class="option-icon" />
-          </label>
-        </div>
-  
-        <div class="option-checkbox">
-          <label class="option-content">
-            <input type="checkbox" class="visually-hidden" name="dietary" value="eggs" />
-            <span class="checkbox"></span>
-            <span class="option-label">Eggs</span>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/e6a0787b47abd2fe95015a6c5f772835a0ba9ed7c3ec457aeed629bbebc16b15?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Eggs Icon" class="option-icon" />
-          </label>
-        </div>
-  
-        <div class="option-checkbox">
-          <label class="option-content">
-            <input type="checkbox" class="visually-hidden" name="dietary" value="soy" />
-            <span class="checkbox"></span>
-            <span class="option-label">Soy</span>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ebaa430db5dfb0aab65341d7b993b703a9fa79ff4028b98167e5c03b04a1f005?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Soy Icon" class="option-icon" />
-          </label>
-        </div>
-  
-        <div class="option-checkbox">
-          <label class="option-content">
-            <input type="checkbox" class="visually-hidden" name="dietary" value="vegetarian" />
-            <span class="checkbox"></span>
-            <span class="option-label">Vegetarian</span>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4a1e6f6b33209dad17496cbe597dc1e230aac1a1a7af2c3229ef80b0c3167e81?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Vegetarian Icon" class="option-icon" />
-          </label>
-        </div>
-  
-        <div class="option-checkbox">
-          <label class="option-content">
-            <input type="checkbox" class="visually-hidden" name="dietary" value="peanuts" />
-            <span class="checkbox"></span>
-            <span class="option-label">Peanuts</span>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cb37d29d04cc31d76d3378ed006a1716f32389bb1b6245bbc16109d72f8b7633?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Peanuts Icon" class="option-icon" />
-          </label>
-        </div>
-  
-        <div class="option-checkbox">
-          <label class="option-content">
-            <input type="checkbox" class="visually-hidden" name="dietary" value="fish" />
-            <span class="checkbox"></span>
-            <span class="option-label">Fish</span>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5e1b372674f2894fa7959aae873210b27e5f9a3edce4171fbdb3c5d47179198d?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Fish Icon" class="option-icon" />
-          </label>
-        </div>
-  
-        <div class="option-checkbox">
-          <label class="option-content">
-            <input type="checkbox" class="visually-hidden" name="dietary" value="vegan" />
-            <span class="checkbox"></span>
-            <span class="option-label">Vegan</span>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a4db24397e3e5e70b5d5f3371f0e4446c443a3057eb1a3cbc034481f619f3cad?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Vegan Icon" class="option-icon" />
-          </label>
-        </div>
-  
-        <div class="option-checkbox">
-          <label class="option-content">
-            <input type="checkbox" class="visually-hidden" name="dietary" value="sesame" />
-            <span class="checkbox"></span>
-            <span class="option-label">Sesame</span>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a25985fd63b56eb849567c3dd9781c6a76ef30617351bf3ae4f7541c490d1636?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Sesame Icon" class="option-icon" />
-          </label>
-        </div>
-  
-        <div class="option-checkbox">
-          <label class="option-content">
-            <input type="checkbox" class="visually-hidden" name="dietary" value="shellfish" />
-            <span class="checkbox"></span>
-            <span class="option-label">Shellfish</span>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cb97a4a135186fd54cc681251d8793ab0623d80eb9105827041a9e6d02573b10?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shellfish Icon" class="option-icon" />
-          </label>
-        </div>
-      </div>
-  
-      <button type="submit" class="next-button">Next</button>
-    </form>
-  
-    <footer class="footer">
-      <div class="footer-content">
-        <form class="subscribe-section">
-          <label for="email" class="subscribe-text">Subscribe for the latest updates:</label>
-          <input type="email" id="email" class="email-input" placeholder="Email Address" aria-label="Email Address" />
-        </form>
-  
-        <nav class="footer-links">
-          <a href="#faq" class="footer-link">FAQ</a>
-          <a href="#contact" class="footer-link">Contact Us</a>
-          <a href="#how-it-works" class="footer-link">How it Works</a>
-          <a href="#countries" class="footer-link">Countries</a>
-          <a href="#get-started" class="footer-link">Get Started</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Quiz</title>
+    <link rel="stylesheet" href="GetStartedQ2.css">
+</head>
+<body>
+    <div class="snack-quiz-container">
+        <nav class="top-nav">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="nav-logo" />
+            <div class="nav-menu">
+                <div class="menu-items">
+                    <a href="#how-it-works" class="menu-link">How It Works</a>
+                    <a href="#countries" class="menu-link">Countries</a>
+                    <div class="get-started-wrapper">
+                        <a href="#get-started" class="menu-link">Get Started</a>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/fd19d80648e22140ef24e8412b01f8dde1f242b4961a97a65d66b6c22883e1c9?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="get-started-underline" />
+                    </div>
+                </div>
+                <div class="nav-icons">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Navigation Icon 1" class="icon-1" />
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Navigation Icon 2" class="icon-2" />
+                </div>
+            </div>
         </nav>
-  
-        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo 1" class="footer-logo-1" />
-        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo 2" class="footer-logo-2" />
-      </div>
-    </footer>
-  </div>
-  
+    
+        <div class="quiz-title-wrapper">
+            <h1 class="quiz-title">Snack Preference Quiz</h1>
+        </div>
+    
+        <form class="quiz-container">
+            <h2 class="quiz-question">Do you have any dietary restrictions?</h2>
+            
+            <div class="options-grid">
+                <div class="option-checkbox">
+                    <label class="option-content">
+                        <input type="checkbox" class="visually-hidden" name="dietary" value="milk" />
+                        <span class="checkbox"></span>
+                        <span class="option-label">Milk</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/bc1a1778664cb5c0105d28394c289cc48751a6430af36678c16f06a93aab08ae?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Milk Icon" class="option-icon" />
+                    </label>
+                </div>
+                <div class="option-checkbox">
+                    <label class="option-content">
+                        <input type="checkbox" class="visually-hidden" name="dietary" value="gluten" />
+                        <span class="checkbox"></span>
+                        <span class="option-label">Gluten</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/7a66b6a8a7ad23b87b84c7e5d47b23a34d5bc5b49c89b071d270173b8786c54d?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Gluten Icon" class="option-icon" />
+                    </label>
+                </div>
+                <div class="option-checkbox">
+                    <label class="option-content">
+                        <input type="checkbox" class="visually-hidden" name="dietary" value="nuts" />
+                        <span class="checkbox"></span>
+                        <span class="option-label">Nuts</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d05ff90741e4f3a6a53b63d9449a0208d3c0182d09b2fe4386c06ac6fc60792b?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Nuts Icon" class="option-icon" />
+                    </label>
+                </div>
+                <div class="option-checkbox">
+                    <label class="option-content">
+                        <input type="checkbox" class="visually-hidden" name="dietary" value="vegan" />
+                        <span class="checkbox"></span>
+                        <span class="option-label">Vegan</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d2220a3a035d2260d24b8d2139c3201f99d6c5936c9d6ff9a004d3924d2e65b1?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Vegan Icon" class="option-icon" />
+                    </label>
+                </div>
+                <div class="option-checkbox">
+                    <label class="option-content">
+                        <input type="checkbox" class="visually-hidden" name="dietary" value="vegetarian" />
+                        <span class="checkbox"></span>
+                        <span class="option-label">Vegetarian</span>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f1b9a98a739c9cdb760ef07b6e28231fc93ecf5248b141ac902adf504ce38c34?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Vegetarian Icon" class="option-icon" />
+                    </label>
+                </div>
+            </div>
+    
+            <button type="submit" class="next-button">Next</button>
+        </form>
+    
+        <footer class="footer">
+            <div class="footer-content">
+                <form class="subscribe-section">
+                    <label for="email" class="subscribe-text">Subscribe for the latest updates:</label>
+                    <input type="email" id="email" class="email-input" placeholder="Email Address" aria-label="Email Address" />
+                </form>
+        
+                <nav class="footer-links">
+                    <a href="#faq" class="footer-link">FAQ</a>
+                    <a href="#contact" class="footer-link">Contact Us</a>
+                    <a href="#how-it-works" class="footer-link">How it Works</a>
+                    <a href="#countries" class="footer-link">Countries</a>
+                    <a href="#get-started" class="footer-link">Get Started</a>
+                </nav>
+        
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo 1" class="footer-logo-1" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo 2" class="footer-logo-2" />
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
