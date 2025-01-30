@@ -22,7 +22,7 @@
 .nav-menu {
     background: #65D7DA;
     display: flex;
-    width: 80%;
+    width: 90%;
     align-items: flex-start;
     gap: 20px;
     flex-wrap: wrap;
