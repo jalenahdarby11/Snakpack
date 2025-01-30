@@ -31,7 +31,7 @@
 .nav-container {
     background-color: #65d7da;
     display: flex;
-    width: 100%;
+    width: 93%;
     align-items: flex-start;
     gap: 20px;
     flex-wrap: wrap;

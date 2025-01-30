@@ -28,7 +28,7 @@
   .nav-container {
     background-color: rgba(101, 215, 218, 1);
     display: flex;
-    width: 100%;
+    width: 93%;
     align-items: flex-start;
     gap: 20px;
     flex-wrap: wrap;

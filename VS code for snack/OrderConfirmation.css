@@ -1,4 +1,4 @@
-/* General Styling */
+
 .order-confirmation {
     background: #fff;
     display: flex;
@@ -20,7 +20,7 @@
     font: 700 24px Montserrat, sans-serif;
   }
   
-  /* Main Content Styling */
+  
   .main-content {
     margin: 49px auto 0;
     width: 100%;
