@@ -8,7 +8,7 @@
 .top-nav {
     background: #52B9BC;
     padding: 18px 0 19px;
-    width: 93%;
+    width: 100%;
 }
 
 .nav-logo {
@@ -16,7 +16,7 @@
     object-fit: contain;
     width: 605px;
     align-self: center;
-    max-width: 100%;
+    max-width: 93%;
 }
 
 .nav-menu {
