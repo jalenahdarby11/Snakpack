@@ -5,57 +5,6 @@
     flex-direction: column;
     align-items: center;
   }
-  .nav-container {
-    background-color: #65D7DA;
-    z-index: 10;
-    display: flex;
-    width: 100%;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 5px 0 -6px;
-    padding: 0 32px 0 80px;
-  }
-  
-  .nav-links {
-    align-self: end;
-    display: flex;
-    margin-top: 25px;
-    gap: 40px 50px;
-    color: #EFF1EE;
-    font: 600 16px Montserrat, sans-serif;
-  }
-  
-  .nav-dropdown {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .dropdown-icon {
-    aspect-ratio: 15.87;
-    object-fit: contain;
-    width: 80px;
-    margin-top: 4px;
-  }
-  
-  .nav-icons {
-    display: flex;
-    margin: auto 0;
-  }
-  
-  .social-icon {
-    aspect-ratio: 0.7;
-    object-fit: contain;
-    width: 67px;
-  }
-  
-  .cart-icon {
-    aspect-ratio: 0.97;
-    object-fit: contain;
-    width: 60px;
-    margin: auto 0;
-  }
   
   .header-image {
     aspect-ratio: 6.49;
