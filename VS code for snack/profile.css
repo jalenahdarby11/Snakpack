@@ -13,6 +13,20 @@
     background-color: #52B9BC;
     width: 90%;
   }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .button {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
   
   .logo {
     aspect-ratio: 6.1;
