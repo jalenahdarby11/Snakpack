@@ -5,12 +5,102 @@
     overflow: hidden;
 }
 
-.header-banner {
+  
+  .header-section {
+    background-color: #52B9BC;
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    padding: 18px 0 0;
+    flex-direction: column;
+  }
+  
+  .logo {
+    aspect-ratio: 6.1;
+    object-fit: contain;
+    width: 605px;
+    align-self: center;
+    max-width: 100%;
+  }
+  
+  .nav-container {
+    background-color: #65D7DA;
+    z-index: 10;
+    display: flex;
+    width: 93%;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px 0 -6px;
+    padding: 0 32px 0 80px;
+  }
+  
+  .nav-links {
+    align-self: end;
+    display: flex;
+    margin-top: 25px;
+    gap: 40px 50px;
+    color: #EFF1EE;
+    font: 600 16px Montserrat, sans-serif;
+  }
+  
+  .nav-dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-icon {
+    aspect-ratio: 15.87;
+    object-fit: contain;
+    width: 80px;
+    margin-top: 4px;
+  }
+  
+  .nav-icons {
+    display: flex;
+    margin: auto 0;
+  }
+  
+  .social-icon {
+    aspect-ratio: 0.7;
+    object-fit: contain;
+    width: 67px;
+  }
+  
+  .cart-icon {
+    aspect-ratio: 0.97;
+    object-fit: contain;
+    width: 60px;
+    margin: auto 0;
+  }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .subscription-page {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  .header-logo {
     aspect-ratio: 6.62;
     object-fit: contain;
     object-position: center;
     width: 100%;
-}
+    align-self: stretch;
+  }
 
 .settings-wrapper {
     display: flex;
@@ -20,15 +110,6 @@
     margin: 27px 0 0 75px;
 }
 
-.profile-header {
-    display: flex;
-    width: 658px;
-    max-width: 100%;
-    align-items: start;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
 .settings-icon-wrapper {
     display: flex;
