@@ -118,6 +118,20 @@
 .progress-dot-4 { background: rgba(166, 230, 110, 0.4); }
 .progress-dot-5 { background: rgba(166, 230, 110, 0.2); }
 
+
+
+  
+.cta-button {
+    border-radius: 50px;
+    background-color: #ECA72C;
+    margin-top: 32px;
+    width: 285px;
+    max-width: 100%;
+    padding: 23px 70px;
+  }
+
+
+
 .visually-hidden {
     position: absolute;
     width: 1px;
