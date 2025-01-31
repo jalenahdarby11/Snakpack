@@ -76,6 +76,20 @@
   width: 60px;
   margin: auto 0;
 }
+.section-wrapper {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-image {
+  aspect-ratio: 6.49;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  align-self: stretch;
+}
 
 .success-container {
     background-color: #fff;
