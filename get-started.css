@@ -1,0 +1,274 @@
+.featured-section {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navigation-bar {
+    background-color: #52B9BC;
+    padding: 20px 0 19px;
+  }
+  
+  .nav-container {
+    background-color: #52B9BC;
+    width: 93%;
+  }
+  
+  .logo {
+    aspect-ratio: 6.1;
+    width: 605px;
+    align-self: center;
+    max-width: 100%;
+  }
+  
+  .menu-wrapper {
+    background-color: #65D7DA;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px 0 -6px;
+    padding: 0 32px 0 80px;
+  }
+  
+  .nav-links {
+    align-self: end;
+    display: flex;
+    margin-top: 25px;
+    gap: 40px 52px;
+    color: #EFF1EE;
+    font: 600 16px Montserrat, sans-serif;
+  }
+  
+  .nav-item {
+    flex-basis: auto;
+  }
+  
+  .nav-button-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-indicator {
+    aspect-ratio: 18.87;
+    width: 95px;
+    margin-top: 4px;
+  }
+  
+  .social-icons {
+    display: flex;
+    margin: auto 0;
+  }
+  
+  .social-icon {
+    aspect-ratio: 0.7;
+    width: 67px;
+  }
+  
+  .social-icon-alt {
+    aspect-ratio: 0.97;
+    width: 60px;
+    margin: auto 0;
+  }
+  
+  .featured-content {
+    align-self: center;
+    margin-top: 43px;
+    width: 100%;
+    max-width: 959px;
+  }
+  
+  .country-section {
+    gap: 20px;
+    display: flex;
+  }
+  
+  .country-info {
+    display: flex;
+    margin-top: 8px;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    text-align: center;
+    font: 400 20px Inter, sans-serif;
+  }
+  
+  .country-name {
+    margin-top: 17px;
+    font: 700 36px Montserrat, sans-serif;
+  }
+  
+  .country-description {
+    align-self: stretch;
+    margin-top: 27px;
+    font: 15px Poppins, sans-serif;
+  }
+  
+  .cta-button {
+    border-radius: 50px;
+    background-color: #ECA72C;
+    margin-top: 32px;
+    width: 285px;
+    max-width: 100%;
+    padding: 23px 70px;
+  }
+  
+  .country-image {
+    aspect-ratio: 0.87;
+    width: 100%;
+    border-radius: 23px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    flex-grow: 1;
+  }
+  
+  .newsletter-section {
+    background-color: #52B9BC;
+    margin-top: 109px;
+    width: 100%;
+    padding: 79px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+  }
+  
+  .newsletter-container {
+    width: 100%;
+    max-width: 929px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .subscribe-form {
+    align-self: stretch;
+    display: flex;
+    gap: 23px;
+    flex-wrap: wrap;
+  }
+  
+  .subscribe-heading {
+    flex-grow: 1;
+    margin: auto 0;
+    font: 600 24px Montserrat, sans-serif;
+  }
+  
+  .email-input {
+    border-radius: 100px;
+    background-color: #D9D9D9;
+    flex-grow: 1;
+    width: fit-content;
+    padding: 9px 28px;
+    font: 300 20px Poppins, sans-serif;
+  }
+  
+  .footer-links {
+    display: flex;
+    width: 761px;
+    max-width: 100%;
+    gap: 40px 43px;
+    margin: 50px 0 0 25px;
+    font: 275 24px Poppins, sans-serif;
+  }
+  
+  .footer-logo {
+    aspect-ratio: 6.02;
+    width: 410px;
+    margin-top: 34px;
+    max-width: 100%;
+  }
+  
+  .footer-image {
+    aspect-ratio: 3.51;
+    width: 260px;
+    max-width: 100%;
+    margin: 47px 0 0 29px;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  @media (max-width: 991px) {
+    .navigation-bar {
+      max-width: 100%;
+      margin-right: 4px;
+    }
+  
+    .nav-container {
+      max-width: 100%;
+    }
+  
+    .menu-wrapper {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  
+    .nav-indicator {
+      margin-right: 5px;
+    }
+  
+    .featured-content {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  
+    .country-section {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  
+    .country-info {
+      margin-top: 40px;
+      width: 100%;
+    }
+  
+    .cta-button {
+      padding: 23px 20px;
+    }
+  
+    .country-image {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  
+    .newsletter-section {
+      max-width: 100%;
+      margin-top: 40px;
+      padding: 40px 20px;
+    }
+  
+    .newsletter-container {
+      max-width: 100%;
+    }
+  
+    .subscribe-form {
+      max-width: 100%;
+    }
+  
+    .email-input {
+      max-width: 100%;
+      padding: 9px 20px;
+    }
+  
+    .footer-links {
+      margin-top: 40px;
+    }
+  
+    .footer-image {
+      margin-top: 40px;
+    }
+  }
+  

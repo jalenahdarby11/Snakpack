@@ -1,0 +1,348 @@
+
+
+.countries-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  .header-section {
+    background-color: #52B9BC;
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    padding: 18px 0 0;
+    flex-direction: column;
+  }
+  
+  .logo {
+    aspect-ratio: 6.1;
+    object-fit: contain;
+    width: 605px;
+    align-self: center;
+    max-width: 100%;
+  }
+  
+  .nav-container {
+    background-color: #65D7DA;
+    z-index: 10;
+    display: flex;
+    width: 93%;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px 0 -6px;
+    padding: 0 32px 0 80px;
+  }
+  
+  .nav-links {
+    align-self: end;
+    display: flex;
+    margin-top: 25px;
+    gap: 40px 50px;
+    color: #EFF1EE;
+    font: 600 16px Montserrat, sans-serif;
+  }
+  
+  .nav-dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-icon {
+    aspect-ratio: 15.87;
+    object-fit: contain;
+    width: 80px;
+    margin-top: 4px;
+  }
+  
+  .nav-icons {
+    display: flex;
+    margin: auto 0;
+  }
+  
+  .social-icon {
+    aspect-ratio: 0.7;
+    object-fit: contain;
+    width: 67px;
+  }
+  
+  .cart-icon {
+    aspect-ratio: 0.97;
+    object-fit: contain;
+    width: 60px;
+    margin: auto 0;
+  }
+  .section-wrapper {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-image {
+    aspect-ratio: 6.49;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    align-self: stretch;
+  }
+  
+  .section-title {
+    color: #000;
+    margin: 55px 0 0;
+    font: 600 50px Montserrat, sans-serif;
+  }
+  
+  .steps-container {
+    margin: 65px auto 0;
+    width: 861px;
+    max-width: 100%;
+  }
+  
+  .steps-grid {
+    gap: 20px;
+    display: flex;
+  }
+  
+  .step-column {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+  }
+  
+  .step-content {
+    display: flex;
+    margin-top: 7px;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+  }
+  
+  .step-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 96px;
+  }
+  
+  .step-heading {
+    margin: 14px 0 0;
+    font: 600 24px Montserrat, sans-serif;
+  }
+  
+  .step-description {
+    text-align: center;
+    margin: 12px 0 0;
+    font: 400 16px Poppins, sans-serif;
+  }
+  
+  .cta-button {
+    border-radius: 30px;
+    background-color: #ECA72C;
+    margin: 50px 0 0;
+    width: 274px;
+    max-width: 100%;
+    padding: 17px 70px;
+    font: 400 22px Inter, sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .about-section {
+    color: #000;
+    margin: 78px 0 0;
+    font: 600 50px Montserrat, sans-serif;
+  }
+  
+  .about-text {
+    color: #000;
+    text-align: center;
+    margin: 41px 0 0;
+    font: 400 24px Poppins, sans-serif;
+  }
+  
+  .mission-heading {
+    color: #000;
+    margin: 98px 0 0;
+    font: 600 50px Montserrat, sans-serif;
+  }
+  
+  .mission-text {
+    color: #000;
+    text-align: center;
+    margin: 28px 0 0;
+    font: 400 24px Poppins, sans-serif;
+  }
+  
+  .faq-section {
+    color: #000;
+    margin: 123px 0 0;
+    font: 600 50px Montserrat, sans-serif;
+  }
+  
+  .faq-item {
+    border-radius: 100px;
+    background-color: #D9D9D9;
+    display: flex;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 997px;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 5px 44px;
+    align-items: center;
+  }
+  
+  .faq-question {
+    font: 600 32px Montserrat, sans-serif;
+    margin: auto 0;
+  }
+  
+  .faq-icon {
+    aspect-ratio: 1.04;
+    object-fit: contain;
+    width: 80px;
+  }
+  
+  .faq-button {
+    border-radius: 30px;
+    background-color: #ECA72C;
+    margin: 31px 0 0;
+    width: 274px;
+    max-width: 100%;
+    padding: 14px 70px;
+    font: 400 30px Inter, sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .footer {
+    background-color: #52B9BC;
+    width: 100%;
+    margin: 107px 0 0;
+    padding: 79px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-content {
+    width: 100%;
+    max-width: 929px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 23px;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .newsletter-label {
+    font: 600 24px Montserrat, sans-serif;
+    flex-grow: 1;
+  }
+  
+  .newsletter-input {
+    border-radius: 100px;
+    background-color: #D9D9D9;
+    padding: 9px 28px;
+    font: 300 20px Poppins, sans-serif;
+    border: none;
+    flex-grow: 1;
+  }
+  
+  .footer-nav {
+    display: flex;
+    width: 761px;
+    max-width: 100%;
+    gap: 43px;
+    margin: 50px 0 0 25px;
+    font: 275 24px Poppins, sans-serif;
+    justify-content: space-between;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .footer-logo {
+    aspect-ratio: 6.02;
+    object-fit: contain;
+    width: 410px;
+    margin: 34px 0 0;
+    max-width: 100%;
+  }
+  
+  .footer-social {
+    aspect-ratio: 3.51;
+    object-fit: contain;
+    width: 260px;
+    max-width: 100%;
+    margin: 47px 0 0 29px;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+  
+  @media (max-width: 991px) {
+    .header-image {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  
+    .steps-grid {
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .cta-button {
+      width: 100%;
+    }
+  
+    .faq-section {
+      font-size: 42px;
+    }
+  
+    .faq-question {
+      font-size: 28px;
+    }
+  
+    .faq-item {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .footer-content {
+      padding: 0 20px;
+    }
+  
+    .newsletter-form {
+      flex-direction: column;
+    }
+  
+    .footer-nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-social {
+      margin: 20px 0 0 0;
+    }
+  }
+  

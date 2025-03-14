@@ -1,0 +1,130 @@
+[
+    {
+        "userId": 1,
+        "firstName": "aivy",
+        "lastName": "nguyen",
+        "email": "aivyx@yahoo.com",
+        "password": "$2y$10$pxllg6Z83pokeeK6gbLGnu8RC1vQH5kWQe0wlaDuccjFcZPlpM1dy",
+        "phone": "1234567890"
+    },
+    {
+        "userId": 2,
+        "firstName": "siby",
+        "lastName": "nguyn",
+        "email": "ajncjdn@yahoo.com",
+        "password": "$2y$10$VUWgMtKziiiwjr4ah3aoTeVeNtt4\/tciTcWjCuDx3BQn.AznooNyW",
+        "phone": "jnjdnk"
+    },
+    {
+        "userId": 3,
+        "firstName": "aivy",
+        "lastName": "nguyen",
+        "email": "aivy@yahoo.com",
+        "password": "$2y$10$gwpKlvT67jru3Y.aLn.JsedYkfwp6Mh5N0TgkYL9aXaxxqoYQp.Wa",
+        "phone": "2134"
+    },
+    {
+        "userId": 4,
+        "firstName": "aivy",
+        "lastName": "nguyrn",
+        "email": "aivy@gmail.com",
+        "password": "$2y$10$eiOoi4Pj\/SiZQfqrEk.fgeOqp.JqzMhUNOSbC8uPrSeaXdJhJKFKq",
+        "phone": "1234"
+    },
+    {
+        "userId": 5,
+        "firstName": "aivy",
+        "lastName": "nguyrn",
+        "email": "aivy123@gmail.com",
+        "password": "$2y$10$ao8QQWDyqLOTaMBr9zJVWOOnI2anQ4dwY8A9Tc7s0Tuds\/IDv452W",
+        "phone": "1234"
+    },
+    {
+        "userId": 6,
+        "firstName": "ivy",
+        "lastName": "nfuyen",
+        "email": "aivy3949@gmail.com",
+        "password": "$2y$10$qdoAagtR5F7NXUjHKdMOQeexJCL2Z8lt\/6Lhddxw8AJrYTP0Z2k5m",
+        "phone": "2334"
+    },
+    {
+        "userId": 7,
+        "firstName": "ivy",
+        "lastName": "nfuyen",
+        "email": "aivy4000@gmail.com",
+        "password": "$2y$10$NCWmIgAqWTkoGsxfzIgsDuz6kpT5o1BHLcSjJvSTNbUR3Jy\/mdvcq",
+        "phone": "2334"
+    },
+    {
+        "userId": 8,
+        "firstName": "ivy",
+        "lastName": "nfuyen",
+        "email": "aiv0660@gmail.com",
+        "password": "$2y$10$xVkyXtPp.lA8rGo6tvOaOuNVtoeb7EZUtRsGnIcFWHtzLH3sJIbHC",
+        "phone": "2334"
+    },
+    {
+        "userId": 9,
+        "firstName": "ivy",
+        "lastName": "nfuyen",
+        "email": "aiv567@gmail.com",
+        "password": "$2y$10$aYzNhRyepaCTDLtoujrPB.U35.JGqaJ7VgCO63HxS6.mCfkJIPRTW",
+        "phone": "2334"
+    },
+    {
+        "userId": 10,
+        "firstName": "ivy",
+        "lastName": "nfuyen",
+        "email": "aiv569@gmail.com",
+        "password": "$2y$10$Ibyybz9Y6qFk6r\/M8fuWM.AWNgwAIAjg2m6sGO0rCTxaoY8aYYvBS",
+        "phone": "2334"
+    },
+    {
+        "userId": 11,
+        "firstName": "ivy",
+        "lastName": "nfuyen",
+        "email": "aiv509@gmail.com",
+        "password": "$2y$10$XJjEV5Q9AjKDmZpHE\/jULenHyWFlva4CaZ7yYSdmH0g.9GTi990my",
+        "phone": "2334"
+    },
+    {
+        "userId": 12,
+        "firstName": "ivy",
+        "lastName": "nfuyen",
+        "email": "aiv5109@gmail.com",
+        "password": "$2y$10$adJE76qeu0IX4WQe6GzGAuBiLSUbwtK94LbCUdrR9jhFJh6obrkry",
+        "phone": "2334"
+    },
+    {
+        "userId": 13,
+        "firstName": "aivy",
+        "lastName": "nguyen",
+        "email": "aivy19238@gmail.com",
+        "password": "$2y$10$ArB8EKCl9CCG7htvGcWh4eCl7vLiaMUZvpPBd4nxB1MNlm9mmA4qS",
+        "phone": "1234567"
+    },
+    {
+        "userId": 14,
+        "firstName": "aivy",
+        "lastName": "nguyen",
+        "email": "aivy5938@gmail.com",
+        "password": "$2y$10$U4dYmXTDKU8c29Pm1Wh97.1QJwK2fJOJLZB6S.ee4cCUyijpVuKIm",
+        "phone": "1234567"
+    },
+    {
+        "userId": 15,
+        "firstName": "aivy",
+        "lastName": "nguyen",
+        "email": "aivy6000@gmail.com",
+        "password": "$2y$10$zl1xLbzPqNkx9DS945scb.LXqQ4jtJjnUDak1jWlYleCIw\/wqs74G",
+        "phone": "12345678"
+    },
+    {
+        "userId": 16,
+        "firstName": "Aivy",
+        "lastName": "Nguyen",
+        "email": "aivy7000@gmail.com",
+        "password": "$2y$10$cQ8oOckh1LWeT50XAZ9MFecBG5fqbkina.5c65sO5GRB0WXj7luCq",
+        "phone": "1234567890"
+    }
+]

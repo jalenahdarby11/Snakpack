@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="OrderConfirmationPage.css">
+</head>
+<body>
+    <div class="order-confirmation">
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/2cf17b00013288e730b9195aac2518d046287f2b800598d5871f33fdc6c7e7c2?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
+             alt="Company Logo" 
+             class="header-logo" />
+        <h1 class="page-title">Confirm and Pay</h1>
+
+        <div class="main-content">
+            <div class="content-wrapper">
+                <div class="form-column">
+                    <form class="form-container">
+                        <h2 class="section-title">Your Info</h2>
+                        <label for="firstName" class="visually-hidden">First Name</label>
+                        <input type="text" id="firstName" class="input-field" value="John" aria-label="First Name">
+
+                        <label for="lastName" class="visually-hidden">Last Name</label>
+                        <input type="text" id="lastName" class="input-field" value="Doe" aria-label="Last Name">
+
+                        <h2 class="section-title">Shipping Address</h2>
+                        <label for="street" class="visually-hidden">Street Address</label>
+                        <input type="text" id="street" class="input-field" value="123 Sesame Street" aria-label="Street Address">
+
+                        <label for="unit" class="visually-hidden">Unit Number</label>
+                        <input type="text" id="unit" class="input-field" value="B4" aria-label="Unit Number">
+
+                        <label for="city" class="visually-hidden">City</label>
+                        <input type="text" id="city" class="input-field" value="Orlando" aria-label="City">
+
+                        <label for="state" class="visually-hidden">State</label>
+                        <input type="text" id="state" class="input-field" value="FL" aria-label="State">
+
+                        <label for="zip" class="visually-hidden">ZIP Code</label>
+                        <input type="text" id="zip" class="input-field" value="32181" aria-label="ZIP Code">
+
+                        <h2 class="section-title">Contact</h2>
+                        <label for="phone" class="visually-hidden">Phone Number</label>
+                        <input type="tel" id="phone" class="input-field" value="(123) 456-7890" aria-label="Phone Number">
+
+                        <div class="divider"></div>
+
+                        <h2 class="section-title">Payment Information</h2>
+                        <div class="payment-section">
+                            <div class="card-info">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0054688d81a7b4137c8818968f672be26545c12c24e0966f95738e991beb8424?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
+                                     alt="Credit Card Icon" 
+                                     class="payment-icon">
+                                <span>0123 4567 8910</span>
+                            </div>
+                            <div class="card-icons">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ced0fe018a0d12a7f8b108d90b8f9b6cc73dae0315b28047f92ec9a532c0f1fb?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
+                                     alt="Payment Method Icon" 
+                                     class="payment-icon">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/1266081ec9b04f7e934344f373525f3d66a44c91c1b124ce4b09fa284131f5d3?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
+                                     alt="Payment Method Icon" 
+                                     class="payment-icon">
+                            </div>
+                        </div>
+
+                        <div class="divider-text">or</div>
+
+                        <button class="apple-pay-wrapper">
+                            <div class="apple-pay-button">
+                                <span>Pay with</span>
+                                <span>Pay</span>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="summary-column">
+                    <div class="order-summary">
+                        <div class="summary-container">
+                            <h2 class="summary-title">Order Summary</h2>
+                            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0ca3ff0eda14be7a202223e092f9d6916cf10466f5f5e79b8224f098a0329905?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
+                                 alt="Costa Rica Box Product Image" 
+                                 class="product-image">
+                            <h3 class="product-name">Costa Rica Box</h3>
+                            <div class="summary-divider"></div>
+                            <div class="price-details">
+                                <div class="price-labels">
+                                    <span>Subtotal</span>
+                                    <span>Shipping</span>
+                                    <span>Taxes</span>
+                                    <span>Today's Total</span>
+                                </div>
+                                <div class="price-values">
+                                    <span>$14.99</span>
+                                    <span>$4.99</span>
+                                    <span>--</span>
+                                    <span class="total-price">$19.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="confirm-button">Confirm and Pay</button>
+    </div>
+</body>
+</html>

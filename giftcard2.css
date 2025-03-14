@@ -1,0 +1,163 @@
+.gift-card-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header-nav {
+    background-color: #52B9BC;
+    width: 100%;
+    padding: 18px 0 19px;
+}
+
+.logo {
+    aspect-ratio: 6.1;
+    object-fit: contain;
+    width: 605px;
+    align-self: center;
+    max-width: 100%;
+}
+
+.nav-menu {
+    background-color: #65D7DA;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0 -6px;
+    padding: 0 32px 0 80px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px 50px;
+    color: #EFF1EE;
+    margin: auto 0;
+    font: 600 16px Montserrat, sans-serif;
+}
+
+.nav-icons {
+    display: flex;
+    margin: auto 0;
+}
+
+.profile-icon {
+    aspect-ratio: 0.7;
+    object-fit: contain;
+    width: 67px;
+}
+
+.cart-icon {
+    aspect-ratio: 0.97;
+    object-fit: contain;
+    width: 60px;
+    margin: auto 0;
+}
+
+.main-content {
+    display: flex;
+    margin-top: 52px;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    font-family: Poppins, sans-serif;
+    color: #000;
+    font-weight: 400;
+    padding: 0 80px;
+}
+
+.page-title {
+    margin-left: 33px;
+    font: 600 80px Fredoka, sans-serif;
+}
+
+.balance-card {
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    margin-top: 66px;
+    flex-direction: column;
+    align-items: start;
+    padding: 27px 73px;
+    font: 24px Montserrat, sans-serif;
+    border: 1px solid #B7D0D5;
+}
+
+.history-title {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.history-table {
+    margin-top: 35px;
+    width: 100%;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    background-color: #e0f3f6;
+    padding: 20px;
+    font-weight: 600;
+    color: #637575;
+    text-align: left;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    padding: 18px 0;
+    border-top: 1px solid #9b9b9b;
+}
+
+.amount-columns {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.card-form {
+    width: 100%;
+}
+
+.card-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4b91b1;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #E4F5F5;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-logo {
+    width: 150px;
+}
+
+.footer-image {
+    width: 90px;
+    margin-top: 20px;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Card</title>
+    <link rel="stylesheet" href="giftcard2.css">
+</head>
+<body>
+    <div class="gift-card-container">
+        <nav class="header-nav">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo">
+            <div class="nav-menu">
+                <div class="nav-links">
+                    <a href="HowItWorks.html">How It Works</a>
+                    <a href="Countries.html">Countries</a>
+                    <a href="GetStartedQ1.html">Get Started</a>
+                </div>
+                <div class="nav-icons">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Profile" class="profile-icon">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shopping Cart" class="cart-icon">
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <h1 class="page-title">Gift Card Balance</h1>
+            
+            <div class="balance-card">
+                <label for="current-balance">Your Gift Card Balance</label>
+                <div class="balance-amount" id="current-balance" aria-live="polite">Total: $30.00</div>
+            </div>
+
+            <h2 class="history-title">Gift Card History</h2>
+
+            <div class="history-table" role="table" aria-label="Gift Card Transaction History">
+                <div class="table-header" role="row">
+                    <div role="columnheader">Date</div>
+                    <div role="columnheader">Description</div>
+                    <div class="amount-columns">
+                        <div role="columnheader">Amount</div>
+                        <div role="columnheader">Closing Balance</div>
+                    </div>
+                </div>
+
+                <div class="table-row" role="row">
+                    <div class="date-cell" role="cell">February 15, 2000</div>
+                    <div class="description-cell" role="cell">Gift Card Applied to: UK SnakPack</div>
+                    <div role="cell">-$30.00</div>
+                    <div class="amount-cell" role="cell">$0.00</div>
+                </div>
+
+                <div class="table-row" role="row">
+                    <div class="date-cell" role="cell">January 13, 2012</div>
+                    <div class="description-cell" role="cell">Gift Card Applied to: Greece SnakPack</div>
+                    <div role="cell">-$30.00</div>
+                    <div class="amount-cell" role="cell">$0.00</div>
+                </div>
+
+                <div class="table-row" role="row">
+                    <div class="date-cell" role="cell">January 30, 2024</div>
+                    <div class="description-cell" role="cell">Gift Card Applied to: Greece SnakPack</div>
+                    <div role="cell">-$30.00</div>
+                    <div class="amount-cell" role="cell">$0.00</div>
+                </div>
+
+                <div class="table-row" role="row">
+                    <div class="date-cell" role="cell">January 15, 2024</div>
+                    <div class="description-cell" role="cell">Gift Card Applied to: Not Used</div>
+                    <div role="cell">$30.00</div>
+                    <div class="amount-cell" role="cell">$30.00</div>
+                </div>
+            </div>
+
+            <h2 class="add-card-section">Add Gift Card</h2>
+
+            <form class="card-form">
+                <div class="card-input">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0054688d81a7b4137c8818968f672be26545c12c24e0966f95738e991beb8424?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Card Icon" class="card-icon">
+                    <label for="card-number" class="visually-hidden">Card Number</label>
+                    <input type="text" id="card-number" placeholder="0123 4567 8910" pattern="[0-9\s]{13,19}" maxlength="19" required>
+                </div>
+
+                <div class="input-group">
+                    <div>
+                        <label for="cvc" class="visually-hidden">CVC</label>
+                        <input type="text" id="cvc" placeholder="000" pattern="[0-9]{3,4}" maxlength="4" required>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/b286329d30d9b2bad13bb365389050b35fc3d92810625e625af97b1dc622c7d8?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="CVC Icon" aria-hidden="true">
+                    </div>
+
+                    <div>
+                        <label for="expiry" class="visually-hidden">Expiration Date</label>
+                        <input type="text" id="expiry" placeholder="MM/YYYY" pattern="(0[1-9]|1[0-2])\/20[2-9][0-9]" required>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/671073e16f9f2bf5891eb4562370f8761ac4a0f5fcc07e7f4266b98539ca4dc0?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Calendar Icon" aria-hidden="true">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <form class="subscribe-section">
+                    <label for="email-signup" class="subscribe-text">Subscribe for the latest updates:</label>
+                    <input type="email" id="email-signup" class="email-input" placeholder="Email Address" required>
+                </form>
+
+                <nav class="footer-links">
+                    <a href="FAQs.html">FAQ</a>
+                    <a href="ContactUs.html">Contact Us</a>
+                    <a href="HowItWorks.html">How it Works</a>
+                    <a href="Countries.html">Countries</a>
+                    <a href="GetStarted.html">Get Started</a>
+                </nav>
+
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="footer-logo">
+                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="" class="footer-image">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
