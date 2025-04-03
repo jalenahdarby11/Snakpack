@@ -1,3 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@275;300;400&display=swap");
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header styles */
+.nav-header {
+  background-color: #52b9bc;
+  padding-top: 18px;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-logo {
+  aspect-ratio: 6.1;
+  object-fit: contain;
+  width: 605px;
+  max-width: 100%;
+}
+
+.nav-wrapper {
+  background-color: #65d7da;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 80px 0 80px;
+  margin-top: 5px;
+  margin-bottom: -6px;
+  z-index: 10;
+}
+
+.main-nav {
+  display: flex;
+  gap: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #eff1ee;
+}
+
+.nav-link {
+  color: #eff1ee;
+  text-decoration: none;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-dropdown {
+  aspect-ratio: 15.87;
+  width: 80px;
+  object-fit: contain;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon {
+  aspect-ratio: 0.7;
+  width: 67px;
+}
+
+.nav-cart-icon {
+  aspect-ratio: 0.97;
+  width: 60px;
+  margin-left: 10px;
+}
+
+
+
 
 
 .countries-container {
@@ -17,65 +106,16 @@
     flex-direction: column;
   }
   
-  .logo {
-    aspect-ratio: 6.1;
-    object-fit: contain;
-    width: 605px;
-    align-self: center;
-    max-width: 100%;
-  }
+ 
+ 
   
-  .nav-container {
-    background-color: #65D7DA;
-    z-index: 10;
-    display: flex;
-    width: 93%;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 5px 0 -6px;
-    padding: 0 32px 0 80px;
-  }
+ 
   
-  .nav-links {
-    align-self: end;
-    display: flex;
-    margin-top: 25px;
-    gap: 40px 50px;
-    color: #EFF1EE;
-    font: 600 16px Montserrat, sans-serif;
-  }
   
-  .nav-dropdown {
-    display: flex;
-    flex-direction: column;
-  }
+ 
   
-  .dropdown-icon {
-    aspect-ratio: 15.87;
-    object-fit: contain;
-    width: 80px;
-    margin-top: 4px;
-  }
   
-  .nav-icons {
-    display: flex;
-    margin: auto 0;
-  }
   
-  .social-icon {
-    aspect-ratio: 0.7;
-    object-fit: contain;
-    width: 67px;
-  }
-  
-  .cart-icon {
-    aspect-ratio: 0.97;
-    object-fit: contain;
-    width: 60px;
-    margin: auto 0;
-  }
   .section-wrapper {
     background-color: #fff;
     display: flex;
@@ -83,13 +123,7 @@
     align-items: center;
   }
   
-  .header-image {
-    aspect-ratio: 6.49;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-    align-self: stretch;
-  }
+  
   
   .section-title {
     color: #000;
@@ -162,7 +196,7 @@
   .about-text {
     color: #000;
     text-align: center;
-    margin: 41px 0 0;
+    margin: 41px 40px 40px;
     font: 400 24px Poppins, sans-serif;
   }
   
@@ -175,7 +209,7 @@
   .mission-text {
     color: #000;
     text-align: center;
-    margin: 28px 0 0;
+    margin: 28px 40px 40px;
     font: 400 24px Poppins, sans-serif;
   }
   
