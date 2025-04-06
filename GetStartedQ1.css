@@ -1,252 +1,390 @@
-.quiz-container {
-  background-color: #fff;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@275;300;400&display=swap");
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header styles */
+.nav-header-1 {
+  background-color: #52b9bc;
+  padding-top: 18px;
+}
+
+.nav-container {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-}
-
-.nav-header {
-  background-color: #52B9BC;
+  align-items: center;
   width: 100%;
-  padding: 18px 0 19px;
 }
 
-.logo {
+.nav-logo {
   aspect-ratio: 6.1;
+  object-fit: contain;
   width: 605px;
-  align-self: center;
   max-width: 100%;
 }
 
-.nav-menu {
-  background-color: #65D7DA;
-  display: flex;
+.nav-wrapper {
+  background-color: #65d7da;
   width: 100%;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: flex;
   justify-content: space-between;
-  margin: 5px 0 -6px;
-  padding: 0 32px 0 80px;
+  padding: 25px 80px 0 80px;
+  margin-top: 5px;
+  margin-bottom: -6px;
+  z-index: 10;
 }
 
-.nav-links {
-  align-self: end;
+.main-nav {
   display: flex;
-  margin-top: 25px;
-  gap: 40px 52px;
-  color: #EFF1EE;
-  font: 600 16px Montserrat, sans-serif;
+  gap: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #eff1ee;
+}
+
+.nav-link {
+  color: #eff1ee;
+  text-decoration: none;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .nav-dropdown {
-  display: flex;
-  flex-direction: column;
-}
-
-.dropdown-indicator {
-  aspect-ratio: 18.87;
-  width: 95px;
-  margin-top: 4px;
+  aspect-ratio: 15.87;
+  width: 80px;
+  object-fit: contain;
 }
 
 .nav-icons {
   display: flex;
-  margin: auto 0;
-}
-
-.quiz-title-container {
-  border-radius: 10px;
-  align-self: center;
-  display: flex;
-  margin-top: 19px;
-  width: 632px;
-  max-width: 100%;
-  flex-direction: column;
-  color: #EFF1EE;
-  justify-content: center;
-  padding: 6px;
-  font: 600 40px Montserrat, sans-serif;
-  border: 1px solid #000;
-}
-
-.quiz-title {
-  border-radius: 10px;
-  background-color: #52B9BC;
-  padding: 9px 63px;
-}
-
-.quiz-content {
-  background-color: rgba(217, 217, 217, 0.11);
-  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
-  align-self: center;
-  width: 753px;
-  max-width: 100%;
-  color: #000;
-  margin: 33px 0 0 24px;
-  padding: 20px 80px 37px;
-  font: 400 16px Poppins, sans-serif;
-  border: 5px solid #000;
-}
-
-.flavor-options-container {
-  align-self: center;
-  width: 449px;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.question-text {
-  font-size: 24px;
-  align-self: stretch;
+.nav-icon-1 {
+  aspect-ratio: 0.7;
+  width: 67px;
 }
 
-.flavor-row {
-  display: flex;
-  margin-top: 13px;
-  width: 401px;
-  max-width: 100%;
-  gap: 40px 61px;
+.nav-cart-icon {
+  aspect-ratio: 0.97;
+  width: 60px;
+  margin-left: 10px;
 }
 
-.flavor-option {
-  border-radius: 10px;
-  background-color: #65D7DA;
-  border-color: #000;
-  border-bottom-width: 3px;
-  border-left-width: 2px;
-  display: flex;
-  gap: 18px;
-  padding: 10px 15px;
-}
 
-.checkbox-container {
-  display: flex;
-  gap: 7px;
-}
 
-.checkbox {
-  border-radius: 10px;
-  background-color: #F5F5F5;
-  width: 44px;
-  height: 39px;
-}
-
-.flavor-icon {
-  aspect-ratio: 1;
-  width: 24px;
-  margin: auto 0;
-}
-
-.next-button {
-  border-radius: 50px;
-  background-color: #ECA72C;
-  align-self: center;
-  margin-top: 39px;
-  width: 200px;
-  max-width: 100%;
-  font-size: 20px;
-  text-align: center;
-  padding: 20px 70px;
-}
-
-.footer {
-  background-color: #52B9BC;
-  width: 100%;
-  margin-top: 88px;
-  padding: 79px 80px;
-}
-
-.footer-content {
-  width: 100%;
-  max-width: 929px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.subscribe-section {
-  align-self: stretch;
-  display: flex;
-  gap: 23px;
-  flex-wrap: wrap;
-}
-
-.subscribe-text {
-  flex-grow: 1;
-  margin: auto 0;
-  font: 600 24px Montserrat, sans-serif;
-}
-
-.email-input {
-  border-radius: 100px;
-  background-color: #D9D9D9;
-  flex-grow: 1;
-  width: fit-content;
-  padding: 9px 28px 25px;
-  font: 300 20px Poppins, sans-serif;
-}
-
-.footer-links {
-  display: flex;
-  width: 761px;
-  max-width: 100%;
-  gap: 40px 43px;
-  margin: 50px 0 0 25px;
-  font: 275 24px Poppins, sans-serif;
-}
-
-.footer-logo {
-  aspect-ratio: 6.02;
-  width: 410px;
-  margin-top: 34px;
-  max-width: 100%;
-}
-
-.footer-image {
-  aspect-ratio: 3.51;
-  width: 260px;
-  max-width: 100%;
-  margin: 47px 0 0 29px;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
-@media (max-width: 991px) {
-  .nav-header,
-  .nav-menu,
-  .quiz-title,
-  .quiz-content,
-  .footer {
-    max-width: 100%;
-    padding: 0 20px;
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family:
+      Poppins,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
   }
   
-  .dropdown-indicator,
+  
+  
+ 
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+ 
+  
+  /* Main Content Styles */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .quiz-header {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    margin-top: 19px;
+    width: 632px;
+    max-width: 100%;
+    padding: 6px;
+  }
+  
+  .quiz-title {
+    border-radius: 10px;
+    background-color: rgba(82, 185, 188, 1);
+    padding: 9px 63px;
+    margin: 0;
+    font-family:
+      Montserrat,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 40px;
+    color: rgba(239, 241, 238, 1);
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .quiz-container {
+    background-color: rgba(217, 217, 217, 0.11);
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    border: 5px solid rgba(0, 0, 0, 1);
+    margin-top: 33px;
+    width: 753px;
+    max-width: 100%;
+    padding: 20px 80px 37px;
+  }
+  
+  .quiz-content {
+    max-width: 449px;
+    margin: 0 auto;
+  }
+  
+  .question-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .flavor-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .flavor-row {
+    display: flex;
+    gap: 61px;
+  }
+  
   .flavor-option {
-    margin-right: 10px;
+    border-radius: 10px;
+    background-color: rgba(101, 215, 218, 1);
+    border: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 1);
+    border-left: 2px solid rgba(0, 0, 0, 1);
+    padding: 10px 13px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+  }
+  
+  .option-content {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  
+  .checkbox {
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 1);
+    width: 44px;
+    height: 39px;
+    display: block;
+  }
+  
+  .flavor-text {
+    margin: auto 0;
+  }
+  
+  .flavor-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  
+  .additional-flavors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 14px;
   }
   
   .next-button {
-    padding: 0 20px;
+    border-radius: 50px;
+    background-color: rgba(236, 167, 44, 1);
+    border: none;
+    padding: 20px 70px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    margin: 39px auto 0;
+    display: block;
+    width: 200px;
   }
   
-  .footer {
-    margin-top: 40px;
+  /* Footer Styles */
+  .page-footer {
+    background-color: rgba(82, 185, 188, 1);
+    margin-top: 88px;
+    padding: 79px 80px;
+    color: black;
   }
   
-  .footer-image {
-    margin-top: 40px;
+  .footer-content {
+    max-width: 929px;
+    margin: 0 auto;
   }
-}
+  
+  .subscription-section {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    flex-wrap: wrap;
+  }
+  
+  .subscription-title {
+    font-size: 24px;
+    font-family:
+      Montserrat,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-weight: 600;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .email-input {
+    border-radius: 100px;
+    background-color: rgba(217, 217, 217, 1);
+    padding: 9px 28px 25px;
+    font-family:
+      Poppins,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+    flex-grow: 1;
+    min-width: 200px;
+  }
+  
+  .footer-nav {
+    margin-top: 50px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 43px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+  
+  .footer-link {
+    font-family:
+      Poppins,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 24px;
+    font-weight: 275;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .footer-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 47px;
+    margin-top: 34px;
+  }
+  
+  .footer-logo {
+    aspect-ratio: 6.02;
+    width: 410px;
+    max-width: 100%;
+  }
+  
+  .footer-logo-small {
+    aspect-ratio: 3.51;
+    width: 260px;
+    max-width: 100%;
+    margin-left: 29px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 991px) {
+    .nav-header {
+      max-width: 100%;
+    }
+  
+    .nav-container {
+      max-width: 100%;
+    }
+  
+    .nav-wrapper {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  
+    .nav-icon {
+      margin-right: 5px;
+    }
+  
+    .quiz-title {
+      padding: 9px 20px;
+    }
+  
+    .quiz-container {
+      padding: 20px;
+    }
+  
+    .page-footer {
+      max-width: 100%;
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+  
+    .subscription-section {
+      max-width: 100%;
+    }
+  
+    .email-input {
+      padding: 9px 20px;
+      max-width: 100%;
+    }
+  
+    .footer-nav {
+      margin-top: 40px;
+    }
+  
+    .footer-logos {
+      margin-top: 40px;
+    }
+  }
+  
