@@ -1,35 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="shopping-cart.css">
-    <title>Shopping Cart</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries</title>
+  <link rel="stylesheet" href="ShoppingCart.css">
 </head>
-<body>
-    <div class="cart-container" role="region" aria-label="Shopping Cart">
-        <h2 class="cart-title">Your Cart</h2>
-        <div class="product-container">
-            <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/6fbebe967ebe5095249b45ab867940d2eab18a9fff7bfd9d935c1d7a99d14866?apiKey=3a8ac60b581045f7adb5757904dc023c&"
-                class="product-image"
-                alt="Costa Rica Box product image"
-            />
-            <div class="product-name">Costa Rica Box</div>
+
+
+<header class="nav-header">
+    <div class="nav-container">
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true"
+        alt="Logo"
+        class="nav-logo"
+      />
+      <div class="nav-wrapper">
+        <nav class="main-nav">
+          <a href="HowItWorks.html" class="nav-link">How It Works</a>
+
+          
+            
+            <a href="Countries.html" class="nav-link">Countires</a>
+
+            
+         
+          <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
+        </nav>
+        <div class="nav-icons">
+
+          <a href="ShoppingCart.html">
+            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/edadf950090628a4467326f5ac2e7e6a6c82bdb8?placeholderIfAbsent=true" 
+              alt="Search" 
+              class="nav-icon" />
+          </a>
+
+
+          <a href="Profile.html">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true"
+            alt="Cart"
+            class="nav-cart-icon"
+          />
+        </a>
+
         </div>
-
-        <button  type="submit" tabindex="0" class="find-more">
-            <a href="ShoppingCartAllergy.html">Find Another box!</a>
-        </button>
-        
-       
-
-        <button  type="submit" tabindex="0" class="checkout-button">
-            <a href="OrderConfirmation.html">Proceed to Checkout</a>
-        </button>
-
-     
+      </div>
     </div>
-</body>
-</html>
+  </header>
+
+
+
+
+
+  
+  <main class="cart-section">
+    <h1 class="cart-section__title">Your Cart</h1>
+    <div class="cart-section__divider"></div>
+  
+    <div class="product-display" space="128">
+      <div class="product-card">
+        <div class="product-card__image-container">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbfec5064b19090b7114604248dc8c531f78d040?placeholderIfAbsent=true"
+            alt="Costa Rica Box Product"
+            class="product-card__image"
+          />
+        </div>
+        <div class="product-card__details">
+          <h2 class="product-card__title">Costa Rica Box</h2>
+        </div>
+      </div>
+    </div>
+  
+    <a href="ShoppingCartAllergy.html" class="find-more-link">Find Another box!</a>
+    
+    
+    <button class="checkout-button">
+        <a href="OrderConfirmation.html">Proceed to Checkout</a>
+        </button>
+  </main>
+  
