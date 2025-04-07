@@ -282,7 +282,20 @@ body {
     }
   }
   
-  .email-input,
+  .email-input-1  {
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 1);
+    margin-top: 16px;
+    width: 100%;
+    color: rgba(0, 0, 0, 1);
+    padding: 10px 28px;
+    font: 400 16px Poppins, sans-serif;
+    border: 1px solid rgba(0, 0, 0, 1);
+  }
+
+
+
+
   .password-input {
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 1);
