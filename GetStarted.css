@@ -1,0 +1,397 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@275;300;400&display=swap");
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header styles */
+.nav-header {
+  background-color: #52b9bc;
+  padding-top: 18px;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-logo {
+  aspect-ratio: 6.1;
+  object-fit: contain;
+  width: 605px;
+  max-width: 100%;
+}
+
+.nav-wrapper {
+  background-color: #65d7da;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 80px 0 80px;
+  margin-top: 5px;
+  margin-bottom: -6px;
+  z-index: 10;
+}
+
+.main-nav {
+  display: flex;
+  gap: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #eff1ee;
+}
+
+.nav-link {
+  color: #eff1ee;
+  text-decoration: none;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-dropdown {
+  aspect-ratio: 15.87;
+  width: 80px;
+  object-fit: contain;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon {
+  aspect-ratio: 0.7;
+  width: 67px;
+}
+
+.nav-cart-icon {
+  aspect-ratio: 0.97;
+  width: 60px;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+.landing-page {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-section {
+    align-self: center;
+    margin-top: 43px;
+    width: 100%;
+    max-width: 959px;
+}
+
+@media (max-width: 991px) {
+    .product-section {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}
+
+.product-container {
+    gap: 20px;
+    display: flex;
+}
+
+@media (max-width: 991px) {
+    .product-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    line-height: normal;
+    width: 46%;
+    margin-left: 0;
+}
+
+@media (max-width: 991px) {
+    .product-info {
+        width: 100%;
+    }
+}
+
+.product-content {
+    display: flex;
+    margin-top: 8px;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .product-content {
+        margin-top: 40px;
+    }
+}
+
+.recommendation-text, .monthly-text {
+    font-size: 20px;
+    font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.country-title {
+    font-size: 36px;
+    font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-top: 17px;
+}
+
+.product-description {
+    font-size: 15px;
+    font-family: Poppins, -apple-system, Roboto, Helvetica, sans-serif;
+    align-self: stretch;
+    margin-top: 27px;
+}
+
+.purchase-button {
+    border-radius: 50px;
+    background-color: #ECA72C;
+    margin-top: 32px;
+    width: 285px;
+    max-width: 100%;
+    padding: 23px 70px;
+    border: none;
+    color: #000000;
+    font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .purchase-button {
+        padding: 23px 20px;
+    }
+}
+
+.product-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    line-height: normal;
+    width: 54%;
+    margin-left: 20px;
+}
+
+@media (max-width: 991px) {
+    .product-image-container {
+        width: 100%;
+    }
+}
+
+.product-image {
+    aspect-ratio: 0.87;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 23px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    flex-grow: 1;
+}
+
+@media (max-width: 991px) {
+    .product-image {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}
+
+.monthly-box {
+    margin-top: 138px;
+}
+
+@media (max-width: 991px) {
+    .monthly-box {
+        margin-top: 40px;
+    }
+}
+
+
+
+
+/* Footer */
+.main-footer {
+    background-color: #52b9bc;
+    margin-top: 41px;
+    padding: 79px 80px;
+  }
+  
+  .footer-content {
+    max-width: 929px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .newsletter-section {
+    width: 100%;
+    display: flex;
+    gap: 23px;
+    flex-wrap: wrap;
+  }
+  
+  .newsletter-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    margin: auto 0;
+    flex: 1;
+  }
+  
+  .email-input {
+    background-color: #d9d9d9;
+    border: none;
+    border-radius: 100px;
+    padding: 9px 28px 25px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-nav {
+    display: flex;
+    gap: 43px;
+    margin-top: 50px;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 275;
+  }
+  
+  .footer-nav a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .footer-logo {
+    aspect-ratio: 6.02;
+    width: 410px;
+    margin-top: 34px;
+  }
+  
+  .social-media {
+    aspect-ratio: 3.51;
+    width: 260px;
+    margin-top: 47px;
+    margin-left: 29px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 991px) {
+    .nav-wrapper {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .hero-content {
+      flex-direction: column;
+    }
+  
+    .featured-country {
+      width: 100%;
+    }
+  
+    .country-title {
+      font-size: 40px;
+    }
+  
+    .featured-box {
+      width: 100%;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  
+    .explore-section {
+      margin-top: 40px;
+    }
+  
+    .section-title {
+      font-size: 40px;
+    }
+  
+    .boxes-grid {
+      flex-direction: column;
+      margin-top: 40px;
+    }
+  
+    .country-card {
+      width: 100%;
+      margin-top: 40px;
+    }
+  
+    .main-footer {
+      padding: 40px 20px;
+    }
+  
+    .footer-nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .footer-logo,
+    .social-media {
+      max-width: 100%;
+    }
+  
+    .social-media {
+      margin-top: 40px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
