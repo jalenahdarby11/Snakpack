@@ -427,22 +427,20 @@ body {
   
   /* Login Logo */
   .login-logo {
-    aspect-ratio: 1.32;
+    aspect-ratio: 1.09;
     object-fit: contain;
     object-position: center;
-    width: 144px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    width: 156px;
+    align-self: center;
     z-index: 10;
+    margin: 22px 0 5px;
     max-width: 100%;
-    margin: 7px 0 -17px;
-  }
-  @media (max-width: 991px) {
-    .login-logo {
-      margin-bottom: 10px;
-    }
   }
 
 
+
+
+  
 
 /* Footer */
 .footer {
