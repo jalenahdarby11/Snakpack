@@ -196,27 +196,19 @@ body {
  
   
   /* Main Content Styles */
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
+
+
+ 
+  /* Quiz Header */
   .quiz-header {
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
     margin-top: 19px;
-    width: 632px;
-    max-width: 100%;
-    padding: 6px;
   }
   
   .quiz-title {
     border-radius: 10px;
-    background-color: rgba(82, 185, 188, 1);
-    padding: 9px 63px;
-    margin: 0;
+    border: 1px solid rgb(0, 0, 0);
     font-family:
       Montserrat,
       -apple-system,
@@ -224,10 +216,27 @@ body {
       Helvetica,
       sans-serif;
     font-size: 40px;
-    color: rgba(239, 241, 238, 1);
+    color: rgb(239, 241, 238);
     font-weight: 600;
-    text-align: center;
+    background-color: rgb(82, 185, 188);
+    padding: 9px 63px;
+    margin: 0;
   }
+
+
+
+
+
+
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+  }
+  
+ 
   
   .quiz-container {
     background-color: rgba(217, 217, 217, 0.11);
