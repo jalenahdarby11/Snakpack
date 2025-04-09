@@ -179,471 +179,296 @@ body {
   }
 
 
-.homepage {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  align-items: center;
-}
 
-/* Hero Section */
-.hero-logo {
-  aspect-ratio: 6.62;
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
-  align-self: stretch;
-}
 
-.hero-title {
-  color: #000000;
-  font-size: 60px;
-  font-family:
-    Fredoka,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-weight: 500;
-  text-align: center;
-  margin-top: 32px;
-}
-
-/* Feature Section */
-.feature-section {
-  margin-top: 34px;
-  width: 100%;
-  max-width: 1046px;
-}
-
-.feature-container {
-  gap: 20px;
-  display: flex;
-}
-
-.feature-content {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  line-height: normal;
-  width: 50%;
-}
-
-.feature-text-wrapper {
-  display: flex;
-  margin-top: 41px;
-  flex-direction: column;
-  align-items: center;
-  font-family:
-    Montserrat,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-size: 32px;
-  color: #000000;
-  font-weight: 400;
-}
-
-.feature-title {
-  font-size: 40px;
-  font-weight: 500;
-  text-align: center;
-  align-self: stretch;
-}
-
-.highlight-text {
-  font-style: italic;
-  color: #eca72c;
-}
-
-.cta-button {
-  border: none;
-  border-radius: 30px;
-  background-color: #eca72c;
-  margin-top: 24px;
-  width: 419px;
-  max-width: 100%;
-  padding: 20px 70px;
-  font-size: 32px;
-  font-family: inherit;
-  color: inherit;
-  cursor: pointer;
-}
-
-.cta-button:first-of-type {
-  margin-top: 59px;
-}
-
-.feature-image-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  line-height: normal;
-  width: 50%;
-  margin-left: 20px;
-}
-
-.feature-image {
-  aspect-ratio: 1.05;
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
-  border-radius: 30px;
-  flex-grow: 1;
-}
-
-/* Benefits Section */
-.benefits-section {
-  background-color: #52b9bc;
-  align-self: stretch;
-  display: flex;
-  margin-top: 36px;
-  width: 100%;
-  padding: 40px 70px;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.benefits-title {
-  color: #000000;
-  font-size: 60px;
-  font-family:
-    Fredoka,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-weight: 500;
-  text-align: center;
-  align-self: center;
-  margin-left: 25px;
-}
-
-.benefits-container {
-  margin-top: 65px;
-  display: flex;
-  gap: 20px;
-}
-
-.benefit-card {
-  width: 33.33%;
-  color: #000000;
-  text-align: center;
-}
-
-.benefit-image {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
-  border-radius: 30px;
-}
-
-.benefit-title {
-  font-size: 33px;
-  font-family:
-    Montserrat,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-weight: 600;
-  margin-top: 34px;
-}
-
-.benefit-description {
-  font-size: 24px;
-  font-family:
-    Poppins,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-weight: 400;
-  margin-top: 38px;
-}
-
-/* Testimonials Section */
-.testimonials-section {
-  margin-top: 36px;
-  width: 100%;
-  max-width: 991px;
-}
-
-.testimonials-title {
-  color: #000000;
-  font-size: 60px;
-  font-family:
-    Fredoka,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-weight: 500;
-  text-align: center;
-}
-
-.testimonials-container {
-  margin-top: 100px;
-  display: flex;
-  gap: 20px;
-}
-
-.testimonials-column {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.testimonial {
-  width: 100%;
-  text-align: center;
-  font-family:
-    Poppins,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  color: #000000;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.testimonial.blue-background {
-  background-color: #52b9bc;
-  border-radius: 15px;
-  padding: 68px 28px;
-}
-
-.testimonial.orange-background {
-  background-color: #eca72c;
-  border-radius: 15px;
-  padding: 49px 30px 78px;
-}
-
-.testimonial-text {
-  font-size: 30px;
-  font-weight: 400;
-   border-radius: 15px;
-  padding: 49px 30px 78px;
-}
-
-.testimonial-author {
-  font-size: 26px;
-  margin-top: 23px;
-  width: 316px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.author-location {
-  font-weight: 600;
-  font-style: italic;
-}
-
-/* Footer */
-.footer {
-  background-color: #52b9bc;
-  align-self: stretch;
-  margin-top: 143px;
-  width: 100%;
-  padding: 79px 80px;
-  color: #000000;
-}
-
-.footer-content {
-  display: flex;
-  width: 100%;
-  max-width: 929px;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.newsletter-section {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 23px;
-  flex-wrap: wrap;
-}
-
-.newsletter-title {
-  font-size: 24px;
-  font-family:
-    Montserrat,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-weight: 600;
-  flex-grow: 1;
-}
-
-.email-input {
-  border: none;
-  border-radius: 100px;
-  background-color: #d9d9d9;
-  padding: 9px 28px 25px;
-  font-family:
-    Poppins,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  flex-grow: 1;
-  width: fit-content;
-}
-
-.footer-nav {
-  display: flex;
-  margin-top: 50px;
-  margin-left: 25px;
-  width: 761px;
-  max-width: 100%;
-  gap: 43px;
-  font-family:
-    Poppins,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-size: 24px;
-  font-weight: 275;
-  justify-content: center;
-}
-
-.footer-nav a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.footer-logos {
-  margin-top: 34px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-logo {
-  aspect-ratio: 6.02;
-  object-fit: contain;
-  object-position: center;
-  width: 410px;
-  max-width: 100%;
-}
-
-.footer-logo-small {
-  aspect-ratio: 3.51;
-  object-fit: contain;
-  object-position: center;
-  width: 260px;
-  margin-top: 47px;
-  margin-left: 29px;
-  max-width: 100%;
-}
-
-/* Media Queries */
-@media (max-width: 991px) {
-  .hero-logo {
-    max-width: 100%;
-  }
-
-  .hero-title {
-    max-width: 100%;
-    font-size: 40px;
-  }
-
-  .feature-section {
-    max-width: 100%;
-  }
-
-  .feature-container {
+.countries-container {
+    background-color: #fff;
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
-    gap: 0;
+    overflow: hidden;
+    align-items: center;
   }
-
-  .feature-content {
+  
+  .header-section {
+    background-color: #52B9BC;
+    align-self: stretch;
+    display: flex;
     width: 100%;
-  }
-
-  .feature-text-wrapper {
-    max-width: 100%;
-    margin-top: 40px;
-  }
-
-  .cta-button {
-    padding: 20px;
-  }
-
-  .feature-image-wrapper {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .feature-image {
-    max-width: 100%;
-    margin-top: 40px;
-  }
-
-  .benefits-section {
-    max-width: 100%;
-    padding: 44px 20px;
-  }
-
-  .benefits-title {
-    max-width: 100%;
-    font-size: 40px;
-  }
-
-  .benefits-container {
-    flex-direction: column;
-    margin-top: 40px;
-  }
-
-  .benefit-card {
-    width: 100%;
-    margin-top: 40px;
-  }
-
-  .testimonials-container {
-    flex-direction: column;
-    margin-top: 40px;
-  }
-
-  .testimonials-column {
-    width: 100%;
-  }
-
-  .footer {
-    max-width: 100%;
-    padding: 79px 20px;
-    margin-top: 40px;
-  }
-
-  .newsletter-section {
+    padding: 18px 0 0;
     flex-direction: column;
   }
-
-  .email-input {
-    width: 100%;
-    padding: 9px 20px 25px;
+  
+ 
+ 
+  
+ 
+  
+  
+ 
+  
+  
+  
+  .section-wrapper {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-
-  .footer-nav {
-    margin-top: 40px;
-    flex-wrap: wrap;
+  
+  
+  
+  .section-title {
+    color: #000;
+    margin: 55px 0 0;
+    font: 600 50px Montserrat, sans-serif;
+  }
+  
+  .steps-container {
+    margin: 65px auto 0;
+    width: 861px;
+    max-width: 100%;
+  }
+  
+  .steps-grid {
     gap: 20px;
-    justify-content: center;
+    display: flex;
   }
-
-  .footer-logo-small {
-    margin-top: 40px;
+  
+  .step-column {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
   }
-}
+  
+  .step-content {
+    display: flex;
+    margin-top: 7px;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+  }
+  
+  .step-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 96px;
+  }
+  
+  .step-heading {
+    margin: 14px 0 0;
+    font: 600 24px Montserrat, sans-serif;
+  }
+  
+  .step-description {
+    text-align: center;
+    margin: 12px 0 0;
+    font: 400 16px Poppins, sans-serif;
+  }
+  
+  .cta-button {
+    border-radius: 30px;
+    background-color: #ECA72C;
+    margin: 50px 0 0;
+    width: 274px;
+    max-width: 100%;
+    padding: 17px 70px;
+    font: 400 22px Inter, sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .about-section {
+    color: #000;
+    margin: 78px 0 0;
+    font: 600 50px Montserrat, sans-serif;
+  }
+  
+  .about-text {
+    color: #000;
+    text-align: center;
+    margin: 41px 40px 40px;
+    font: 400 24px Poppins, sans-serif;
+  }
+  
+  .mission-heading {
+    color: #000;
+    margin: 98px 0 0;
+    font: 600 50px Montserrat, sans-serif;
+  }
+  
+  .mission-text {
+    color: #000;
+    text-align: center;
+    margin: 28px 40px 40px;
+    font: 400 24px Poppins, sans-serif;
+  }
+  
+  .faq-section {
+    color: #000;
+    margin: 123px 0 0;
+    font: 600 50px Montserrat, sans-serif;
+  }
+  
+  .faq-item {
+    border-radius: 100px;
+    background-color: #D9D9D9;
+    display: flex;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 997px;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 5px 44px;
+    align-items: center;
+  }
+  
+  .faq-question {
+    font: 600 32px Montserrat, sans-serif;
+    margin: auto 0;
+  }
+  
+  .faq-icon {
+    aspect-ratio: 1.04;
+    object-fit: contain;
+    width: 80px;
+  }
+  
+  .faq-button {
+    border-radius: 30px;
+    background-color: #ECA72C;
+    margin: 31px 0 0;
+    width: 274px;
+    max-width: 100%;
+    padding: 14px 70px;
+    font: 400 30px Inter, sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .footer {
+    background-color: #52B9BC;
+    width: 100%;
+    margin: 107px 0 0;
+    padding: 79px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-content {
+    width: 100%;
+    max-width: 929px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 23px;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .newsletter-label {
+    font: 600 24px Montserrat, sans-serif;
+    flex-grow: 1;
+  }
+  
+  .newsletter-input {
+    border-radius: 100px;
+    background-color: #D9D9D9;
+    padding: 9px 28px;
+    font: 300 20px Poppins, sans-serif;
+    border: none;
+    flex-grow: 1;
+  }
+  
+  .footer-nav {
+    display: flex;
+    width: 761px;
+    max-width: 100%;
+    gap: 43px;
+    margin: 50px 0 0 25px;
+    font: 275 24px Poppins, sans-serif;
+    justify-content: space-between;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .footer-logo {
+    aspect-ratio: 6.02;
+    object-fit: contain;
+    width: 410px;
+    margin: 34px 0 0;
+    max-width: 100%;
+  }
+  
+  .footer-social {
+    aspect-ratio: 3.51;
+    object-fit: contain;
+    width: 260px;
+    max-width: 100%;
+    margin: 47px 0 0 29px;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+  
+  @media (max-width: 991px) {
+    .header-image {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  
+    .steps-grid {
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .cta-button {
+      width: 100%;
+    }
+  
+    .faq-section {
+      font-size: 42px;
+    }
+  
+    .faq-question {
+      font-size: 28px;
+    }
+  
+    .faq-item {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .footer-content {
+      padding: 0 20px;
+    }
+  
+    .newsletter-form {
+      flex-direction: column;
+    }
+  
+    .footer-nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-social {
+      margin: 20px 0 0 0;
+    }
+  }
+  
