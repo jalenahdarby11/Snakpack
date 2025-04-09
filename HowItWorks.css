@@ -89,6 +89,98 @@ body {
 
 
 
+
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family:
+      Poppins,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    background-color: #ffffff;
+  }
+  
+  /* Header Styles */
+  .nav-header {
+    background-color: rgb(82, 185, 188);
+    padding-bottom: 19px;
+    width: 100%;
+  }
+  
+  .nav-container {
+    background-color: rgb(82, 185, 188);
+    display: flex;
+    width: 100%;
+    padding-top: 18px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .main-logo {
+    aspect-ratio: 6.1;
+    object-fit: contain;
+    object-position: center;
+    width: 605px;
+    align-self: center;
+    max-width: 100%;
+  }
+  
+  .navigation-bar {
+    background-color: rgb(101, 215, 218);
+    z-index: 10;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: -20px;
+    width: 100%;
+    padding: 0 32px 0 80px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-family:
+      Montserrat,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .nav-link {
+    color: rgb(239, 241, 238);
+    text-decoration: none;
+  }
+  
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-icon {
+    width: 67px;
+    aspect-ratio: 0.7;
+    object-fit: contain;
+  }
+  
+  .nav-icon.menu-icon {
+    width: 60px;
+    aspect-ratio: 0.97;
+  }
+
+
+
+
 .countries-container {
     background-color: #fff;
     display: flex;
