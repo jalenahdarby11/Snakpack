@@ -1,103 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback Form</title>
-  <link rel="stylesheet" href="feedback.css">
-</head>
-<body>
-  <div class="feedback-container">
-    <nav class="header-nav">
-      <div class="logo-wrapper">
-        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo">
-      </div>
-      <div class="nav-container">
-        <div class="nav-links">
-          <a href="HowItWorks.html">How It Works</a>
-          <a href="Countries.html">Countries</a>
-          <a href="GetStartedQ1.html">Get Started</a>
-        </div>
-        <div class="nav-icons">
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Profile" class="profile-icon">
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Menu" class="menu-icon">
-        </div>
-      </div>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Feedback Survey</title>
+    <link rel="stylesheet" href="feedback.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Fredoka:wght@600&family=Poppins:wght@275;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="feedback.js" defer></script>
+  </head>
+  <body>
+    <div class="feedback">
+    
 
-    <main class="main-content">
-      <h1 class="page-title">Customer Feedback Survey</h1>
-      <form>
+
+        <header class="nav-header">
+            <div class="nav-container">
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
+              <nav class="navigation-bar">
+                <div class="nav-links">
+                <a href="HomePage.html" class="nav-link">Home</a>
+                  <a href="HowItWorks.html" class="nav-link">How It Works</a>
+                  <a href="Countries.html" class="nav-link">Countries</a>
+                  <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
+                </div>
+                <div class="nav-icons">
+        
+                    <a href="ShoppingCart.html">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/edadf950090628a4467326f5ac2e7e6a6c82bdb8?placeholderIfAbsent=true" alt="User Icon" class="nav-icon" />
+                </a>
+                  
+                  <a href="Profile.html">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Menu Icon" class="nav-icon menu-icon" />
+                </a>
+                
+                </div>
+              </nav>
+            </div>
+          </header>
+
+
+
+
+
+
+
+
+
+      <main class="survey-container">
+        <h1 class="survey-title">Customer Feedback Survey</h1>
+
         <div class="rating-labels">
-          <span>Very Satisfied</span>
-          <span>Satisfied</span>
-          <span>Neutral</span>
-          <span>Unsatisfied</span>
-          <span>Very Unsatisfied</span>
+          <span class="very-satisfied">Very Satisfied</span>
+          <span class="rating-label">Satisfied</span>
+          <span class="rating-label">Neutral</span>
+          <span class="rating-label">Unsatisfied</span>
+          <span class="very-unsatisfied">Very Unsatisfied</span>
         </div>
 
-        <div class="rating-group">
-          <label class="rating-question">How satisfied are you with our product?</label>
-          <div class="rating-options" role="radiogroup">
-            <div class="rating-option" role="radio" tabindex="0">
-              <div class="radio-circle"></div>
+        <form>
+          <section class="question-section">
+            <label class="question-label"
+              >How satisfied are you with our product?</label
+            >
+            <div class="radio-buttons">
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
             </div>
-            <div class="rating-option" role="radio" tabindex="0">
-              <div class="radio-circle"></div>
+          </section>
+
+          <section class="question-section">
+            <label class="question-label"
+              >How satisfied are you with our service?</label
+            >
+            <div class="radio-buttons">
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
             </div>
-            <div class="rating-option" role="radio" tabindex="0">
-              <div class="radio-circle"></div>
+          </section>
+
+          <section class="question-section">
+            <label class="question-label"
+              >How satisfied are you with our team?</label
+            >
+            <div class="radio-buttons-1">
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
+              <div class="radio-btn">
+                <div class="radio-outer"><div class="radio-inner"></div></div>
+              </div>
             </div>
-            <div class="rating-option" role="radio" tabindex="0">
-              <div class="radio-circle"></div>
+          </section>
+
+          <label class="feedback-label-1">Tell us how we can improve</label>
+          <textarea class="feedback-textarea"></textarea>
+
+          <label class="order-label"
+            >If this is about a specific order, please type in the order
+            number</label
+          >
+          <input type="text" class="order-input" />
+
+          <label class="contact-label"
+            >Would you like a representative to contact you?</label
+          >
+          <div class="yes-no-options">
+            <div class="option-container">
+              <div class="option-circle"></div>
+              <label class="option-label">Yes</label>
             </div>
-            <div class="rating-option" role="radio" tabindex="0">
-              <div class="radio-circle"></div>
+            <div class="option-container">
+              <div class="option-circle"></div>
+              <label class="option-label">No</label>
             </div>
           </div>
+
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </main>
+
+
+      <footer class="main-footer">
+        <div class="footer-content">
+          <div class="newsletter-section">
+            <h3 class="newsletter-title">Subscribe for the latest updates:</h3>
+            <input type="email" placeholder="Email Address" class="email-input" />
+          </div>
+    
+          <nav class="footer-nav">
+            <a href="FAQs.html">FAQ</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <a href="HowItWorks.html">How it Works</a>
+            <a href="Countries.html">Countries</a>
+            <a href="GetStartedQ1.html">Get Started</a>
+          </nav>
+    
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cf63493f8f4723e9e40fdfa32ca7b38eb2d69e50?placeholderIfAbsent=true"
+            alt="Footer logo"
+            class="footer-logo"
+          />
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9c2fd45f0841e4cf7d570ccfb6099e596290f28e?placeholderIfAbsent=true"
+            alt="Social media"
+            class="social-media"
+          />
         </div>
-
-        <label for="feedback" class="feedback-text">Tell us how we can improve</label>
-        <textarea id="feedback" class="feedback-textarea" aria-label="Feedback text"></textarea>
-
-        <label for="order" class="feedback-text">If this is about a specific order, please type in the order number</label>
-        <input type="text" id="order" class="order-input" aria-label="Order number">
-
-        <label class="feedback-text">Would you like a representative to contact you?</label>
-        <div class="contact-options">
-          <div class="radio-option">
-            <input type="radio" id="contact-yes" name="contact" class="visually-hidden">
-            <label for="contact-yes">Yes</label>
-          </div>
-          <div class="radio-option">
-            <input type="radio" id="contact-no" name="contact" class="visually-hidden">
-            <label for="contact-no">No</label>
-          </div>
-        </div>
-
-        <button  type="submit"  class="submit-button">
-          <a href="FormSubmitted.html">Submit</a>
-      </button>
-
-      </form>
+      </footer>
     </main>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <form class="subscribe-section">
-          <label for="email" class="subscribe-text">Subscribe for the latest updates:</label>
-          <input type="email" id="email" class="email-input" placeholder="Email Address" aria-label="Email Address">
-        </form>
-        <nav class="footer-links">
-          <a href="FAQs.html">FAQ</a>
-          <a href="ContactUs.html">Contact Us</a>
-          <a href="HowItWorks.html">How it Works</a>
-          <a href="Countries.html">Countries</a>
-          <a href="GetStartedQ1.html">Get Started</a>
-        </nav>
-        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Footer Logo" class="footer-logo">
-      </div>
-    </footer>
-  </div>
-</body>
-</html>
+
+
+
+
+
+
+
