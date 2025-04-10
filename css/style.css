@@ -1,0 +1,15 @@
+.article-container{
+    display: flex;
+
+}
+
+.articleBtn {
+    border: 1px solid gray;
+    padding: 80px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.row{
+    display: flex;
+}

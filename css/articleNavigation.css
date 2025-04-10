@@ -1,0 +1,95 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container for Articles */
+.article-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Styling for Each Article Link */
+.articleBtn {
+    display: block;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* Make it 3 items per row */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.articleBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f1f1f1;
+}
+
+.articleBtn img:hover{
+
+        width: 80%;
+        height: 200px; /* or whatever height fits your design */
+        object-fit: cover;
+        border-radius: 6px;
+        margin-bottom: 10px;
+    
+    
+}
+
+.articleBtn:active {
+    transform: scale(1);
+    box-shadow: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .articleBtn {
+        width: 100%; /* Full-width for mobile */
+        font-size: 16px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.articleBtn img {
+    width: 60px;            /* Small fixed width */
+    height: 60px;           /* Small fixed height */
+    object-fit: contain;    /* Keeps full image visible without cropping */
+    display: block;
+    margin: 0 auto 10px;    /* Center and add spacing below */
+}
+
+
+
