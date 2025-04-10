@@ -1,96 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Previous Orders</title>
-  <link rel="stylesheet" href="PreviousOrders.css">
-</head>
-<body>
-  <div class="orders-container">
-    <header class="header-bar">
-      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo">
-      <nav class="nav-container">
-        <div class="nav-links">
-          <a href="HowItWorks.html">How It Works</a>
-          <a href="Countries.html">Countries</a>
-          <a href="GetStarted.html">Get Started</a>
-        </div>
-        <div class="user-actions">
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shopping Cart" class="cart-icon">
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="User Profile" class="profile-icon">
-        </div>
-      </nav>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Previous Orders</title>
+    <link rel="stylesheet" href="PreviousOrders.css"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@275;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="previous-orders-container">
+     
 
-    <main class="main-content">
-      <h1 class="page-title">Previous Orders</h1>
 
-      <article class="order-card">
-        <div class="order-header">
-          <div class="order-info">
-            <div class="order-dates">
-              <span class="info-label">Order Placed</span>
-              <span class="info-value">Month day, year</span>
+
+        <header class="nav-header">
+            <div class="nav-container">
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
+              <nav class="navigation-bar">
+                <div class="nav-links">
+                <a href="HomePage.html" class="nav-link">Home</a>
+                  <a href="HowItWorks.html" class="nav-link">How It Works</a>
+                  <a href="Countries.html" class="nav-link">Countries</a>
+                  <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
+                </div>
+                <div class="nav-icons">
+        
+                    <a href="ShoppingCart.html">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/edadf950090628a4467326f5ac2e7e6a6c82bdb8?placeholderIfAbsent=true" alt="User Icon" class="nav-icon" />
+                </a>
+                  
+                  <a href="Profile.html">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Menu Icon" class="nav-icon menu-icon" />
+                </a>
+                
+                </div>
+              </nav>
             </div>
-            <div class="order-total">
-              <span class="info-label">Total</span>
-              <span class="info-value">$0.00</span>
+          </header>
+
+
+
+
+      <main class="main-content">
+        <h1 class="page-title">Previous Orders</h1>
+
+        <section class="order-details-card">
+          <div class="order-header">
+            <div class="order-info">
+              <div class="order-date-info">
+                <h2 class="order-label">Order Placed</h2>
+                <p class="order-date">November 10, 2024</p>
+              </div>
+              <div class="order-total-info">
+                <h2 class="total-label">Total</h2>
+                <p class="total-amount">19.99</p>
+              </div>
+            </div>
+            <div class="order-number-section">
+              <p class="order-number">Order # 123 - 1234567 - 12345678</p>
+              <div class="order-actions">
+                <a href="#" class="action-link">View Order Details</a>
+                <span class="action-divider"></span>
+                <a href="#" class="action-link">View Invoice</a>
+              </div>
             </div>
           </div>
 
-          <div class="order-details">
-            <span class="order-number">Order # 000 - 0000000 - 00000000</span>
-            <div class="action-links">
-              <a href="#details">View Order Details</a>
-              <span class="divider"></span>
-              <a href="#invoice">View Invoice</a>
+          <hr class="order-divider" />
+
+          <h2 class="delivery-status">Delivered November 20, 2024</h2>
+          <p class="delivery-details">
+            Hand delivered directly to leasing office
+          </p>
+
+          <article class="product-details" data-el="div-1">
+            <div class="product-container">
+              <div class="product-image-column">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/8ce277f10f7bb488f22afb026e5dda695c06b0ae?placeholderIfAbsent=true"
+                  alt="UK SnakPack Product"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-info-column">
+                <div class="product-content">
+                  <h3 class="product-title">UK SnakPack</h3>
+                  <div class="product-description-container">
+                    <h4 class="description-title">Description</h4>
+                    <p class="description-text">
+                      Treat yourself to a monthly delivery of deliciousness with
+                      our Snack Subscription Pack. Each month, you'll receive a
+                      handpicked selection of premium snacks, from classic
+                      British favorites to exciting international flavors.
+                      Whether you're craving crisps, chocolate, or something a
+                      little more unusual, we've got you covered. Our snacks are
+                      chosen for their quality, taste, and variety, so you can
+                      enjoy a fresh, exciting mix each time. With options to
+                      suit all dietary needs, including gluten-free and vegan,
+                      our subscription is the perfect way to satisfy your
+                      cravings without leaving the house. Sign up today and
+                      enjoy a new snacking adventure delivered straight to your
+                      door!
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </article>
+
+          <button class="feedback-button">Customer Feedback</button>
+        </section>
+      </main>
+
+
+
+      <footer class="main-footer">
+        <div class="footer-content">
+          <div class="newsletter-section">
+            <h3 class="newsletter-title">Subscribe for the latest updates:</h3>
+            <input type="email" placeholder="Email Address" class="email-input" />
           </div>
+    
+          <nav class="footer-nav">
+            <a href="FAQs.html">FAQ</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <a href="HowItWorks.html">How it Works</a>
+            <a href="Countries.html">Countries</a>
+            <a href="GetStartedQ1.html">Get Started</a>
+          </nav>
+    
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cf63493f8f4723e9e40fdfa32ca7b38eb2d69e50?placeholderIfAbsent=true"
+            alt="Footer logo"
+            class="footer-logo"
+          />
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9c2fd45f0841e4cf7d570ccfb6099e596290f28e?placeholderIfAbsent=true"
+            alt="Social media"
+            class="social-media"
+          />
         </div>
-
-        <hr class="divider">
-
-        <h2 class="order-status">Delivered November 20, 2024</h2>
-        <p class="delivery-info">Hand delivered directly to leasing office</p>
-
-        <div class="product-container">
-          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5d984683ff16b34c28948c95e2854502dc118cd17813d4c9f28d4f129fd65db6?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="UK SnakPack Product Image" class="product-image">
-
-          <div class="product-details">
-            <h3 class="product-title">UK SnakPack</h3>
-            <div class="product-description">
-              <h4>Description</h4>
-              <p>Treat yourself to a monthly delivery of deliciousness with our Snack Subscription Pack. Each month, you'll receive a handpicked selection of premium snacks, from classic British favorites to exciting international flavors...</p>
-            </div>
-          </div>
-        </div>
-
-        <a href="Feedback.html">
-        <button class="feedback-button">Customer Feedback</button>
-        </a>
-      </article>
+      </footer>
     </main>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <form class="newsletter-form">
-          <label for="email" class="newsletter-label">Subscribe for the latest updates:</label>
-          <input type="email" id="email" class="newsletter-input" placeholder="Email Address" aria-label="Email Address">
-        </form>
-  
-        <nav class="footer-nav">
-          <a href="FAQs.html" class="footer-link">FAQ</a>
-          <a href="Countries.html" class="footer-link">Contact Us</a>
-          <a href="HowItWorks.html" class="footer-link">How it Works</a>
-          <a href="Countries.html" class="footer-link">Countries</a>
-          <a href="GetStartedQ1.html" class="footer-link">Get Started</a>
-        </nav>
-  
-        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Snakpack logo" class="footer-logo">
-        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Social media links" class="footer-social">
-      </div>
-    </footer>
-  </div>
-</body>
+
+     
+    </div>
+
+    <script src="PreviousOrders.js"></script>
+  </body>
 </html>
