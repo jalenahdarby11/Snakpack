@@ -1,125 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@275;300;400&display=swap");
 
-
-.countries-container {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  align-items: center;
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header-section {
-  background-color: #52B9BC;
-  align-self: stretch;
-  display: flex;
-  width: 100%;
-  padding: 18px 0 0;
-  flex-direction: column;
+body {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
 }
 
-.logo {
-  aspect-ratio: 6.1;
-  object-fit: contain;
-  width: 605px;
-  align-self: center;
-  max-width: 100%;
+/* Header styles */
+.nav-header {
+  background-color: #52b9bc;
+  padding-top: 18px;
 }
 
 .nav-container {
-  background-color: #65D7DA;
-  z-index: 10;
   display: flex;
-  width: 93%;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 5px 0 -6px;
-  padding: 0 32px 0 80px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.nav-links {
-  align-self: end;
+.nav-logo {
+  aspect-ratio: 6.1;
+  object-fit: contain;
+  width: 605px;
+  max-width: 100%;
+}
+
+.nav-wrapper {
+  background-color: #65d7da;
+  width: 100%;
   display: flex;
-  margin-top: 25px;
-  gap: 40px 50px;
-  color: #EFF1EE;
-  font: 600 16px Montserrat, sans-serif;
+  justify-content: space-between;
+  padding: 25px 80px 0 80px;
+  margin-top: 5px;
+  margin-bottom: -6px;
+  z-index: 10;
+}
+
+.main-nav {
+  display: flex;
+  gap: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #eff1ee;
+}
+
+.nav-link {
+  color: #eff1ee;
+  text-decoration: none;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .nav-dropdown {
-  display: flex;
-  flex-direction: column;
-}
-
-.dropdown-icon {
   aspect-ratio: 15.87;
-  object-fit: contain;
   width: 80px;
-  margin-top: 4px;
+  object-fit: contain;
 }
 
 .nav-icons {
   display: flex;
-  margin: auto 0;
+  align-items: center;
 }
 
-.social-icon {
+.nav-icon {
   aspect-ratio: 0.7;
-  object-fit: contain;
   width: 67px;
 }
 
-.cart-icon {
+.nav-cart-icon {
   aspect-ratio: 0.97;
-  object-fit: contain;
   width: 60px;
-  margin: auto 0;
+  margin-left: 10px;
 }
 
 
 
-.order-confirmation {
-    background-color: #fff;
+
+
+
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family:
+      Poppins,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    background-color: #ffffff;
+  }
+  
+  /* Header Styles */
+  .nav-header {
+    background-color: rgb(82, 185, 188);
+    padding-bottom: 19px;
+    width: 100%;
+  }
+  
+  .nav-container {
+    background-color: rgb(82, 185, 188);
     display: flex;
-    padding-bottom: 37px;
+    width: 100%;
+    padding-top: 18px;
     flex-direction: column;
-    overflow: hidden;
-    font-family: Montserrat, sans-serif;
-    color: #000;
+    align-items: stretch;
+  }
+  
+  .main-logo {
+    aspect-ratio: 6.1;
+    object-fit: contain;
+    object-position: center;
+    width: 605px;
+    align-self: center;
+    max-width: 100%;
+  }
+  
+  .navigation-bar {
+    background-color: rgb(101, 215, 218);
+    z-index: 10;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: -20px;
+    width: 100%;
+    padding: 0 32px 0 80px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-family:
+      Montserrat,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .nav-link {
+    color: rgb(239, 241, 238);
+    text-decoration: none;
+  }
+  
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-icon {
+    width: 67px;
+    aspect-ratio: 0.7;
+    object-fit: contain;
+  }
+  
+  .nav-icon.menu-icon {
+    width: 60px;
+    aspect-ratio: 0.97;
+  }
+
+
+
+
+
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family:
+      Montserrat,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    color: rgba(0, 0, 0, 1);
     font-weight: 400;
     text-align: center;
   }
   
-  .header-banner {
+  /* Animation classes */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+  }
+  
+  .animate-fade-out {
+    animation: fadeOut 0.3s ease-in-out forwards;
+  }
+  
+  .animate-bounce {
+    animation: bounce 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  /* Main container */
+  .order-confirmation-page {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    padding-bottom: 37px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: stretch;
+  }
+  
+  /* Header image */
+  .header-image {
     aspect-ratio: 6.62;
     object-fit: contain;
     object-position: center;
     width: 100%;
   }
   
+  /* Confirmation container */
   .confirmation-container {
     background-color: rgba(217, 217, 217, 0.11);
     box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    border: 5px solid rgba(0, 0, 0, 1);
     align-self: center;
     display: flex;
     margin-top: 15px;
     width: 753px;
     max-width: 100%;
+    padding: 33px 80px 73px;
     flex-direction: column;
     align-items: center;
-    padding: 33px 80px 73px;
-    border: 5px solid #000;
   }
   
-  .content-wrapper {
+  /* Content wrapper */
+  .confirmation-content {
     display: flex;
     width: 415px;
     max-width: 100%;
     flex-direction: column;
+    align-items: stretch;
   }
   
-  .confirmation-icon {
+  /* Success icon */
+  .success-icon {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -127,58 +296,68 @@
     align-self: center;
   }
   
+  /* Confirmation title */
   .confirmation-title {
     font-size: 48px;
+    margin: 0;
+    font-weight: 400;
   }
   
+  /* Confirmation message */
   .confirmation-message {
     font-size: 24px;
     margin-top: 87px;
+    margin-bottom: 0;
   }
   
-  .home-button {
+  /* Return home button */
+  .return-home-button {
+    display: block;
+    text-decoration: none;
+    color: inherit;
     border-radius: 50px;
-    background-color: #ECA72C;
+    background-color: rgba(236, 167, 44, 1);
+    margin-top: 146px;
+    margin-left: 23px;
+    margin-right: 23px;
     width: 369px;
     max-width: 100%;
-    font-size: 35px;
-    margin: 146px 23px 0;
     padding: 30px 42px 50px;
+    font-size: 32px;
+    box-sizing: border-box;
     cursor: pointer;
-    border: none;
+    transition:
+      background-color 0.3s,
+      transform 0.3s;
   }
   
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
-  
+  /* Responsive styles */
   @media (max-width: 991px) {
-    .header-banner {
+    .header-image {
       max-width: 100%;
     }
-    
+  
     .confirmation-container {
-      padding: 0 20px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
-    
+  
     .confirmation-title {
       font-size: 40px;
     }
-    
+  
     .confirmation-message {
-      margin: 40px 4px 0;
+      margin-right: 4px;
+      margin-left: 4px;
+      margin-top: 40px;
     }
-    
-    .home-button {
-      margin: 40px 10px 0;
-      padding: 0 20px;
+  
+    .return-home-button {
+      margin-right: 10px;
+      margin-left: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 40px;
     }
   }
   

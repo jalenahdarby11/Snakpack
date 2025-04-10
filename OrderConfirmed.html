@@ -1,66 +1,66 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Confirmed</title>
+  <title>Order Confirmation Page</title>
   <link rel="stylesheet" href="OrderConfirmed.css">
 </head>
-<body>
 
 
-  <div class="countries-container">
-    <header class="header-section">
-      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo">
-      <nav class="nav-container">
+
+<header class="nav-header">
+    <div class="nav-container">
+      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
+      <nav class="navigation-bar">
         <div class="nav-links">
-          <a href="HowItWorks.html">How It Works</a>
-          <a href="Countries.html">Countries</a>
-          <a href="GetStartedQ1.html">Get Started</a>
+        <a href="HomePage.html" class="nav-link">Home</a>
+          <a href="HowItWorks.html" class="nav-link">How It Works</a>
+          <a href="Countries.html" class="nav-link">Countries</a>
+          <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
         </div>
         <div class="nav-icons">
 
-      
+            <a href="ShoppingCart.html">
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/edadf950090628a4467326f5ac2e7e6a6c82bdb8?placeholderIfAbsent=true" alt="User Icon" class="nav-icon" />
+        </a>
           
-          <a href="ShoppingCart.html">
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
-              alt="Shopping Cart" 
-              class="social-icon" />
-          </a>
-
           <a href="Profile.html">
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
-          alt="Profile Icon" 
-          class="cart-icon" />
-          </a>
-
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Menu Icon" class="nav-icon menu-icon" />
+        </a>
         
-          
         </div>
       </nav>
-    </header>
-
-
-
-  <div class="order-confirmation">
-   
-    <div class="confirmation-container">
-      <div class="content-wrapper">
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/967f72f294f6d127529d47a90349d52e490ab79cbc802dc5aa1e724d81ae2258?apiKey=3a8ac60b581045f7adb5757904dc023c&"
-          class="confirmation-icon"
-          alt="Order confirmation checkmark"
-        />
-        <h1 class="confirmation-title">Order Confirmed!</h1>
-        <p class="confirmation-message">
-          Check your email for confirmation and shipping updates!
-        </p>
-        <a href="HomePage.html">
-        <button class="home-button" tabindex="0">Return Home</button>
-        </a>
-      </div>
     </div>
-  </div>
-</body>
+  </header>
+
+
+
+
+
+
+
+
+
+  <body>
+    <main class="order-confirmation-page">
+     
+      <section class="confirmation-container">
+        <div class="confirmation-content">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9efc5accf5df1cb8220f674f72e5e8c81ffb2b5e?placeholderIfAbsent=true"
+            alt="Success checkmark"
+            class="success-icon"
+          />
+          <h1 class="confirmation-title">Order Confirmed!</h1>
+          <p class="confirmation-message">
+            Check your email for confirmation and shipping updates!
+          </p>
+          <a href="HomePage.html" class="return-home-button">Return Home</a>
+        </div>
+      </section>
+    </main>
+    <script src="order-confirmed.js"></script>
+  </body>
 </html>
