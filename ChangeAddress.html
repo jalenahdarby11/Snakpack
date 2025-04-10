@@ -1,82 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Change Address</title>
-  <link rel="stylesheet" href="ChangeAddress.css">
-</head>
-<body>
-  <form class="address-form">
-    <nav class="header-nav">
-      <div class="nav-container">
-        <a href="HomePage.html"><img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo" /></a>
-        <div class="nav-menu">
-          <div class="nav-links">
-            <a href="HowItWorks.html" class="nav-link">How It Works</a>
-            <a href="Countries.html" class="nav-link">Countries</a>
-            <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Address</title>
+    <link rel="stylesheet" href="ChangeAddress.css"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka&family=Montserrat:wght@600&family=Poppins:wght@275;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="ChangeAddress.js" defer></script>
+  </head>
+  <body>
+    <div class="change-address">
+     
+
+
+
+        <header class="nav-header">
+            <div class="nav-container">
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
+              <nav class="navigation-bar">
+                <div class="nav-links">
+                <a href="HomePage.html" class="nav-link">Home</a>
+                  <a href="HowItWorks.html" class="nav-link">How It Works</a>
+                  <a href="Countries.html" class="nav-link">Countries</a>
+                  <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
+                </div>
+                <div class="nav-icons">
+        
+                    <a href="ShoppingCart.html">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/edadf950090628a4467326f5ac2e7e6a6c82bdb8?placeholderIfAbsent=true" alt="User Icon" class="nav-icon" />
+                </a>
+                  
+                  <a href="Profile.html">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Menu Icon" class="nav-icon menu-icon" />
+                </a>
+                
+                </div>
+              </nav>
+            </div>
+          </header>
+
+
+
+
+      <main class="form-container">
+        <h1 class="page-title">Change Address</h1>
+
+        <section class="form-section">
+          <h2 class="section-title">Your Info</h2>
+          <form>
+            <div class="form-group">
+              <input
+                type="text"
+                id="firstName"
+                class="form-input first-name"
+                placeholder="First Name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="lastName"
+                class="form-input last-name"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+
+            <h2 class="section-title shipping-address">Shipping Address</h2>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="streetAddress"
+                class="form-input street-address"
+                placeholder="Street Address"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="apartment"
+                class="form-input apartment-suite"
+                placeholder="Apartment/ Suite (Optional)"
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="city"
+                class="form-input city"
+                placeholder="City"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="state"
+                class="form-input state"
+                placeholder="State"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="postalCode"
+                class="form-input postal-code"
+                placeholder="Postal Code"
+                required
+              />
+            </div>
+
+            <h2 class="section-title contact">Contact</h2>
+
+            <div class="form-group">
+              <input
+                type="tel"
+                id="mobileNumber"
+                class="form-input mobile-number"
+                placeholder="Mobile Number (Optional)"
+              />
+            </div>
+            <a href="FormSubmitted.html">
+            <button type="submit" class="submit-button">Submit</button>
+            </a>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="subscription-container">
+            <p class="subscription-text">Subscribe for the latest updates:</p>
+            <div class="email-input">Email Address</div>
           </div>
-          <div class="nav-icons">
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Profile" class="profile-icon" />
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Shopping Cart" class="cart-icon" />
-          </div>
+
+          <nav class="footer-nav">
+            <ul class="footer-links">
+              <li><a href="FAQs.html">FAQ</a></li>
+              <li><a href="ContactUs.html" class="contact-us">Contact Us</a></li>
+              <li><a href="HowItWorks.html" class="howit-works">How it Works</a></li>
+              <li><a href="Countries.html" class="countries">Countries</a></li>
+              <li><a href="GetStartedQ1.html" class="get-started-footer">Get Started</a></li>
+            </ul>
+          </nav>
+
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/58e2ebb9ce27507cd57b7c091e7af46b1a438519?placeholderIfAbsent=true" class="footer-logo-one" alt="Footer Logo" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9c2fd45f0841e4cf7d570ccfb6099e596290f28e?placeholderIfAbsent=true" class="footer-logo-two" alt="Footer Logo" />
         </div>
-      </div>
-    </nav>
-
-    <div class="form-container">
-      <h1 class="page-title">Change Address</h1>
-
-      <h2 class="section-title">Your Info</h2>
-      <label for="firstName" class="visually-hidden">First Name</label>
-      <input type="text" id="firstName" class="form-input" required />
-
-      <label for="lastName" class="visually-hidden">Last Name</label>
-      <input type="text" id="lastName" class="form-input" required />
-
-      <h2 class="section-title">Shipping Address</h2>
-      <label for="street" class="visually-hidden">Street Address</label>
-      <input type="text" id="street" class="form-input" required />
-
-      <label for="apt" class="visually-hidden">Apartment/Suite</label>
-      <input type="text" id="apt" class="form-input" />
-
-      <label for="city" class="visually-hidden">City</label>
-      <input type="text" id="city" class="form-input" required />
-
-      <label for="state" class="visually-hidden">State</label>
-      <input type="text" id="state" class="form-input" required />
-
-      <label for="postal" class="visually-hidden">Postal Code</label>
-      <input type="text" id="postal" class="form-input" required />
-
-      <h2 class="section-title">Contact</h2>
-      <label for="mobile" class="visually-hidden">Mobile Number</label>
-      <input type="tel" id="mobile" class="form-input" />
-
-      <a href="FormSubmitted.html"><button type="submit" class="submit-button">Submit</button></a>
+      </footer>
     </div>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <form class="subscribe-section">
-          <label for="email" class="subscribe-text">Subscribe for the latest updates:</label>
-          <input type="email" id="email" class="email-input" required />
-        </form>
-
-        <nav class="footer-links">
-          <a href="FAQs.html" class="footer-link">FAQ</a>
-          <a href="ContactUs.html" class="footer-link">Contact Us</a>
-          <a href="HowItWorks.html" class="footer-link">How it Works</a>
-          <a href="Countries.html" class="footer-link">Countries</a>
-          <a href="GetStartedQ1.html" class="footer-link">Get Started</a>
-        </nav>
-
-        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9634f3683c67f50a08b69937a5fcd5d1e4e1bd958c6122dd9132b7c5642d2fcd?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Primary Footer Logo" class="footer-logo-primary" />
-        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Secondary Footer Logo" class="footer-logo-secondary" />
-      </div>
-    </footer>
-  </form>
-</body>
+  </body>
 </html>
