@@ -1,107 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment Info</title>
-  <link rel="stylesheet" href="PaymentInfo.css">
-</head>
-<body>
-  <div class="countries-container">
-    <header class="header-section">
-      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo">
-      <nav class="nav-container">
-        <div class="nav-links">
-          <a href="HowItWorks.html">How It Works</a>
-          <a href="Countries.html">Countries</a>
-          <a href="GetStartedQ1.html">Get Started</a>
-        </div>
-        <div class="nav-icons">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Information</title>
+    <link rel="stylesheet" href="PaymentInfo.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Montserrat:wght@600&family=Poppins:wght@275;300;400;600&family=Istok+Web&family=SF+Pro+Display:wght@500&family=SF+Pro+Text:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="PaymentInfo.js" defer></script>
+   
+  </head>
+  <body>
+    <div class="payment-container">
+     
 
-      
-          
-          <a href="ShoppingCart.html">
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
-              alt="Shopping Cart" 
-              class="social-icon" />
-          </a>
 
-          <a href="Profile.html">
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
-          alt="Profile Icon" 
-          class="cart-icon" />
-          </a>
-
+        <header class="nav-header">
+            <div class="nav-container">
+              <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
+              <nav class="navigation-bar">
+                <div class="nav-links">
+                <a href="HomePage.html" class="nav-link">Home</a>
+                  <a href="HowItWorks.html" class="nav-link">How It Works</a>
+                  <a href="Countries.html" class="nav-link">Countries</a>
+                  <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
+                </div>
+                <div class="nav-icons">
         
-          
-        </div>
-      </nav>
-    </header>
+                    <a href="ShoppingCart.html">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/edadf950090628a4467326f5ac2e7e6a6c82bdb8?placeholderIfAbsent=true" alt="User Icon" class="nav-icon" />
+                </a>
+                  
+                  <a href="Profile.html">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Menu Icon" class="nav-icon menu-icon" />
+                </a>
+                
+                </div>
+              </nav>
+            </div>
+          </header>
 
 
 
 
 
-    <main class="main-content">
-      <h1 class="page-title">Payment Info</h1>
-      <section class="card-section">
-        <h2 class="section-title">Current Card in Use</h2>
-        <p class="card-type">Credit Card</p>
-        <form class="card-input">
-          <div class="card-number-group">
-            <img src="creditcard.png" alt="Credit Card" class="card-icon">
-            <label for="cardNumber" class="visually-hidden">Card Number</label>
-            <input type="text" id="cardNumber" value="0123 4567 8910" readonly>
-          </div>
-        </form>
-        <div class="security-group">
-          <div class="input-group">
-            <label for="cvc" class="input-label">CVC</label>
-            <div class="input-field">
-              <img src="CV.png" alt="CVC Icon" class="security-icon">
-              <input type="text" id="cvc" value="000" readonly>
+
+      <main class="main-content">
+        <h1 class="page-title">Payment Info</h1>
+
+        <section class="current-card-section">
+          <h2 class="section-title">Current Card in Use</h2>
+          <p class="card-type">Credit Card</p>
+
+          <div class="card-display">
+            <div class="card-number-container">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/fa416f92b5dd36073711bc5c2271373c322e881d?placeholderIfAbsent=true"
+                alt="Card"
+                class="card-icon"
+              />
+              <p class="card-number-text">0123 4567 8910</p>
+            </div>
+            <div class="card-brand-container">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4fc686b9c450d189ed71d4fa96efac4ed2fa212c?placeholderIfAbsent=true"
+                alt="Card Brand"
+                class="card-brand-icon"
+              />
+              <div class="card-security-icons">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a9aa6355ca82a4f64536ed51dc9c4d90947edaff?placeholderIfAbsent=true"
+                  alt="Security"
+                  class="security-icon"
+                />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ca287c958e1752a4f268f51b6d85a6d30b16d555?placeholderIfAbsent=true"
+                  alt="Security"
+                  class="security-icon-wide"
+                />
+              </div>
             </div>
           </div>
-          <div class="input-group">
-            <label for="expiry" class="input-label">Date</label>
-            <div class="input-field">
-              <img src="date.png" alt="Calendar Icon" class="security-icon">
-              <input type="text" id="expiry" value="11/1111" readonly>
+
+          <div class="card-details">
+            <div class="card-detail-group">
+              <label class="detail-label">CVC</label>
+              <div class="detail-input">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/48288efcccbc069274fe1e14a2f39f8012d11102?placeholderIfAbsent=true"
+                  alt="CVC"
+                  class="detail-icon"
+                />
+                <span class="detail-value">000</span>
+              </div>
+            </div>
+
+            <div class="card-detail-group">
+              <label class="detail-label">Date</label>
+              <div class="detail-input">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9aeba3e45c27b9a9d36bd82fb8908fd6f6dce9c2?placeholderIfAbsent=true"
+                  alt="Calendar"
+                  class="detail-icon"
+                />
+                <span class="detail-value">11/1111</span>
+              </div>
             </div>
           </div>
+        </section>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <span class="divider-text">or</span>
+          <div class="divider-line"></div>
         </div>
-      </section>
-      <div class="divider">
-        <div class="divider-line"></div>
-        <span>or</span>
-        <div class="divider-line"></div>
-      </div>
-      <button class="apple-pay">
-        <span>Pay with</span>
-        <span>Pay</span>
-      </button>
-      <a href="FormSubmitted.html">
-      <button class="submit-button">Submit</button>
-      </a>
-    </main>
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="subscribe-group">
-          <h2 class="subscribe-text">Subscribe for the latest updates:</h2>
-          <form>
-            <label for="email" class="visually-hidden">Email Address</label>
-            <input type="email" id="email" class="email-input" placeholder="Email Address">
-          </form>
+
+        <section class="change-card-section">
+          <h2 class="section-title-1">Change Current Credit Card</h2>
+
+          <div class="card-display rounded">
+            <div class="card-number-container">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/fa416f92b5dd36073711bc5c2271373c322e881d?placeholderIfAbsent=true"
+                alt="Card"
+                class="card-icon"
+              />
+              <p class="card-number-text">0123 4567 8910</p>
+            </div>
+            <div class="card-brand-container">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4fc686b9c450d189ed71d4fa96efac4ed2fa212c?placeholderIfAbsent=true"
+                alt="Card Brand"
+                class="card-brand-icon"
+              />
+              <div class="card-security-icons">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a9aa6355ca82a4f64536ed51dc9c4d90947edaff?placeholderIfAbsent=true"
+                  alt="Security"
+                  class="security-icon"
+                />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ca287c958e1752a4f268f51b6d85a6d30b16d555?placeholderIfAbsent=true"
+                  alt="Security"
+                  class="security-icon-wide"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="card-details">
+            <div class="card-detail-group">
+              <div class="detail-input rounded">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/48288efcccbc069274fe1e14a2f39f8012d11102?placeholderIfAbsent=true"
+                  alt="CVC"
+                  class="detail-icon"
+                />
+                <span class="detail-value">000</span>
+              </div>
+            </div>
+
+            <div class="card-detail-group">
+              <div class="detail-input rounded">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9aeba3e45c27b9a9d36bd82fb8908fd6f6dce9c2?placeholderIfAbsent=true"
+                  alt="Calendar"
+                  class="detail-icon"
+                />
+                <span class="detail-value">dd/yyyy</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="apple-pay-button">
+            <div class="apple-pay-content">
+              <span class="pay-with-text">Pay with Apple Pay</span>
+              
+            </div>
+          </button>
+
+          <button class="submit-button">Submit</button>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="subscription-container">
+            <h3 class="subscription-title">
+              Subscribe for the latest updates:
+            </h3>
+            <button class="email-button">Email Address</button>
+          </div>
+
+          <nav class="footer-nav">
+            <ul class="footer-links">
+              <li><a href="FAQs.html" class="footer-link">FAQ</a></li>
+              <li><a href="ContactUs.html" class="footer-link">Contact Us</a></li>
+              <li><a href="HowItWorks.html" class="footer-link">How it Works</a></li>
+              <li><a href="Countries.html" class="footer-link">Countries</a></li>
+              <li><a href="GetStartedQ1.html" class="footer-link">Get Started</a></li>
+            </ul>
+          </nav>
+
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d5b1e560105caee6c0687781f53e9cfa46574107?placeholderIfAbsent=true"
+            alt="Logo"
+            class="footer-logo"
+          />
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9c2fd45f0841e4cf7d570ccfb6099e596290f28e?placeholderIfAbsent=true"
+            alt="Logo"
+            class="footer-logo-small"
+          />
         </div>
-        <nav class="footer-links">
-          <a href="FAQs.html">FAQ</a>
-          <a href="ContactUs.html">Contact Us</a>
-          <a href="HowItWorks.html">How it Works</a>
-          <a href="Countries.html">Countries</a>
-          <a href="GetStartedQ1.html">Get Started</a>
-        </nav>
-      </div>
-    </footer>
-  </div>
-</body>
+      </footer>
+    </div>
+  </body>
 </html>
