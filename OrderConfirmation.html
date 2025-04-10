@@ -3,124 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Confirmation</title>
+  <title>Confirm and Pay</title>
   <link rel="stylesheet" href="OrderConfirmation.css">
 </head>
-<body>
 
 
-  <div class="countries-container">
-    <header class="header-section">
-      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d77088e823072b38e66701426a98af2216e9d7d8dfe2959ab2c7373573abca0e?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Company Logo" class="logo">
-      <nav class="nav-container">
+
+
+
+<header class="nav-header">
+    <div class="nav-container">
+      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
+      <nav class="navigation-bar">
         <div class="nav-links">
-          <a href="HowItWorks.html">How It Works</a>
-          <a href="Countries.html">Countries</a>
-          <a href="GetStartedQ1.html">Get Started</a>
+        <a href="HomePage.html" class="nav-link">Home</a>
+          <a href="HowItWorks.html" class="nav-link">How It Works</a>
+          <a href="Countries.html" class="nav-link">Countries</a>
+          <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
         </div>
         <div class="nav-icons">
 
-      
+            <a href="ShoppingCart.html">
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/edadf950090628a4467326f5ac2e7e6a6c82bdb8?placeholderIfAbsent=true" alt="User Icon" class="nav-icon" />
+        </a>
           
-          <a href="ShoppingCart.html">
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4b3c434ba154a80e5951ca4ebea5375461b10912552515a383f969138bbdbb50?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
-              alt="Shopping Cart" 
-              class="social-icon" />
-          </a>
-
           <a href="Profile.html">
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/5c2d06a0a77014efc50c9063afe3311802943bf3afc54f3d6c3bf6bad4069969?apiKey=3a8ac60b581045f7adb5757904dc023c&" 
-          alt="Profile Icon" 
-          class="cart-icon" />
-          </a>
-
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Menu Icon" class="nav-icon menu-icon" />
+        </a>
         
-          
         </div>
       </nav>
-    </header>
-
-
-  <form class="order-confirmation">
-    
+    </div>
+  </header>
 
 
 
-    <h1 class="page-title">Confirm and Pay</h1>
-    
-    <div class="main-content">
+
+
+
+
+
+<main class="order-confirmation-page">
+   
+    <h1 class="page-title-1">Confirm and Pay</h1>
+  
+    <div class="main-container">
       <div class="content-wrapper">
-        <!-- Form Section -->
         <section class="form-section">
-          <div class="form-container">
-            <h2 class="section-title">Your Info</h2>
-            <label for="firstName" class="visually-hidden">First Name</label>
-            <input type="text" id="firstName" class="input-field" placeholder="First Name" required>
-            <label for="lastName" class="visually-hidden">Last Name</label>
-            <input type="text" id="lastName" class="input-field" placeholder="Last Name" required>
-            <h2 class="section-title">Shipping Address</h2>
-            <label for="street" class="visually-hidden">Street Address</label>
-            <input type="text" id="street" class="input-field" placeholder="Street Address" required>
-            <label for="apt" class="visually-hidden">Apartment/Suite</label>
-            <input type="text" id="apt" class="input-field" placeholder="Apartment/Suite (Optional)">
-            <label for="city" class="visually-hidden">City</label>
-            <input type="text" id="city" class="input-field" placeholder="City" required>
-            <label for="state" class="visually-hidden">State</label>
-            <input type="text" id="state" class="input-field" placeholder="State" required>
-            <label for="postal" class="visually-hidden">Postal Code</label>
-            <input type="text" id="postal" class="input-field" placeholder="Postal Code" required>
-            <h2 class="section-title">Contact</h2>
-            <label for="mobile" class="visually-hidden">Mobile Number</label>
-            <input type="tel" id="mobile" class="input-field" placeholder="Mobile Number (Optional)">
-            <div class="divider"></div>
-            <h2 class="section-title">Payment Information</h2>
-            <div class="payment-section">
+          <form class="checkout-form">
+            <section class="personal-info">
+              <h2 class="section-title">Your Info</h2>
+              <input type="text" placeholder="First Name" class="input-field" />
+              <input type="text" placeholder="Last Name" class="input-field" />
+            </section>
+  
+            <section class="shipping-info">
+              <h2 class="section-title">Shipping Address</h2>
+              <input
+                type="text"
+                placeholder="Street Address"
+                class="input-field"
+              />
+              <input
+                type="text"
+                placeholder="Apartment/ Suite (Optional)"
+                class="input-field"
+              />
+              <input type="text" placeholder="City" class="input-field" />
+              <input type="text" placeholder="State" class="input-field" />
+              <input type="text" placeholder="Postal Code" class="input-field" />
+            </section>
+  
+            <section class="contact-info">
+              <h2 class="section-title">Contact</h2>
+              <input
+                type="tel"
+                placeholder="Mobile Number (Optional)"
+                class="input-field"
+              />
+            </section>
+  
+            <div class="separator"></div>
+  
+            <section class="payment-section">
+              <h2 class="section-title">Payment Information</h2>
               <div class="card-input">
-                <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0054688d81a7b4137c8818968f672be26545c12c24e0966f95738e991beb8424?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Credit card" class="payment-icon">
-                <span>Card Number</span>
+                <div class="card-number-group">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/fa416f92b5dd36073711bc5c2271373c322e881d?placeholderIfAbsent=true" alt="Card" class="card-icon" />
+                  <input
+                    type="text"
+                    class="input-field card-number"
+                    placeholder="Card Number"
+                    maxlength="19"
+                  />
+                </div>
+                <div class="card-icons">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4fc686b9c450d189ed71d4fa96efac4ed2fa212c?placeholderIfAbsent=true"
+                    alt="Card Type"
+                    class="payment-icon"
+                  />
+                  <div class="additional-cards">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a9aa6355ca82a4f64536ed51dc9c4d90947edaff?placeholderIfAbsent=true"
+                      alt="Additional Card"
+                      class="payment-icon"
+                    />
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ca287c958e1752a4f268f51b6d85a6d30b16d555?placeholderIfAbsent=true"
+                      alt="Additional Card"
+                      class="payment-icon"
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="divider-text">or</div>
-            <button type="button" class="apple-pay">
-              <div class="apple-pay-button">
-                <span>Pay with</span>
-                <span>Pay</span>
-              </div>
-            </button>
-          </div>
+  
+              <div class="payment-separator">or</div>
+  
+              <button type="button" class="apple-pay-button">
+                <div class="apple-pay-content">
+                  <span class="pay-with">Pay with Apple Pay</span>
+               
+                </div>
+              </button>
+            </section>
+          </form>
         </section>
-        <!-- Summary Section -->
-        <section class="summary-section">
-          <div class="order-summary">
+  
+        <section class="order-summary-section">
+          <div class="summary-container">
             <h2 class="summary-title">Order Summary</h2>
-            <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/0ca3ff0eda14be7a202223e092f9d6916cf10466f5f5e79b8224f098a0329905?apiKey=3a8ac60b581045f7adb5757904dc023c&" alt="Costa Rica Box" class="product-image">
-            <h3 class="product-name">Costa Rica Box</h3>
-            <div class="summary-divider"></div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/1fc53d52dce0cf35cb0e4d32a4a88fbadd947e57?placeholderIfAbsent=true"
+              alt="Costa Rica Box"
+              class="product-image"
+            />
+            <h3 class="product-title">Costa Rica Box</h3>
+            <div class="summary-separator"></div>
             <div class="price-details">
               <div class="price-labels">
-                <span>Subtotal</span>
-                <span>Shipping</span>
-                <span>Taxes</span>
-                <span class="total">Today's Total</span>
+                <p>Subtotal</p>
+                <p class="shipping-label">Shipping</p>
+                <p class="taxes-label">Taxes</p>
+                <p class="total-label">Today's Total</p>
               </div>
               <div class="price-values">
-                <span>$14.99</span>
-                <span>$4.99</span>
-                <span>--</span>
-                <span class="total">$19.99</span>
+                <p class="subtotal-value">$14.99</p>
+                <p class="shipping-value">$4.99</p>
+                <p class="taxes-value">--</p>
+                <p class="total-value">$19.99</p>
               </div>
             </div>
           </div>
         </section>
       </div>
     </div>
+  
+    <button type="submit" class="confirm-pay-button">
+        <a href="OrderConfirmed.html">Confirm and Pay</a>
+    </button>
+  </main>
+  <script src="order-confirmation.js"></script>
 
 
 
-    <button  type="submit"  class="submit-button">
-      <a href="OrderConfirmed.html">Confirm and Pay</a>
-  </button>
-    
-  </form>
-</body>
-</html>
+
+  <footer class="page-footer">
+    <div class="footer-content">
+      <div class="subscribe-section">
+        <p class="subscribe-text">Subscribe for the latest updates:</p>
+        <input type="email" placeholder="Email Address" class="subscribe-input" />
+      </div>
+  
+      <nav class="footer-nav">
+        <a href="FAQs.html" class="footer-link">FAQ</a>
+        <a href="ContactUs.html" class="footer-link">Contact Us</a>
+        <a href="HowItWorks.html" class="footer-link">How it Works</a>
+        <a href="Countries.html" class="footer-link">Countries</a>
+        <a href="GetStartedQ1.html" class="footer-link">Get Started</a>
+      </nav>
+  
+      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/83a0146325637aabd8615d230e39b2f36738afd0?placeholderIfAbsent=true" alt="Footer Logo 1" class="footer-logo" />
+      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9c2fd45f0841e4cf7d570ccfb6099e596290f28e?placeholderIfAbsent=true" alt="Footer Logo 2" class="footer-logo secondary" />
+    </div>
+  </footer>
+  
+  
