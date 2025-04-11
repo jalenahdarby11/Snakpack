@@ -1,311 +1,176 @@
-.profile-container {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
+:root {
+    --primary-color: #5dd2d2; 
+    --secondary-color: #f2a154; 
+    --background-color: #f9f9f9; 
+    --text-color: #333333; 
+  }
 
-  
-  .header-section {
-    background-color: #52B9BC;
-    align-self: stretch;
-    display: flex;
-    width: 100%;
-    padding: 18px 0 0;
-    flex-direction: column;
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
   }
   
-  .logo {
-    aspect-ratio: 6.1;
-    object-fit: contain;
-    width: 605px;
-    align-self: center;
-    max-width: 100%;
+  
+  .profile-container {
+    max-width: 600px;
+    margin: 60px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 1px solid #000000;
+  }
+  
+  
+  .profile-info {
+    text-align: center;
+  }
+  
+  button, .settings-button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  button:hover, .settings-button:hover {
+    background-color: var(--secondary-color);
+  }
+
+.nav-header {
+    background-color: #52B9BC; 
+    width: 100%;
   }
   
   .nav-container {
-    background-color: #65D7DA;
-    z-index: 10;
     display: flex;
-    width: 93%;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-logo {
+    width: 300px;
+    margin: 16px auto;
+    display: block;
+    align-items: center;
+  }
+  
+  .navigation-bar {
+    background-color: #52B9BC; 
+    width: 100%;
+    display: flex;
     justify-content: space-between;
-    margin: 5px 0 -6px;
-    padding: 0 32px 0 80px;
+    align-items: center;
+    padding: 12px 60px;
+    box-sizing: border-box;
   }
   
   .nav-links {
-    align-self: end;
     display: flex;
-    margin-top: 25px;
-    gap: 40px 50px;
-    color: #EFF1EE;
-    font: 600 16px Montserrat, sans-serif;
+    gap: 40px;
   }
   
-  .nav-dropdown {
-    display: flex;
-    flex-direction: column;
+  .nav-link {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
   }
   
-  .dropdown-icon {
-    aspect-ratio: 15.87;
-    object-fit: contain;
-    width: 80px;
-    margin-top: 4px;
+  .nav-link:hover {
+    text-decoration: underline;
   }
   
   .nav-icons {
     display: flex;
-    margin: auto 0;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .nav-icon {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    gap: 10px;
+  }
+  
+  .main-footer {
+    background-color: #6ac7cc;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .newsletter-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .newsletter-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .email-input {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    width: 300px;
+    font-size: 1rem;
+  }
+  
+  .footer-nav {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+  
+  .footer-nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
   }
   
   .social-icon {
-    aspect-ratio: 0.7;
-    object-fit: contain;
-    width: 67px;
-  }
-  
-  .cart-icon {
-    aspect-ratio: 0.97;
-    object-fit: contain;
-    width: 60px;
-    margin: auto 0;
-  }
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
-  
-  .subscription-page {
-    background-color: #fff;
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    align-items: center;
-  }
-  
-  .header-logo {
-    aspect-ratio: 6.62;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-    align-self: stretch;
-  }
-
-.settings-wrapper {
-    display: flex;
-    width: 749px;
-    max-width: 100%;
-    flex-direction: column;
-    margin: 27px 0 0 75px;
-}
-
-
-.settings-icon-wrapper {
-    display: flex;
-    gap: 4px;
-}
-
-.icon-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    aspect-ratio: 1;
-    width: 43px;
-}
-
-.icon-overlay {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.icon-base {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-}
-
-.settings-label {
-    color: #000;
-    align-self: start;
-    margin-top: 10px;
-    font: 400 20px Poppins, sans-serif;
-}
-
-.profile-info {
-    display: flex;
-    margin-top: 16px;
-    flex-direction: column;
-}
-
-.profile-name {
-    color: #000;
-    align-self: center;
-    margin-top: 7px;
-    font: 600 20px Poppins, sans-serif;
-}
-
-.menu-row {
-    align-self: end;
-    display: flex;
-    margin-top: 49px;
-    width: 411px;
-    max-width: 100%;
     gap: 20px;
-    color: #000;
-    white-space: nowrap;
-    justify-content: space-between;
-    font: 400 20px Poppins, sans-serif;
-}
-
-.menu-item {
-    display: flex;
-    gap: 9px;
-    align-items: center;
-}
-
-.menu-icon {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    width: 33px;
-}
-
-.footer-section {
-    background-color: #52B9BC;
-    display: flex;
-    margin-top: 212px;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    color: #000;
     justify-content: center;
-    padding: 78px 80px;
-}
+  }
+  
+  .social-icon img {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+  }
 
-.footer-content {
+  .footer-brand {
     display: flex;
-    width: 100%;
-    max-width: 929px;
     flex-direction: column;
     align-items: center;
-}
+    margin-top: 20px;
+  }
 
-.subscribe-container {
-    align-self: stretch;
-    display: flex;
-    gap: 23px;
-    flex-wrap: wrap;
-}
-
-.subscribe-text {
-    flex-grow: 1;
-    flex-basis: auto;
-    margin: auto 0;
-    font: 600 24px Montserrat, sans-serif;
-}
-
-.email-input {
-    border-radius: 100px;
-    background-color: #D9D9D9;
-    flex-grow: 1;
-    width: fit-content;
-    padding: 9px 28px 25px;
-    font: 300 20px Poppins, sans-serif;
-}
-
-.footer-links {
-    display: flex;
-    width: 761px;
-    max-width: 100%;
-    gap: 40px 43px;
-    margin: 50px 0 0 25px;
-    font: 275 24px Poppins, sans-serif;
-}
-
-.footer-link {
-    flex-grow: 1;
-    min-width: 100px;
-}
-
-.footer-logo-primary {
-    aspect-ratio: 6.02;
-    object-fit: contain;
-    object-position: center;
-    width: 410px;
-    margin-top: 34px;
-    max-width: 100%;
-}
-
-.footer-logo-secondary {
-    aspect-ratio: 3.51;
-    object-fit: contain;
-    object-position: center;
-    width: 260px;
-    max-width: 100%;
-    margin: 47px 0 0 29px;
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-@media (max-width: 991px) {
-    .header-banner {
-        max-width: 100%;
-    }
-
-    .menu-row {
-        margin-top: 40px;
-        white-space: initial;
-    }
-
-    .footer-section {
-        max-width: 100%;
-        margin-top: 40px;
-        padding: 0 20px;
-    }
-
-    .footer-content {
-        max-width: 100%;
-    }
-
-    .subscribe-container {
-        max-width: 100%;
-    }
-
-    .email-input {
-        max-width: 100%;
-        padding: 0 20px;
-    }
-
-    .footer-links {
-        margin-top: 40px;
-    }
-
-    .footer-logo-secondary {
-        margin-top: 40px;
-    }
-}
+  .footer-logo {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  
