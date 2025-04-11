@@ -25,7 +25,7 @@
       </div>
       <div class="nav-icons">
 
-          <a href="ShoppingCart.html">
+          <a href="OrderConfirmation.php">
         <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/edadf950090628a4467326f5ac2e7e6a6c82bdb8?placeholderIfAbsent=true" alt="User Icon" class="nav-icon" />
       </a>
         
@@ -71,11 +71,7 @@
   
     <section class="explore-section">
       <h2 class="section-title">Explore Countries</h2>
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/63b558a04d1a5e045ec5803cc375ce11bf3ca273?placeholderIfAbsent=true"
-        alt="Countries map"
-        class="countries-map"
-      />
+      
     </section>
   
     <section class="previous-boxes-section">
@@ -95,7 +91,12 @@
             with rich tropical ingredients, each snack offers a taste of Brazil's
             dynamic culture and festive spirit.
           </p>
-          <a href="GetStartedQ1.html" class="card-button">Get Started</a>
+          <form action="setCountry.php" method="POST">
+            <input type="hidden" name="country" value="Brazil">
+            <button type="button" onclick="addToCart('Brazil')">Add to Cart</button>
+
+          </form>
+          
         </article>
   
         <article class="country-card">
@@ -111,7 +112,11 @@
             this unique nation, you'll also find towering monuments, colorful
             wildlife, and a feast of delicious culinary creations!
           </p>
-          <a href="GetStartedQ1.html" class="card-button">Get Started</a>
+          <form action="setCountry.php" method="POST">
+            <input type="hidden" name="country" value="India">
+            <button type="button" onclick="addToCart('India')">Add to Cart</button>
+          </form>
+          
         </article>
   
         <article class="country-card">
@@ -127,7 +132,11 @@
             borders, one can discover breathtaking scenery, iconic cathedrals, and
             partake in some of the most exquisite cuisine worldwide.
           </p>
-          <a href="GetStartedQ1.html" class="card-button">Get Started</a>
+          <form action="setCountry.php" method="POST">
+            <input type="hidden" name="country" value="France">
+            <button type="button" onclick="addToCart('France')">Add to Cart</button>
+          </form>
+          
         </article>
       </div>
     </section>
@@ -162,5 +171,18 @@
         />
       </div>
     </footer>
+    <script>
+      function addToCart(country) {
+        fetch('setCountry.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: 'country=' + encodeURIComponent(country)
+        })
+        .then(response => response.text())
+        .then(data => {
+        });
+      }
+    </script>
+    
   </main>
   
