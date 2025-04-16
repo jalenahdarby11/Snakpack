@@ -1,21 +1,21 @@
 <?php
 session_start();
 
-// Initialize the cart array if it doesn't exist
-if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = [];
-}
+$country = $_POST['country'] ?? null;
 
-// Check if a country was sent via POST
-if (isset($_POST['country'])) {
-    $country = $_POST['country'];
-
-    // Add the selected country to the cart array
-    $_SESSION['cart'][] = $country;
-
-    // Return a success message (used by JavaScript)
-    echo "Added $country to cart.";
-} else {
+if (!$country) {
     echo "No country selected.";
+    exit;
 }
+
+$_SESSION['cart'][] = $country;
+
+// Save to countries.json
+$dataFile = 'countries.json';
+$data = file_exists($dataFile) ? json_decode(file_get_contents($dataFile), true) : [];
+$data[] = ['country' => $country, 'timestamp' => date("Y-m-d H:i:s")];
+file_put_contents($dataFile, json_encode($data, JSON_PRETTY_PRINT));
+
+header("Location: OrderConfirmation.php");
+exit();
 ?>
