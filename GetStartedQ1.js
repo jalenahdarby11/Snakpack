@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const flavorOptions = document.querySelectorAll(".flavor-option");
   const nextButton = document.querySelector(".next-button");
   const emailInput = document.querySelector(".email-input");
-  const navLinks = document.querySelectorAll(".nav-link");
+  
 
   // Handle flavor selection
   flavorOptions.forEach((option) => {
