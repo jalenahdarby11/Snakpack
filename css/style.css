@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-.article-container{
-    display: flex;
 
-}
-
-.articleBtn {
-    border: 1px solid gray;
-    padding: 80px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
-.row{
-    display: flex;
-}
-=======
 .main-footer {
     background-color: #54c3c3;
     color: black;
@@ -219,4 +203,4 @@
   .footer-logo-secondary {
     height: 30px;
   }
->>>>>>> 947a0a5 (SnakPack Quiz)
+
