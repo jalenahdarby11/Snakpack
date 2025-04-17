@@ -105,10 +105,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
     <nav class="navigation-bar">
       <div class="nav-links">
-        <a href="HomePage.html" class="nav-link">Home</a>
-        <a href="HowItWorks.html" class="nav-link">How It Works</a>
+        <a href="HomePage.php" class="nav-link">Home</a>
+        <a href="HowItWorks.php" class="nav-link">How It Works</a>
         <a href="Countries.php" class="nav-link">Countries</a>
-        <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
+        <a href="GetStartedQ1.php" class="nav-link">Get Started</a>
       </div>
       <div class="nav-icons">
 
