@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirm and Pay</title>
+  <link rel="stylesheet" href="OrderConfirmation.css">
+</head>
+
+
+
+
+
+<header class="nav-header">
+    <div class="nav-container">
+      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
+      <nav class="navigation-bar">
+        <div class="nav-links">
+        <a href="HomePage.html" class="nav-link">Home</a>
+          <a href="HowItWorks.html" class="nav-link">How It Works</a>
+          <a href="Countries.html" class="nav-link">Countries</a>
+          <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
+        </div>
+        <div class="nav-icons">
+
+            <a href="ShoppingCart.html">
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/edadf950090628a4467326f5ac2e7e6a6c82bdb8?placeholderIfAbsent=true" alt="User Icon" class="nav-icon" />
+        </a>
+          
+          <a href="Profile.html">
+          <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Menu Icon" class="nav-icon menu-icon" />
+        </a>
+        
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+<main class="order-confirmation-page">
+   
+    <h1 class="page-title-1">Confirm and Pay</h1>
+  
+    <div class="main-container">
+      <div class="content-wrapper">
+        <section class="form-section">
+          <form class="checkout-form">
+            <section class="personal-info">
+              <h2 class="section-title">Your Info</h2>
+              <input type="text" placeholder="First Name" class="input-field" />
+              <input type="text" placeholder="Last Name" class="input-field" />
+            </section>
+  
+            <section class="shipping-info">
+              <h2 class="section-title">Shipping Address</h2>
+              <input
+                type="text"
+                placeholder="Street Address"
+                class="input-field"
+              />
+              <input
+                type="text"
+                placeholder="Apartment/ Suite (Optional)"
+                class="input-field"
+              />
+              <input type="text" placeholder="City" class="input-field" />
+              <input type="text" placeholder="State" class="input-field" />
+              <input type="text" placeholder="Postal Code" class="input-field" />
+            </section>
+  
+            <section class="contact-info">
+              <h2 class="section-title">Contact</h2>
+              <input
+                type="tel"
+                placeholder="Mobile Number (Optional)"
+                class="input-field"
+              />
+            </section>
+  
+            <div class="separator"></div>
+  
+            <section class="payment-section">
+              <h2 class="section-title">Payment Information</h2>
+              <div class="card-input">
+                <div class="card-number-group">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/fa416f92b5dd36073711bc5c2271373c322e881d?placeholderIfAbsent=true" alt="Card" class="card-icon" />
+                  <input
+                    type="text"
+                    class="input-field card-number"
+                    placeholder="Card Number"
+                    maxlength="19"
+                  />
+                </div>
+                <div class="card-icons">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/4fc686b9c450d189ed71d4fa96efac4ed2fa212c?placeholderIfAbsent=true"
+                    alt="Card Type"
+                    class="payment-icon"
+                  />
+                  <div class="additional-cards">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/a9aa6355ca82a4f64536ed51dc9c4d90947edaff?placeholderIfAbsent=true"
+                      alt="Additional Card"
+                      class="payment-icon"
+                    />
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/ca287c958e1752a4f268f51b6d85a6d30b16d555?placeholderIfAbsent=true"
+                      alt="Additional Card"
+                      class="payment-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+  
+              <div class="payment-separator">or</div>
+  
+              <button type="button" class="apple-pay-button">
+                <div class="apple-pay-content">
+                  <span class="pay-with">Pay with Apple Pay</span>
+               
+                </div>
+              </button>
+            </section>
+          </form>
+        </section>
+  
+        <section class="order-summary-section">
+          <div class="summary-container">
+            <h2 class="summary-title">Order Summary</h2>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/1fc53d52dce0cf35cb0e4d32a4a88fbadd947e57?placeholderIfAbsent=true"
+              alt="Costa Rica Box"
+              class="product-image"
+            />
+            <h3 class="product-title">Costa Rica Box</h3>
+            <div class="summary-separator"></div>
+            <div class="price-details">
+              <div class="price-labels">
+                <p>Subtotal</p>
+                <p class="shipping-label">Shipping</p>
+                <p class="taxes-label">Taxes</p>
+                <p class="total-label">Today's Total</p>
+              </div>
+              <div class="price-values">
+                <p class="subtotal-value">$14.99</p>
+                <p class="shipping-value">$4.99</p>
+                <p class="taxes-value">--</p>
+                <p class="total-value">$19.99</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  
+    <button type="submit" class="confirm-pay-button">
+        <a href="OrderConfirmed.html">Confirm and Pay</a>
+    </button>
+  </main>
+  <script src="order-confirmation.js"></script>
+
+
+
+
+  <footer class="page-footer">
+    <div class="footer-content">
+      <div class="subscribe-section">
+        <p class="subscribe-text">Subscribe for the latest updates:</p>
+        <input type="email" placeholder="Email Address" class="subscribe-input" />
+      </div>
+  
+      <nav class="footer-nav">
+        <a href="FAQs.html" class="footer-link">FAQ</a>
+        <a href="ContactUs.html" class="footer-link">Contact Us</a>
+        <a href="HowItWorks.html" class="footer-link">How it Works</a>
+        <a href="Countries.html" class="footer-link">Countries</a>
+        <a href="GetStartedQ1.html" class="footer-link">Get Started</a>
+      </nav>
+  
+      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/83a0146325637aabd8615d230e39b2f36738afd0?placeholderIfAbsent=true" alt="Footer Logo 1" class="footer-logo" />
+      <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9c2fd45f0841e4cf7d570ccfb6099e596290f28e?placeholderIfAbsent=true" alt="Footer Logo 2" class="footer-logo secondary" />
+    </div>
+  </footer>
+  
+  
