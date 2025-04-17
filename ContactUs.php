@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
   <link rel="stylesheet" href="ContactUs.css">
+  <script src = "ContactUs.js"></script>
 </head>
 
 <header class="nav-header">
