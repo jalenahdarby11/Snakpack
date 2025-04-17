@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SnakPack QR Codes</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <style>
+    body {
+      background-color: white;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 10px;
+      margin: 0;
+    }
+
+    .qr-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .qr-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .qr-container {
+      width: 250px;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-container canvas {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    .label {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .flag-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.3), 0 4px 6px rgba(0,0,0,0.2);
+      margin-bottom: 10px;
+    }
+
+    .indonesia-flag {
+      background: linear-gradient(to bottom, #FF0000 50%, #FFFFFF 50%);
+    }
+
+    .germany-flag {
+      background: linear-gradient(to bottom, black 33%, red 33% 66%, gold 66%);
+    }
+
+    .costa-rica-flag {
+      background: linear-gradient(to bottom, #002B7F 33%, white 33% 66%, red 66%);
+    }
+
+    .mexico-flag {
+      background: linear-gradient(to right, #006847 33%, white 33% 66%, #CE1126 66%);
+    }
+
+    .peru-flag {
+      background: linear-gradient(to right, #D91023 33%, white 33% 66%, #D91023 66%);
+    }
+
+    .taiwan-flag {
+      background: linear-gradient(to bottom, #000095 30%, #FE0000 70%);
+    }
+
+    .vietnam-flag {
+      background-color: #DA251D;
+    }
+
+    .qatar-flag {
+      background: linear-gradient(to right, white 25%, #8A1538 25%);
+    }
+
+    .country-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Row 1 -->
+  <div class="qr-row">
+    <div class="qr-wrapper">
+      <div class="qr-container"><div id="qrcode-indonesia"></div></div>
+      <div class="label">
+        <div class="flag-circle indonesia-flag"></div>
+        <div class="country-name">Indonesia</div>
+      </div>
+    </div>
+
+    <div class="qr-wrapper">
+      <div class="qr-container"><div id="qrcode-germany"></div></div>
+      <div class="label">
+        <div class="flag-circle germany-flag"></div>
+        <div class="country-name">Germany</div>
+      </div>
+    </div>
+
+    <div class="qr-wrapper">
+      <div class="qr-container"><div id="qrcode-costa-rica"></div></div>
+      <div class="label">
+        <div class="flag-circle costa-rica-flag"></div>
+        <div class="country-name">Costa Rica</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="qr-row">
+    <div class="qr-wrapper">
+      <div class="qr-container"><div id="qrcode-mexico"></div></div>
+      <div class="label">
+        <div class="flag-circle mexico-flag"></div>
+        <div class="country-name">Mexico</div>
+      </div>
+    </div>
+
+    <div class="qr-wrapper">
+      <div class="qr-container"><div id="qrcode-peru"></div></div>
+      <div class="label">
+        <div class="flag-circle peru-flag"></div>
+        <div class="country-name">Peru</div>
+      </div>
+    </div>
+
+    <div class="qr-wrapper">
+      <div class="qr-container"><div id="qrcode-taiwan"></div></div>
+      <div class="label">
+        <div class="flag-circle taiwan-flag"></div>
+        <div class="country-name">Taiwan</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="qr-row">
+    <div class="qr-wrapper">
+      <div class="qr-container"><div id="qrcode-vietnam"></div></div>
+      <div class="label">
+        <div class="flag-circle vietnam-flag"></div>
+        <div class="country-name">Vietnam</div>
+      </div>
+    </div>
+
+    <div class="qr-wrapper">
+      <div class="qr-container"><div id="qrcode-qatar"></div></div>
+      <div class="label">
+        <div class="flag-circle qatar-flag"></div>
+        <div class="country-name">Qatar</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const generateQR = (id, url) => {
+      new QRCode(document.getElementById(id), {
+        text: url,
+        width: 250,
+        height: 250,
+        colorDark: "#002B7F",
+        colorLight: "#FFFFFF",
+        correctLevel: QRCode.CorrectLevel.L
+      });
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      generateQR("qrcode-indonesia", "indonesia.html");
+      generateQR("qrcode-germany", "Germany/germany.html");
+      generateQR("qrcode-costa-rica", "CostaRica/CostaRica.html");
+      generateQR("qrcode-mexico", "Mexico/mexico.html");
+      generateQR("qrcode-peru", "Peru/peru.html");
+      generateQR("qrcode-taiwan", "Taiwan/taiwan.html");
+      generateQR("qrcode-vietnam", "Vietnam/vietnam.html");
+      generateQR("qrcode-qatar", "Qatar/qatar.html");
+    });
+  </script>
+</body>
+</html>
