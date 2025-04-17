@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Ensure full height of the page */
 
   
@@ -92,3 +93,213 @@ h3 {
     cursor: pointer;
 }
   
+=======
+/* Ensure full height of the page */
+
+  
+  /* Make sure the form content doesn't cut off early */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Form Styling */
+  /* Form Styling */
+  form {
+    background-color: rgba(132, 230, 207, 0.7);
+    border: 5px solid black;
+    padding: 50px; /* Reduced padding */
+    border-radius: 10px;
+    max-width: 650px; /* Smaller width */
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+
+  /* Stretch all answer blocks to the same height */
+.questionrow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  
+  /* Ensure answer blocks stretch and align vertically */
+  .questionrow label {
+    display: flex;
+    flex-direction: column;        /* Stack radio + image vertically */
+    align-items: center;
+    justify-content: space-between; /* Even spacing between top (radio) and bottom (image) */
+    width: 45%;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 100%; /* Optional: ensures equal height if combined with consistent row height */
+  }
+  
+  /* Make all images the same size */
+  .question img {
+    width: 220px;       /* Uniform width */
+    height: 150px;      /* Uniform height */
+    object-fit: contain;  /* Scale inside without distortion */
+    margin-top: 10px;
+  }
+
+  h1 {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    font-size: 70px;
+    text-align: center; /* Centers the text */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers vertically if it's inside a flex container */
+    margin: 0; /* Remove default margin */
+}
+
+h3 {
+    font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 50px; /* Make the font smaller on smaller screens */
+    }
+}
+
+.submitbtn {
+  background-color: #4caf50;
+  color: black;
+  padding: 20px 40px;
+  font-size: 30px;
+  border-radius: 50px; /* Rounded edges */
+  border: none;
+}
+
+
+.submitbtn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+    cursor: pointer;
+}
+
+/* Styling for the answer box */
+.answerBox {
+  background-color: #f0f8ff;
+  border: 2px solid #4caf50;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.answerBox h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.answerBox p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.answerBox img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.answerBox .submitbtn {
+  background-color: #A6E66E;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.answerBox .submitbtn:hover {
+  background-color: #45a049;
+}
+
+.recs {
+  background-color: #fffaf0; /* soft cream background */
+  border-left: 6px solid #deb887; /* warm accent line */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Georgia', serif;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.recs h3 {
+  font-size: 1.5em;
+  color: #ECA72C; /* rich brown */
+  margin-bottom: 10px;
+}
+
+.recs p {
+  font-size: 1em;
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+.recs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.boxMonth-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.boxMonth {
+  background-color: #fffaf0; /* soft cream background */
+  border-left: 6px solid #deb887; /* warm accent line */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Georgia', serif;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.boxMonth p {
+  font-size: 1em;
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+.boxMonth h3 {
+  font-size: 1.5em;
+  color: #ECA72C; /* rich brown */
+  margin-bottom: 10px;
+}
+>>>>>>> 947a0a5 (SnakPack Quiz)

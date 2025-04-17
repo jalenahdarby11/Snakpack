@@ -1,0 +1,90 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Article metadata styling */
+.article-meta {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+
+.publisher {
+    font: normal;
+    font-weight: bold;
+    color: #d2691e;
+}
+
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fff8f0;
+    color: #333;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Link back to articles */
+a {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #050505;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Main heading */
+.main-heading {
+    font-size: 2rem;
+    color: #050505;
+    margin-bottom: 10px;
+}
+
+/* Subheadings for each snack */
+.subheading {
+    font-size: 1.5rem;
+    color: #050505;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Article text */
+.article-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Images */
+img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 10px auto 20px; /* Center the image */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Optional: Add spacing between article sections */
+.article {
+    margin-bottom: 30px;
+}
+
+.recs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
