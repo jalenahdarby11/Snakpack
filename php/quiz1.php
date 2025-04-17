@@ -104,10 +104,10 @@ $finalAnswer = '';
     <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
     <nav class="navigation-bar">
       <div class="nav-links">
-        <a href="HomePage.php" class="nav-link">Home</a>
-        <a href="HowItWorks.php" class="nav-link">How It Works</a>
-        <a href="Countries.php" class="nav-link">Countries</a>
-        <a href="GetStartedQ1.php" class="nav-link">Get Started</a>
+        <a href="../HomePage.php" class="nav-link">Home</a>
+        <a href="../HowItWorks.php" class="nav-link">How It Works</a>
+        <a href="../Countries.php" class="nav-link">Countries</a>
+        <a href="../GetStartedQ1.php" class="nav-link">Get Started</a>
       </div>
       <div class="nav-icons">
 
@@ -311,10 +311,10 @@ $finalAnswer = '';
 
         <nav class="footer-nav">
           <a href="FAQs.php">FAQ</a>
-          <a href="ContactUs.php">Contact Us</a>
-          <a href="HowItWorks.php">How it Works</a>
-          <a href="Countries.php">Countries</a>
-          <a href="GetStartedQ1.php">Get Started</a>
+          <a href="../ContactUs.php">Contact Us</a>
+          <a href="../HowItWorks.php">How it Works</a>
+          <a href="../Countries.php">Countries</a>
+          <a href="../GetStartedQ1.php">Get Started</a>
         </nav>
 
         <div class="footer-brand">
