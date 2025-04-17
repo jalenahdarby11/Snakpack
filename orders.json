@@ -1,245 +1,86 @@
 [
     {
-        "firstName": "Eliot",
-        "lastName": "Avelar",
-        "street": "561 Brook Cirlce",
-        "city": "South Daytona",
+        "firstName": "Aivy",
+        "lastName": "Nguyen",
+        "email": "yellow@gmail.com",
+        "street": "8938 Tuscan Valley Pl",
+        "city": "Orlando",
         "state": "Florida",
-        "zip": "32119",
-        "cart": [
-            "Brazil",
-            "Brazil",
-            "India"
-        ],
-        "timestamp": "2025-04-15 15:44:16"
-    },
-    {
-        "firstName": "Eliot",
-        "lastName": "Avelar",
-        "street": "561 Brook Cirlce",
-        "city": "South Daytona",
-        "state": "Florida",
-        "zip": "",
-        "cart": [
-            "India"
-        ],
-        "timestamp": "2025-04-15 16:32:31"
-    },
-    {
-        "firstName": "e",
-        "lastName": "a",
-        "street": "123 street",
-        "city": "orlando",
-        "state": "fl",
         "zip": "",
         "mobile": "",
-        "cardNumber": "123456",
-        "expiry": "01\/22",
+        "cardNumber": "123455",
+        "expiry": "1223",
         "cvv": "123",
         "cart": [
-            "India"
-        ]
-    },
-    {
-        "firstName": "Eliot",
-        "lastName": "Avelar",
-        "street": "561 Brook Cirlce",
-        "city": "South Daytona",
-        "state": "Florida",
-        "zip": "",
-        "mobile": "3867951365",
-        "cardNumber": "1",
-        "expiry": "2",
-        "cvv": "3",
-        "cart": [
             "France"
         ]
     },
     {
-        "firstName": "a",
-        "lastName": "b",
-        "street": "123",
-        "city": "orl",
-        "state": "fl",
-        "zip": "",
-        "mobile": "123123123",
-        "cardNumber": "1",
-        "expiry": "2",
-        "cvv": "3",
-        "cart": [
-            "France"
-        ]
-    },
-    {
-        "firstName": "w",
-        "lastName": "b",
-        "street": "123",
-        "city": "tr",
-        "state": "fl",
-        "zip": "",
-        "mobile": "123123123",
-        "cardNumber": "1",
-        "expiry": "2",
-        "cvv": "3",
-        "cart": [
-            "France",
-            "India",
-            "France"
-        ]
-    },
-    {
-        "firstName": "Elio",
-        "lastName": "Avelar",
-        "street": "561 Brook Cirlce",
-        "city": "South Daytona",
+        "firstName": "Alyssa",
+        "lastName": "Smith",
+        "email": "asmith@gmail.com",
+        "street": "2499 Lancien Ct",
+        "city": "Orlando",
         "state": "Florida",
         "zip": "",
-        "mobile": "3867951365",
-        "cardNumber": "1",
-        "expiry": "2",
-        "cvv": "3",
+        "mobile": "4077214363",
+        "cardNumber": "123445678",
+        "expiry": "1223",
+        "cvv": "123",
         "cart": [
             "France",
-            "India",
-            "France"
-        ]
-    },
-    {
-        "firstName": "Eliot",
-        "lastName": "Avelar",
-        "street": "561 Brook Cirlce",
-        "city": "South Daytona",
-        "state": "Florida",
-        "zip": "",
-        "mobile": "3867951365",
-        "cardNumber": "1",
-        "expiry": "2",
-        "cvv": "3",
-        "cart": [
-            "France",
-            "India",
-            "France"
-        ]
-    },
-    {
-        "firstName": "Eliot",
-        "lastName": "Avelar",
-        "street": "561 Brook Cirlce",
-        "city": "South Daytona",
-        "state": "Florida",
-        "zip": "",
-        "mobile": "3867951365",
-        "cardNumber": "1",
-        "expiry": "2",
-        "cvv": "3",
-        "cart": [
-            "France",
-            "India",
-            "France",
-            "India",
-            "India"
-        ]
-    },
-    {
-        "firstName": "Eliot",
-        "lastName": "Avelar",
-        "street": "561 Brook Cirlce",
-        "city": "South Daytona",
-        "state": "Florida",
-        "zip": "",
-        "mobile": "3867951365",
-        "cardNumber": "1",
-        "expiry": "2",
-        "cvv": "3",
-        "cart": [
-            "India",
-            "France",
-            "India",
-            "India"
-        ]
-    },
-    {
-        "firstName": "Eliot",
-        "lastName": "Avelar",
-        "street": "561 Brook Cirlce",
-        "city": "South Daytona",
-        "state": "Florida",
-        "zip": "",
-        "mobile": "3867951365",
-        "cardNumber": "1",
-        "expiry": "2",
-        "cvv": "3",
-        "cart": [
-            "India",
-            "India",
-            "India"
-        ]
-    },
-    {
-        "firstName": "Eliot",
-        "lastName": "Avelar",
-        "street": "561 Brook Cirlce",
-        "city": "South Daytona",
-        "state": "Florida",
-        "zip": "",
-        "mobile": "3867951365",
-        "cardNumber": "2",
-        "expiry": "3",
-        "cvv": "4",
-        "cart": [
-            "France",
-            "France"
-        ]
-    },
-    {
-        "firstName": "Eliot",
-        "lastName": "Avelar",
-        "street": "561 Brook Cirlce",
-        "city": "South Daytona",
-        "state": "Florida",
-        "zip": "",
-        "mobile": "3867951365",
-        "cardNumber": "2",
-        "expiry": "3",
-        "cvv": "4",
-        "cart": [
-            "France",
-            "France"
-        ]
-    },
-    {
-        "firstName": "Eliot",
-        "lastName": "Avelar",
-        "street": "561 Brook Cirlce",
-        "city": "South Daytona",
-        "state": "Florida",
-        "zip": "",
-        "mobile": "3867951365",
-        "cardNumber": "2",
-        "expiry": "3",
-        "cvv": "4",
-        "cart": [
-            "France",
-            "France"
-        ]
-    },
-    {
-        "firstName": "e",
-        "lastName": "a",
-        "street": "1",
-        "city": "afa",
-        "state": "fl",
-        "zip": "",
-        "mobile": "",
-        "cardNumber": "1",
-        "expiry": "2",
-        "cvv": "3",
-        "cart": [
-            "France",
-            "India",
-            "France",
-            "Costa Rica",
             "Costa Rica"
+        ]
+    },
+    {
+        "firstName": "Alyssa",
+        "lastName": "Smith",
+        "email": "asmith@gmail.com",
+        "street": "2499 Lancien Ct",
+        "city": "Orlando",
+        "state": "Florida",
+        "zip": "",
+        "mobile": "4077214363",
+        "cardNumber": "123456788",
+        "expiry": "1223",
+        "cvv": "123",
+        "cart": [
+            "Costa Rica",
+            "France"
+        ]
+    },
+    {
+        "firstName": "Kyle",
+        "lastName": "Smith",
+        "email": "ksmith@gmail.com",
+        "street": "123 Sesame Street",
+        "city": "Orlando",
+        "state": "Fl",
+        "zip": "",
+        "mobile": "4077214363",
+        "cardNumber": "123456789",
+        "expiry": "1223",
+        "cvv": "123",
+        "cart": [
+            "Costa Rica",
+            "France"
+        ]
+    },
+    {
+        "firstName": "Zack",
+        "lastName": "Smith",
+        "email": "zsmith@gmail.com",
+        "street": "123 Sesame Street",
+        "city": "Orlando",
+        "state": "Florida",
+        "zip": "",
+        "mobile": "4077214363",
+        "cardNumber": "123456789",
+        "expiry": "1223",
+        "cvv": "123",
+        "cart": [
+            "Costa Rica",
+            "France"
         ]
     }
 ]

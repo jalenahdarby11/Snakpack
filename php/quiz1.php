@@ -1,4 +1,3 @@
-
 <?php
 // Start the session to keep form data
 session_start();
@@ -107,7 +106,7 @@ $finalAnswer = '';
         <a href="../HomePage.php" class="nav-link">Home</a>
         <a href="../HowItWorks.php" class="nav-link">How It Works</a>
         <a href="../Countries.php" class="nav-link">Countries</a>
-        <a href="index.php">Get Started</a>
+        <a href="php/index.php">Get Started</a>
       </div>
       <div class="nav-icons">
 
@@ -125,15 +124,6 @@ $finalAnswer = '';
   </div>
 </header>
 
-      <?php session_start(); ?>
-                <a href="<?php echo isset($_SESSION['userEmail']) ? 'Profile2.php' : 'Profile.php'; ?>">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Profile Icon" class="nav-icon menu-icon" />
-                </a>
-
-      </div>
-    </nav>
-  </div>
-</header>
     <h1>What is Your Signature Scent?</h1>
     <form id="quizForm" action="" method="POST">
         <!-- Question 1 -->
@@ -278,23 +268,27 @@ $finalAnswer = '';
     </form>
 
     <?php if ($showResults): ?>
-    <div class="answerBox">
+        <div id="results" class="answerBox">
         <h3><?php echo $finalAnswer; ?></h3>
         <p><?php echo $description; ?></p>
-        <img src="<?php echo $finalImg; ?>" alt="Your Fragrance">
+    
     </div>
+
     <div class="recs-container">
-        <div class="recs">
+    <div class="recs">
         <h3><?php echo $boxTitle; ?></h3>
         <p><?php echo $boxDescription; ?></p>
-        </div>
+
+        <a href="../Countries.php" class="recs-button">Go to our boxes</a>
     </div>
+</div>
+
     <div class="boxMonth-container">
         <div class="boxMonth">
         <h3><?php echo $boxMonth; ?></h3>
         <p><?php echo $boxMonthDescription; ?></p>
 
-        <button class = "submitbtn" onclick="location.href='countries.php'>Look at our Box of the Month</button>
+        <button class="submitbtn" onclick="location.href='../Countries.php'">Look at our Box of the Month</button>
         </div>
     </div>
     
@@ -314,7 +308,7 @@ $finalAnswer = '';
           <a href="../ContactUs.php">Contact Us</a>
           <a href="../HowItWorks.php">How it Works</a>
           <a href="../Countries.php">Countries</a>
-          <a href="index.php">Get Started</a>
+          <a href="php/index.php">Get Started</a>
         </nav>
 
         <div class="footer-brand">
@@ -326,6 +320,15 @@ $finalAnswer = '';
       </div>
     </footer>
 
+    <script>
+  window.addEventListener('load', function() {
+    const resultsSection = document.getElementById('results');
+    if (resultsSection) {
+      resultsSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+</script>
+
+
 </body>
 </html>
-

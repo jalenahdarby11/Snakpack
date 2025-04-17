@@ -1,11 +1,12 @@
 <?php
 session_start();
+file_put_contents("debug.log", "saveOrder.php accessed\n", FILE_APPEND);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Get form fields
     $order = [
         'firstName' => $_POST['firstName'] ?? '',
         'lastName' => $_POST['lastName'] ?? '',
+        'email' => $_POST['userEmail'] ?? '',  // use form input instead of session
         'street' => $_POST['street'] ?? '',
         'city' => $_POST['city'] ?? '',
         'state' => $_POST['state'] ?? '',
@@ -17,8 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'cart' => $_SESSION['cart'] ?? []
     ];
 
-    // Save to orders.json
-    $file = 'orders.json';
+    $_SESSION['order'] = $order;
+    $_SESSION['userEmail'] = $_POST['userEmail'] ?? ''; // optional
+
+    $file = __DIR__ . '/orders.json'; // absolute path
     $existingData = [];
 
     if (file_exists($file)) {
@@ -28,15 +31,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $existingData[] = $order;
 
-    file_put_contents($file, json_encode($existingData, JSON_PRETTY_PRINT));
+    $result = file_put_contents($file, json_encode($existingData, JSON_PRETTY_PRINT));
+    if ($result === false) {
+        file_put_contents("debug.log", "❌ Failed to write to orders.json\n", FILE_APPEND);
+    } else {
+        file_put_contents("debug.log", "✅ Order saved to orders.json\n", FILE_APPEND);
+    }
 
-    // Also store in session for OrderConfirmed.php display
-    $_SESSION['order'] = $order;
-
-    // Redirect
     header("Location: OrderConfirmed.php");
     exit();
 } else {
     echo "Invalid request method.";
 }
-?>

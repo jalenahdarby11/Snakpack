@@ -10,20 +10,15 @@ session_start();
   <link rel="stylesheet" href="countries.css">
 </head>
 
-
-
-
-
-
 <header class="nav-header">
   <div class="nav-container">
     <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
     <nav class="navigation-bar">
       <div class="nav-links">
-        <a href="HomePage.html" class="nav-link">Home</a>
-        <a href="HowItWorks.html" class="nav-link">How It Works</a>
-        <a href="Countries.html" class="nav-link">Countries</a>
-        <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
+        <a href="HomePage.php" class="nav-link">Home</a>
+        <a href="HowItWorks.php" class="nav-link">How It Works</a>
+        <a href="Countries.php" class="nav-link">Countries</a>
+        <a href="php/index.php" class="nav-link">Get Started</a>
       </div>
       <div class="nav-icons">
 
@@ -31,9 +26,10 @@ session_start();
         <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/edadf950090628a4467326f5ac2e7e6a6c82bdb8?placeholderIfAbsent=true" alt="User Icon" class="nav-icon" />
       </a>
         
-        <a href="Profile.html">
-        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Menu Icon" class="nav-icon menu-icon" />
-      </a>
+      <?php session_start(); ?>
+                <a href="<?php echo isset($_SESSION['userEmail']) ? 'Profile2.php' : 'Profile.php'; ?>">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Profile Icon" class="nav-icon menu-icon" />
+                </a>
       
       </div>
     </nav>
@@ -41,12 +37,8 @@ session_start();
 </header>
 
 
-
-
-
-
   
-  <main class="main-content">
+<main class="main-content">
     <section class="hero-section">
       <div class="hero-content">
         <div class="featured-country">
@@ -58,16 +50,15 @@ session_start();
             and sweet options, making them a great representation of the country's
             rich culinary heritage.
           </p>
-          <form action="setCountry.php" method="post">
-            <input type="hidden" name="country" value="Costa Rica"/>
-            <button type="submit" class="cta-button">Add to Cart</button>
-          </form>
+          <p id="count-Costa Rica" class="item-counter">🛒 In Cart: 0</p>
+          <button class="cta-button" onclick="addToCart('Costa Rica')">Add to Cart</button>
+
           
         </div>
         <div class="featured-box">
           <h2 class="box-title">Box of the Month</h2>
           <img
-            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d55ad91dffacff4abf621e8e67a46e7ea0a16fdc?placeholderIfAbsent=true"
+            src="img\officalSnakpack.png"
             alt="Featured box"
             class="box-image"
           />
@@ -75,10 +66,6 @@ session_start();
       </div>
     </section>
   
-    <section class="explore-section">
-      <h2 class="section-title">Explore Countries</h2>
-      
-    </section>
   
     <section class="previous-boxes-section">
       <h2 class="section-title">Previous Boxes</h2>
@@ -97,10 +84,9 @@ session_start();
             with rich tropical ingredients, each snack offers a taste of Brazil's
             dynamic culture and festive spirit.
           </p>
-          <form action="setCountry.php" method="post">
-            <input type="hidden" name="country" value="Brazil" />
-            <button type="submit" class="cta-button">Add to Cart</button>
-          </form>
+          <p id="count-Brazil" class="item-counter">🛒 In Cart: 0</p>
+          <button class="cta-button" onclick="addToCart('Brazil')">Add to Cart</button>
+
           
           
         </article>
@@ -118,10 +104,9 @@ session_start();
             this unique nation, you'll also find towering monuments, colorful
             wildlife, and a feast of delicious culinary creations!
           </p>
-          <form action="setCountry.php" method="post">
-            <input type="hidden" name="country" value="India" />
-            <button type="submit" class="cta-button">Add to Cart</button>
-          </form>
+          <p id="count-India" class="item-counter">🛒 In Cart: 0</p>
+          <button class="cta-button" onclick="addToCart('India')">Add to Cart</button>
+
           
           
         </article>
@@ -139,10 +124,9 @@ session_start();
             borders, one can discover breathtaking scenery, iconic cathedrals, and
             partake in some of the most exquisite cuisine worldwide.
           </p>
-          <form action="setCountry.php" method="post">
-            <input type="hidden" name="country" value="France" />
-            <button type="submit" class="cta-button">Add to Cart</button>
-          </form>
+          <p id="count-France" class="item-counter">🛒 In Cart: 0</p>
+          <button class="cta-button" onclick="addToCart('France')">Add to Cart</button>
+
           
           
         </article>
@@ -160,11 +144,11 @@ session_start();
         </div>
   
         <nav class="footer-nav">
-          <a href="FAQs.html">FAQ</a>
-          <a href="ContactUs.html">Contact Us</a>
-          <a href="HowItWorks.html">How it Works</a>
-          <a href="Countries.html">Countries</a>
-          <a href="GetStartedQ1.html">Get Started</a>
+          <a href="FAQs.php">FAQ</a>
+          <a href="ContactUs.php">Contact Us</a>
+          <a href="HowItWorks.php">How it Works</a>
+          <a href="Countries.php">Countries</a>
+          <a href="php/index.php">Get Started</a>
         </nav>
   
         <img
@@ -180,17 +164,53 @@ session_start();
       </div>
     </footer>
     <script>
-      function addToCart(country) {
-        fetch('setCountry.php', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: 'country=' + encodeURIComponent(country)
-        })
-        .then(response => response.text())
-        .then(data => {
+  // Add an item to the cart via PHP
+  function addToCart(country) {
+    fetch('setCountry.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: 'country=' + encodeURIComponent(country)
+    })
+    .then(response => response.text())
+    .then(data => {
+      // After adding, fetch updated counts from session
+      fetch('getCartCounts.php')
+        .then(res => res.json())
+        .then(counts => {
+          updateItemCounter(country, counts[country] || 1);
         });
-      }
-    </script>
-    
-  </main>
-  
+    })
+    .catch(error => {
+      console.error("Error adding to cart:", error);
+    });
+  }
+
+  // Update the counter visually and store locally too
+  function updateItemCounter(country, newCount) {
+    const key = `count-${country}`;
+    sessionStorage.setItem(key, newCount);
+
+    const counterEl = document.getElementById(key);
+    if (counterEl) {
+      counterEl.textContent = `🛒 In Cart: ${newCount}`;
+    }
+  }
+
+  // On page load: fetch real cart from server and show per-country counts
+  window.addEventListener("DOMContentLoaded", () => {
+    fetch('getCartCounts.php')
+      .then(res => res.json())
+      .then(data => {
+        const countries = ["India", "Brazil", "France", "Costa Rica"];
+        countries.forEach(country => {
+          const count = data[country] || 0;
+          const counterEl = document.getElementById(`count-${country}`);
+          if (counterEl) {
+            counterEl.textContent = `🛒 In Cart: ${count}`;
+          }
+          sessionStorage.setItem(`count-${country}`, count);
+        });
+      });
+  });
+</script>
+

@@ -16,7 +16,7 @@
         <a href="../HomePage.php" class="nav-link">Home</a>
         <a href="../HowItWorks.php" class="nav-link">How It Works</a>
         <a href="../Countries.php" class="nav-link">Countries</a>
-        <a href="index.php">Get Started</a>
+        <a href="php/index.php">Get Started</a>
     
       </div>
       <div class="nav-icons">
@@ -94,7 +94,7 @@
           <a href="../ContactUs.php">Contact Us</a>
           <a href="../HowItWorks.php">How it Works</a>
           <a href="../Countries.php">Countries</a>
-          <a href="index.php" class="nav-link">Get Started</a>
+          <a href="php/index.php" class="nav-link">Get Started</a>
         </nav>
 
         <div class="footer-brand">
@@ -107,4 +107,3 @@
     </footer>
 </body>
 </html>
-

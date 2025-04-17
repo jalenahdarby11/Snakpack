@@ -1,101 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@275;300;400&display=swap");
 
-/* Ensure full height of the page */
+/* Full height to push footer down */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-  
-  /* Make sure the form content doesn't cut off early */
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+/* Quiz Form Styling */
+form {
+  background-color: rgba(132, 230, 207, 0.7);
+  border: 5px solid black;
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 650px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  /* Form Styling */
-  /* Form Styling */
-  form {
-    background-color: rgba(132, 230, 207, 0.7);
-    border: 5px solid black;
-    padding: 50px; /* Reduced padding */
-    border-radius: 10px;
-    max-width: 650px; /* Smaller width */
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-
-
-  /* Stretch all answer blocks to the same height */
+/* Question Layout */
 .questionrow {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding-bottom: 20px;
-    width: 100%;
-  }
-  
-  /* Ensure answer blocks stretch and align vertically */
-  .questionrow label {
-    display: flex;
-    flex-direction: column;        /* Stack radio + image vertically */
-    align-items: center;
-    justify-content: space-between; /* Even spacing between top (radio) and bottom (image) */
-    width: 45%;
-    padding: 10px;
-    background-color: rgba(255,255,255,0.6);
-    border-radius: 8px;
-    box-sizing: border-box;
-    height: 100%; /* Optional: ensures equal height if combined with consistent row height */
-  }
-  
-  /* Make all images the same size */
-  .question img {
-    width: 220px;       /* Uniform width */
-    height: 150px;      /* Uniform height */
-    object-fit: contain;  /* Scale inside without distortion */
-    margin-top: 10px;
-  }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
 
-  h1 {
-    color: black;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    font-size: 70px;
-    text-align: center; /* Centers the text */
-    display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers vertically if it's inside a flex container */
-    margin: 0; /* Remove default margin */
+.questionrow label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 45%;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* Quiz Images */
+.question img {
+  width: 220px;
+  height: 150px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
+/* Quiz Title */
+h1 {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  font-size: 70px;
+  text-align: center;
+  margin: 0;
 }
 
 h3 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 50px; /* Make the font smaller on smaller screens */
-    }
+  h1 {
+    font-size: 50px;
+  }
 }
 
+/* Submit Button */
 .submitbtn {
-  background-color: #4caf50;
-  color: black;
-  padding: 20px 40px;
-  font-size: 30px;
-  border-radius: 50px; /* Rounded edges */
-  border: none;
-}
-
-
-.submitbtn:hover {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: black;
+    background-color: #eca72c;
+    color: #ffffff;
+    padding: 20px 40px; /* wider padding */
+    font-size: 24px; 
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
-}
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.6;
+    width: 220px; /* Set a wider width */
+    word-break: normal; /* Allow normal word wrapping */
+    white-space: normal; /* Allow wrapping */
+  }
+  .submitbtn:hover {
+    background-color: #d89224;
+    transform: translateY(-2px);
+  }
+  
+  /* Recs button */
 
-/* Styling for the answer box */
+  .recs-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ECA72C;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .recs-button:hover {
+    background-color: #d68f1f;
+  }  
+  
+/* Result Box */
 .answerBox {
   background-color: #f0f8ff;
   border: 2px solid #4caf50;
@@ -116,94 +133,56 @@ h3 {
   font-size: 16px;
   color: #333;
   margin-bottom: 20px;
-  font-weight: normal;
 }
 
 .answerBox img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .answerBox .submitbtn {
   background-color: #A6E66E;
   color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
   font-size: 16px;
-  cursor: pointer;
+  padding: 10px 20px;
   margin-top: 20px;
-  text-align: center;
 }
 
 .answerBox .submitbtn:hover {
   background-color: #45a049;
 }
 
-.recs {
-  background-color: #fffaf0; /* soft cream background */
-  border-left: 6px solid #deb887; /* warm accent line */
+/* Recommendation and Box Layouts */
+.recs, .boxMonth {
+  background-color: #fffaf0;
+  border-left: 6px solid #deb887;
   border-radius: 12px;
   padding: 20px;
   margin: 30px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   font-family: 'Georgia', serif;
   max-width: 600px;
-  transition: transform 0.3s ease;
   display: flex;
   align-items: center;
 }
 
-.recs h3 {
+.recs h3, .boxMonth h3 {
   font-size: 1.5em;
-  color: #ECA72C; /* rich brown */
+  color: #ECA72C;
   margin-bottom: 10px;
 }
 
-.recs p {
+.recs p, .boxMonth p {
   font-size: 1em;
   color: #5a5a5a;
   line-height: 1.6;
 }
 
-.recs-container {
+.recs-container, .boxMonth-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-}
-
-.boxMonth-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.boxMonth {
-  background-color: #fffaf0; /* soft cream background */
-  border-left: 6px solid #deb887; /* warm accent line */
-  border-radius: 12px;
-  padding: 20px;
-  margin: 30px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Georgia', serif;
-  max-width: 600px;
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-}
-
-.boxMonth p {
-  font-size: 1em;
-  color: #5a5a5a;
-  line-height: 1.6;
-}
-
-.boxMonth h3 {
-  font-size: 1.5em;
-  color: #ECA72C; /* rich brown */
-  margin-bottom: 10px;
 }

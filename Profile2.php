@@ -31,19 +31,19 @@ if (isset($_SESSION['userEmail'])) {
               <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
               <nav class="navigation-bar">
                 <div class="nav-links">
-                    <a href="HomePage.html" class="nav-link">Home</a>
-                  <a href="HowItWorks.html" class="nav-link">How It Works</a>
-                  <a href="Countries.html" class="nav-link">Countries</a>
-                  <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
+                    <a href="HomePage.php" class="nav-link">Home</a>
+                  <a href="HowItWorks.php" class="nav-link">How It Works</a>
+                  <a href="Countries.php" class="nav-link">Countries</a>
+                  <a href="php/index.php" class="nav-link">Get Started</a>
                 </div>
                 <div class="nav-icons">
         
-                    <a href="ShoppingCart.html">
+                    <a href="OrderConfirmation.php">
                   <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/edadf950090628a4467326f5ac2e7e6a6c82bdb8?placeholderIfAbsent=true" alt="User Icon" class="nav-icon" />
                 </a>
   
                 <?php session_start(); ?>
-                <a href="<?php echo isset($_SESSION['userEmail']) ? 'Profile2.php' : 'SignUp.html'; ?>">
+                <a href="<?php echo isset($_SESSION['userEmail']) ? 'Profile2.php' : 'Profile.php'; ?>">
                     <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Profile Icon" class="nav-icon menu-icon" />
                 </a>
 
@@ -54,8 +54,16 @@ if (isset($_SESSION['userEmail'])) {
 
 
   <main>
+    
+  <div class="decorative-bg">
+  <img src="chip-bag.png" class="snack1" alt="chip bag" />
+  <img src="airplane-doodle.png" class="snack2" alt="airplane" />
+  <img src="globe-doodle.png" class="snack3" alt="globe" />
+  <img src="snackbox-doodle.png" class="snack4" alt="snack box" />
+  </div>
+
   <div class="profile-container">
-    <a href="Settings.html" class="settings-button">⚙ Settings</a>
+    <a href="Settings.php" class="settings-button">⚙ Settings</a>
 
     <?php if ($userData): ?>
       <div class="profile-info">
@@ -70,7 +78,7 @@ if (isset($_SESSION['userEmail'])) {
         </form>
       </div>
     <?php else: ?>
-      <p>No user is logged in. <a href="SignUp.html">Sign up here</a></p>
+      <p>No user is logged in. <a href="login.php">Log in</a> or <a href="signup1.php">Sign up here</a></p>
     <?php endif; ?>
   </div>
 </main>
@@ -85,11 +93,11 @@ if (isset($_SESSION['userEmail'])) {
     </div>
 
     <nav class="footer-nav">
-      <a href="FAQs.html">FAQ</a>
-      <a href="ContactUs.html">Contact Us</a>
-      <a href="HowItWorks.html">How it Works</a>
-      <a href="Countries.html">Countries</a>
-      <a href="GetStarted.html">Get Started</a>
+      <a href="FAQs.php">FAQ</a>
+      <a href="ContactUs.php">Contact Us</a>
+      <a href="HowItWorks.php">How it Works</a>
+      <a href="Countries.php">Countries</a>
+      <a href="php/index.php">Get Started</a>
     </nav>
 
     <div class="footer-brand">

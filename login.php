@@ -1,21 +1,31 @@
 <?php
 session_start();
-$order = $_SESSION['order'] ?? null;
 
-$imageMap = [
-    "Costa Rica" => "img/officalSnakpack.png",
-    "Brazil" => "https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/419e01420e1294eb51dd8aef8ee00e66dd39ad43?placeholderIfAbsent=true",
-    "India" => "https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/59098eb45873caf5cd4414286e2adce48870a497?placeholderIfAbsent=true",
-    "France" => "https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/c55f27baa6005b5b93dfd6bf5c0a32c09132849d?placeholderIfAbsent=true"
-];
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $inputEmail = $_POST["email"];
+    $inputPassword = $_POST["password"];
+
+    $users = json_decode(file_get_contents("users.json"), true);
+
+    foreach ($users as $user) {
+        if ($user["email"] === $inputEmail && $user["password"] === $inputPassword) {
+            $_SESSION["userEmail"] = $inputEmail;
+            header("Location: Profile2.php");
+            exit();
+        }
+    }
+
+    $error = "Invalid email or password.";
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Order Confirmed</title>
-  <link rel="stylesheet" href="OrderConfirmed.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css" />
 </head>
 <body>
 
@@ -45,50 +55,26 @@ $imageMap = [
     </div>
   </header>
 
-    <div class="order-confirmation">
-      <div class="confirmation-container">
-        <div class="content-wrapper">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/967f72f294f6d127529d47a90349d52e490ab79cbc802dc5aa1e724d81ae2258?apiKey=3a8ac60b581045f7adb5757904dc023c&"
-            class="confirmation-icon"
-            alt="Order confirmation checkmark"
-          />
-          <h1 class="confirmation-title">Order Confirmed!</h1>
-          <p class="confirmation-message">
-            Check your email for confirmation and shipping updates!
-          </p>
 
-          <?php if ($order): ?>
-            <h2 class="section-title">Shipping To:</h2>
-            <p><?= htmlspecialchars($order['firstName'] . ' ' . $order['lastName']) ?></p>
-            <p><?= htmlspecialchars($order['street']) ?></p>
-            <p><?= htmlspecialchars($order['city'] . ', ' . $order['state']) ?></p>
-            <p><?= htmlspecialchars($order['zip']) ?></p>
+  <div class="login-container">
 
-            <h2 class="section-title">Items:</h2>
-            <?php
-              $counts = array_count_values($order['cart']);
-              foreach ($counts as $country => $qty):
-            ?>
-              <div class="cart-item">
-                <img src="<?= $imageMap[$country] ?? 'images/default.jpg' ?>" alt="<?= $country ?>" class="snack-thumbnail"/>
-                <p><?= htmlspecialchars($country) ?> Box (x<?= $qty ?>)</p>
-              </div>
-            <?php endforeach; ?>
-          <?php else: ?>
-            <p>No recent order found.</p>
-          <?php endif; ?>
+    <form class="login-form-wrapper" action="login.php" method="POST">
+      <?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
+      <label for="email" class="email-label">Email</label>
+      <input type="emaillog" id="email" name="email" class="email-login-input" placeholder="Email Address" required />
 
-          <a href="PreviousOrders.php">
-            <button class="home-button" tabindex="0">Track your Order</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+      <label for="password" class="password-label">Password</label>
+      <input type="password" id="password" name="password" class="password-input" placeholder="Password" required />
 
-  <footer class="main-footer">
+      <button type="submit" class="login-submit-btn">Log In</button>
+
+      <p class="signup-text">
+        Don't have an account? <a href="signup1.php" class="signup-link">Sign up</a>
+      </p>
+    </form>
+
+
+    <footer class="main-footer">
       <div class="footer-content">
         <h3 class="newsletter-title">Subscribe for the latest updates:</h3>
         <input type="email" placeholder="Email Address" class="email-input" />
@@ -109,6 +95,6 @@ $imageMap = [
       </div>
       </div>
     </footer>
-
+  </div>
 </body>
 </html>

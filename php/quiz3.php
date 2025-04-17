@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <a href="../HomePage.php" class="nav-link">Home</a>
         <a href="../HowItWorks.php" class="nav-link">How It Works</a>
         <a href="../Countries.php" class="nav-link">Countries</a>
-        <a href="index.php" class="nav-link">Get Started</a>
+        <a href="php/index.php" class="nav-link">Get Started</a>
       </div>
       <div class="nav-icons">
 
@@ -129,11 +129,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </nav>
   </div>
 </header>
-
-      <?php session_start(); ?>
-                <a href="<?php echo isset($_SESSION['userEmail']) ? 'Profile2.php' : 'Profile.php'; ?>">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Profile Icon" class="nav-icon menu-icon" />
-                </a>
 
       </div>
     </nav>
@@ -312,8 +307,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h3><?php echo $boxMonth; ?></h3>
         <p><?php echo $boxMonthDescription; ?></p>
 
-        <button class = "submitbtn" onclick="location.href='countries.php'>
-        Look at our Box of the Month
+        <button class="submitbtn" onclick="location.href='Countries.php'">Look at our Box of the Month</button>
+  
     </button>
         </div>
     </div>
@@ -333,7 +328,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <a href="../ContactUs.php">Contact Us</a>
           <a href="../HowItWorks.php">How it Works</a>
           <a href="../Countries.php">Countries</a>
-          <a href="index.php">Get Started</a>
+          <a href="php/index.php">Get Started</a>
         </nav>
 
         <div class="footer-brand">
@@ -346,5 +341,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </footer>
 </body>
 </html>
-
 

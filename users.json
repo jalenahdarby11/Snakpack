@@ -126,5 +126,285 @@
         "email": "aivy7000@gmail.com",
         "password": "$2y$10$cQ8oOckh1LWeT50XAZ9MFecBG5fqbkina.5c65sO5GRB0WXj7luCq",
         "phone": "1234567890"
+    },
+    {
+        "userId": 17,
+        "firstName": "Aivy",
+        "lastName": "Nguyen",
+        "email": "aivy53@yahoo.com",
+        "password": "$2y$10$Rubx.EoSpbZwGdmjgIh6rui9Rr96NaIYX7MrWpsoTIyjsweAtiram",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 18,
+        "firstName": "Aivy",
+        "lastName": "Nguyen",
+        "email": "aivy60@yahoo.com",
+        "password": "$2y$10$VwejwDGQMh9bWhURohYaO.k449xdd1f8z6WajiauVMjVx\/kXkiNxa",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 19,
+        "firstName": "ivy",
+        "lastName": "n",
+        "email": "aivx@yahoo.com",
+        "password": "$2y$10$9y90Ndv3MqgQcD350TkpzuXYfYID6O.fNHPaLRM3z9CcvB.KZ1gya",
+        "phone": "8989898"
+    },
+    {
+        "userId": 20,
+        "firstName": "Aivy",
+        "lastName": "Nguyen",
+        "email": "aivwx@yahoo.com",
+        "password": "$2y$10$LuoYpG9ZJaAJBQCR.lUzVeIpeopiBlmMuzx7JbM85ox\/Kk\/NyS6AK",
+        "phone": "290404"
+    },
+    {
+        "userId": 21,
+        "firstName": "Aivy",
+        "lastName": "Nguyen",
+        "email": "lilac@yahoo.com",
+        "password": "$2y$10$p2t3VthExuHLzKoW3FrbTezQLZHNec2p.\/HTCnFAjSkCPUCWm9w5K",
+        "phone": "290404"
+    },
+    {
+        "userId": 22,
+        "firstName": "papa",
+        "lastName": "john",
+        "email": "papa@yahoo.com",
+        "password": "$2y$10$VM\/RQfvWyT4vr6YeaLXEn.pEcKm1KDcpm8XQNZTxZow63sytHN9eC",
+        "phone": "7998978"
+    },
+    {
+        "userId": 23,
+        "firstName": "iris",
+        "lastName": "le",
+        "email": "irisi@gmail.com",
+        "password": "$2y$10$ZJ2wTsjAMyYvgAuWCA0Jkey\/TYzF99ItpYQ9c7yGp1n9Gtc\/1rq\/e",
+        "phone": "787970008"
+    },
+    {
+        "userId": 24,
+        "firstName": "iris",
+        "lastName": "le",
+        "email": "iris@gmail.com",
+        "password": "$2y$10$3cZdJ0k1xFDzw42\/ygdXcu\/GoND6ISsV\/6MXgwqSfGkmEE7JckfES",
+        "phone": "787970008"
+    },
+    {
+        "userId": 25,
+        "firstName": "tulip",
+        "lastName": "ph",
+        "email": "tulip@yahoo.com",
+        "password": "$2y$10$GM0Jc8GnT4L18gYdG4SqYeJdP0kLmPh.qWjl1sVhM6OMJCzgNGqBG",
+        "phone": "0880800808"
+    },
+    {
+        "userId": 26,
+        "firstName": "cherry",
+        "lastName": "blossom",
+        "email": "cherryb@gmail.com",
+        "password": "$2y$10$3Q\/60uxIdFsPOwHCijVnRO7vNIv5AaKVkckhJJUNaIZlxQ2tMPxKC",
+        "phone": "89u89j89"
+    },
+    {
+        "userId": 27,
+        "firstName": "pickle",
+        "lastName": "ball",
+        "email": "pickle@gmail.com",
+        "password": "$2y$10$Vot1sWfgPGGezhP0mf6z7OpWo9c6Pi\/NEh8HdYMpUarCGA.wWc3PC",
+        "phone": "8u89j"
+    },
+    {
+        "userId": 28,
+        "firstName": "fruit",
+        "lastName": "tree",
+        "email": "fruit@gmail.com",
+        "password": "$2y$10$6tqTtLVTV7GI.Qb\/XMpDx.q\/J4vbJ\/t92KFOmJvAowvrB\/wfpDo8q",
+        "phone": "98u98u"
+    },
+    {
+        "userId": 29,
+        "firstName": "star",
+        "lastName": "le",
+        "email": "star@gmail.com",
+        "password": "$2y$10$3Uy3KMMmnDJSnoRXr9pV.Ocn\/TuxWRUn7M.pnO3erYzLX1quxCSzq",
+        "phone": "2934808"
+    },
+    {
+        "userId": 30,
+        "firstName": "purple",
+        "lastName": "pl",
+        "email": "purple@gmail.com",
+        "password": "$2y$10$dGo1mw7CjZDvAr5V22Qic.fZC5RwyvVa1UATLU9G2.2KOSHX5NMpq",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 31,
+        "firstName": "a",
+        "lastName": "n",
+        "email": "ainx@yahoo.com",
+        "password": "$2y$10$dGKn8dHn8fReSD0fMdsm7ORVQf0r.MDpAg2BX2ObCHJRIMFI\/8v0O",
+        "phone": "8980"
+    },
+    {
+        "userId": 32,
+        "firstName": "fairy",
+        "lastName": "Nguyen",
+        "email": "fairy@yahoo.com",
+        "password": "$2y$10$\/BZrV5vAJKP7pXBaUrXp4.vwNxGxoGG87grdvAJ1pok3yE0wxVDlS",
+        "phone": "89u89u89"
+    },
+    {
+        "userId": 33,
+        "firstName": "Aivy",
+        "lastName": "Nguyen",
+        "email": "fl@yahoo.com",
+        "password": "$2y$10$DsNcSGS0xjdgbqyxk7evu.OXYIm06J8yLev1IT9syxXr2RhI4.spy",
+        "phone": "589jiuj3"
+    },
+    {
+        "userId": 34,
+        "firstName": "Aivy",
+        "lastName": "Nguyen",
+        "email": "star@yahoo.com",
+        "password": "$2y$10$fG44E4IafqaNqql0jcjGYOKhSyF2Rfeu7AT\/1ubv0zoc5bIupeuQO",
+        "phone": "8u98989"
+    },
+    {
+        "userId": 35,
+        "firstName": "aivy",
+        "lastName": "Nguyen",
+        "email": "sel@yahoo.com",
+        "password": "$2y$10$X6ACX5WUVIMrr7993Uqv8OIOUNug1XMMPfhbeYYvSS7x8uTD.78Ey",
+        "phone": "89u9u"
+    },
+    {
+        "userId": 36,
+        "firstName": "Aivy",
+        "lastName": "Nguyen",
+        "email": "skmkm@yahoo.com",
+        "password": "$2y$10$qn6jV9foInVT9SWeLfUVze0POOBBYD3kuRcDRe7gG6KcEfmvtlexq",
+        "phone": "7u7u7u"
+    },
+    {
+        "userId": 37,
+        "firstName": "Aivy",
+        "lastName": "Nguyen",
+        "email": "skmkm@yahoo.com",
+        "password": "$2y$10$7AWb87rj41Kci.Dlw1yF5O3a7NEaD8T2VM7CrFkSlaiEakS.vR4iO",
+        "phone": "7u7u7u"
+    },
+    {
+        "userId": 38,
+        "firstName": "toe",
+        "lastName": "n",
+        "email": "toez@gmail.com",
+        "password": "$2y$10$PkI5TOvMYsGtgKlRvue82OzEjcmQLGeI2i8tNd\/EAUUPPLBHV3n0q",
+        "phone": "898989"
+    },
+    {
+        "userId": 39,
+        "firstName": "le",
+        "lastName": "labo",
+        "email": "labo@gmail.com",
+        "password": "$2y$10$1gMavFh6s1cbf5VrIDXOLe4.P6oMeqpWOiLYsmmZ3zLRYmwor6H..",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 40,
+        "firstName": "maison",
+        "lastName": "margiela",
+        "email": "mm@gmail.com",
+        "password": "$2y$10$U8ZRaiSmoqg\/nBEXwgILoOasoyUyp19lVyYVZ0qvJPkSCuIGyKja6",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 41,
+        "firstName": "vivienne",
+        "lastName": "westwood",
+        "email": "vw@gmail.com",
+        "password": "$2y$10$v5vzFk\/gXv9lTNMdJOh8fO7JM95xdWe.0yrL1aBqC5yO8VDc0EkKi",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 42,
+        "firstName": "v",
+        "lastName": "w",
+        "email": "viw@gmail.com",
+        "password": "$2y$10$uHXbZgPRuZOM3uWP\/QmW8O4VzL7sgWlndGZdDrOCEBXBn.PsgTCqq",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 43,
+        "firstName": "kreator",
+        "lastName": "yin",
+        "email": "yin@gmail.com",
+        "password": "$2y$10$Vu6UnqvjEs\/78g\/B.UlVee.uSRv3uzOJmHYagVRqsK9GuX94XYrlK",
+        "phone": "89899"
+    },
+    {
+        "userId": 44,
+        "firstName": "aivy",
+        "lastName": "n",
+        "email": "ivyyy@gmail.com",
+        "password": "$2y$10$z\/FTAPH.beRUFeW\/JUsmhOAfvosIP1UPIxuNEQVVbcvL98MTah7q6",
+        "phone": "8080u0u"
+    },
+    {
+        "userId": 45,
+        "firstName": "tooth",
+        "lastName": "n",
+        "email": "tooth@gmail.com",
+        "password": "$2y$10$gVe0ggTwcVRB5Mikmm62G.TEF.9VsKqKmVgUaWyfvVD0xpeqZBgeS",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 46,
+        "firstName": "yellow",
+        "lastName": "m",
+        "email": "yellow@gmail.com",
+        "password": "$2y$10$\/82zuIY1T0b2ifW\/DO7l4uJML9IWhn9Iu9wUtTzRtctDaOGVnvmDC",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 47,
+        "firstName": "Alyssa",
+        "lastName": "Smith",
+        "email": "asmith@gmail.com",
+        "password": "$2y$10$yYWvDq0eoV.ghBrv4xakTeleooOrjIt29\/iXe0JvDtxHPEbaQ9BDW",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 48,
+        "firstName": "Bethany",
+        "lastName": "Smith",
+        "email": "bsmith@gmail.com",
+        "password": "$2y$10$DCFVvVNmJd4\/64KOG8bPgOdHN7YyTbJrnkFXx.x8mAFl0cGbirwKW",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 49,
+        "firstName": "Vincent",
+        "lastName": "Smith",
+        "email": "vsmith@gmail.com",
+        "password": "$2y$10$z2dPBzW9.FS2Sxs3yTKFoumHeyb9hglC\/3hEvL8ZS\/5l1.TI\/jIWy",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 50,
+        "firstName": "Kyle",
+        "lastName": "Smith",
+        "email": "ksmith@gmail.com",
+        "password": "$2y$10$Zd7TbA9DHKnSriaoFsIQjuxIQVkfkJngOD.2Lsl\/QhKIUHT8kiP92",
+        "phone": "4077214363"
+    },
+    {
+        "userId": 51,
+        "firstName": "Zack",
+        "lastName": "Smith",
+        "email": "zsmith@gmail.com",
+        "password": "$2y$10$KP\/uGDqBqn7PPc\/akwS7guwpfbx0DDVp\/XMZqVObcJuj2KhSwZd6C",
+        "phone": "1234567890"
     }
 ]
