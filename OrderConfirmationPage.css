@@ -189,26 +189,22 @@
   }
   
   .price-details {
-    align-self: stretch;
     display: flex;
-    margin-top: 19px;
-    gap: 20px;
-    font-size: 14px;
     justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+    font-size: 14px;
   }
-  
-  .price-labels {
+  .price-labels, .price-values {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    font-weight: 500;
+    gap: 8px;
+  }
+  .price-values span {
+    text-align: right;
   }
   
-  .price-values {
-    display: flex;
-    flex-direction: column;
-    font-weight: 300;
-  }
+  
   
   .total-price {
     font-weight: 600;
@@ -228,6 +224,17 @@
     font: 400 36px Montserrat, sans-serif;
   }
   
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   /* Responsive Styles */
   @media (max-width: 991px) {
     .main-content {

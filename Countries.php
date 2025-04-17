@@ -1,0 +1,196 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries</title>
+  <link rel="stylesheet" href="countries.css">
+</head>
+
+
+
+
+
+
+<header class="nav-header">
+  <div class="nav-container">
+    <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
+    <nav class="navigation-bar">
+      <div class="nav-links">
+        <a href="HomePage.html" class="nav-link">Home</a>
+        <a href="HowItWorks.html" class="nav-link">How It Works</a>
+        <a href="Countries.html" class="nav-link">Countries</a>
+        <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
+      </div>
+      <div class="nav-icons">
+
+          <a href="OrderConfirmation.php">
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/edadf950090628a4467326f5ac2e7e6a6c82bdb8?placeholderIfAbsent=true" alt="User Icon" class="nav-icon" />
+      </a>
+        
+        <a href="Profile.html">
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/81178d926783336ee4924fea04237c405ade17aa?placeholderIfAbsent=true" alt="Menu Icon" class="nav-icon menu-icon" />
+      </a>
+      
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+
+  
+  <main class="main-content">
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="featured-country">
+          <h1 class="country-title">Costa Rica</h1>
+          <p class="country-description">
+            Costa Rican snacks reflect the country's vibrant culture, tropical
+            climate, and love for fresh, flavorful ingredients. This box is
+            perfect for those who enjoy fresh, bold flavors and a mix of savory
+            and sweet options, making them a great representation of the country's
+            rich culinary heritage.
+          </p>
+          <form action="setCountry.php" method="post">
+            <input type="hidden" name="country" value="Costa Rica"/>
+            <button type="submit" class="cta-button">Add to Cart</button>
+          </form>
+          
+        </div>
+        <div class="featured-box">
+          <h2 class="box-title">Box of the Month</h2>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/d55ad91dffacff4abf621e8e67a46e7ea0a16fdc?placeholderIfAbsent=true"
+            alt="Featured box"
+            class="box-image"
+          />
+        </div>
+      </div>
+    </section>
+  
+    <section class="explore-section">
+      <h2 class="section-title">Explore Countries</h2>
+      
+    </section>
+  
+    <section class="previous-boxes-section">
+      <h2 class="section-title">Previous Boxes</h2>
+      <div class="boxes-grid">
+        <article class="country-card">
+          <h3 class="card-title">Brazil</h3>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/419e01420e1294eb51dd8aef8ee00e66dd39ad43?placeholderIfAbsent=true"
+            alt="Brazil box"
+            class="card-image"
+          />
+          <p class="card-description">
+            Experience the vibrant flavors of Brazil with our handpicked snack
+            selection that embodies the country's lively culinary heritage. From
+            bold, savory bites inspired by street food to sweet treats infused
+            with rich tropical ingredients, each snack offers a taste of Brazil's
+            dynamic culture and festive spirit.
+          </p>
+          <form action="setCountry.php" method="post">
+            <input type="hidden" name="country" value="Brazil" />
+            <button type="submit" class="cta-button">Add to Cart</button>
+          </form>
+          
+          
+        </article>
+  
+        <article class="country-card">
+          <h3 class="card-title">India</h3>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/59098eb45873caf5cd4414286e2adce48870a497?placeholderIfAbsent=true"
+            alt="India box"
+            class="card-image"
+          />
+          <p class="card-description">
+            The country known for inventing chess, sizable spice markets, and
+            breathtaking natural wonders such as sparkling salt deserts. Across
+            this unique nation, you'll also find towering monuments, colorful
+            wildlife, and a feast of delicious culinary creations!
+          </p>
+          <form action="setCountry.php" method="post">
+            <input type="hidden" name="country" value="India" />
+            <button type="submit" class="cta-button">Add to Cart</button>
+          </form>
+          
+          
+        </article>
+  
+        <article class="country-card">
+          <h3 class="card-title">France</h3>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/c55f27baa6005b5b93dfd6bf5c0a32c09132849d?placeholderIfAbsent=true"
+            alt="France box"
+            class="card-image"
+          />
+          <p class="card-description">
+            Located in Western Europe, is a nation of remarkable natural
+            landscapes, profound history, and a lively cultural scene. Within its
+            borders, one can discover breathtaking scenery, iconic cathedrals, and
+            partake in some of the most exquisite cuisine worldwide.
+          </p>
+          <form action="setCountry.php" method="post">
+            <input type="hidden" name="country" value="France" />
+            <button type="submit" class="cta-button">Add to Cart</button>
+          </form>
+          
+          
+        </article>
+      </div>
+    </section>
+
+
+    
+  
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="newsletter-section">
+          <h3 class="newsletter-title">Subscribe for the latest updates:</h3>
+          <input type="email" placeholder="Email Address" class="email-input" />
+        </div>
+  
+        <nav class="footer-nav">
+          <a href="FAQs.html">FAQ</a>
+          <a href="ContactUs.html">Contact Us</a>
+          <a href="HowItWorks.html">How it Works</a>
+          <a href="Countries.html">Countries</a>
+          <a href="GetStartedQ1.html">Get Started</a>
+        </nav>
+  
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cf63493f8f4723e9e40fdfa32ca7b38eb2d69e50?placeholderIfAbsent=true"
+          alt="Footer logo"
+          class="footer-logo"
+        />
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9c2fd45f0841e4cf7d570ccfb6099e596290f28e?placeholderIfAbsent=true"
+          alt="Social media"
+          class="social-media"
+        />
+      </div>
+    </footer>
+    <script>
+      function addToCart(country) {
+        fetch('setCountry.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: 'country=' + encodeURIComponent(country)
+        })
+        .then(response => response.text())
+        .then(data => {
+        });
+      }
+    </script>
+    
+  </main>
+  
