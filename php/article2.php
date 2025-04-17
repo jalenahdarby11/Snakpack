@@ -13,10 +13,10 @@
     <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/9e595b5f1fcde182a7dfc4c426d1f05c6b2789f1?placeholderIfAbsent=true" alt="Logo" class="main-logo" />
     <nav class="navigation-bar">
       <div class="nav-links">
-        <a href="HomePage.html" class="nav-link">Home</a>
-        <a href="HowItWorks.html" class="nav-link">How It Works</a>
-        <a href="Countries.php" class="nav-link">Countries</a>
-        <a href="GetStartedQ1.html" class="nav-link">Get Started</a>
+        <a href="../HomePage.php" class="nav-link">Home</a>
+        <a href="../HowItWorks.php" class="nav-link">How It Works</a>
+        <a href="../Countries.php" class="nav-link">Countries</a>
+        <a href="../GetStartedQ1.php" class="nav-link">Get Started</a>
       </div>
       <div class="nav-icons">
 
@@ -76,8 +76,26 @@
       </p>
     </section>
 
-    <footer>
-      <p class="article-text article"><em>Enjoy the journey, and don't forget the snacks!</em></p>
+    <footer class="main-footer">
+      <div class="footer-content">
+        <h3 class="newsletter-title">Subscribe for the latest updates:</h3>
+        <input type="email" placeholder="Email Address" class="email-input" />
+
+        <nav class="footer-nav">
+          <a href="FAQs.php">FAQ</a>
+          <a href="../ContactUs.php">Contact Us</a>
+          <a href="../HowItWorks.php">How it Works</a>
+          <a href="../Countries.php">Countries</a>
+          <a href="../GetStartedQ1.php">Get Started</a>
+        </nav>
+
+        <div class="footer-brand">
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/cbd4135796799d7f054c96872430269efb61968628230f9302caf2d546dbcd09" alt="Footer logo" class="footer-logo" />
+      </div>
+      <div class="social-icon">
+        <img src="https://cdn.builder.io/api/v1/image/assets/3a8ac60b581045f7adb5757904dc023c/f89c283ce0c3abb2b61c851f7c23923b94294c89cca304d45ab82668cd0e2860" alt="Social icons" class="footer-logo-secondary" />
+      </div>
+      </div>
     </footer>
   </article>
 </body>
